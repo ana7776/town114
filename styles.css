@@ -1,16 +1,16 @@
-:root {
-  --ink: #17201d;
-  --muted: #65716d;
-  --line: #d9e1dc;
+﻿:root {
+  --ink: #17232b;
+  --muted: #60707b;
+  --line: #d7e0e6;
   --surface: #ffffff;
-  --soft: #f6f4ef;
-  --brand: #0f6b5f;
-  --brand-dark: #174139;
-  --accent: #d85f35;
-  --warning: #b48628;
-  --paper: #fffdf7;
-  --graph: #d7c9ad;
-  --shadow: 0 24px 70px rgba(37, 43, 38, 0.12);
+  --soft: #eef4f7;
+  --brand: #1c6dd0;
+  --brand-dark: #12304b;
+  --accent: #e65d4f;
+  --warning: #b7791f;
+  --paper: #f8fbfc;
+  --graph: #a9c7d8;
+  --shadow: 0 24px 70px rgba(23, 35, 43, 0.12);
 }
 
 * {
@@ -43,7 +43,7 @@ a {
   justify-content: space-between;
   min-height: 72px;
   padding: 0 6vw;
-  background: rgba(255, 253, 247, 0.94);
+  background: rgba(248, 251, 252, 0.94);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
 }
@@ -63,7 +63,7 @@ a {
   background:
     linear-gradient(135deg, transparent 0 34%, rgba(255, 255, 255, 0.18) 34% 38%, transparent 38%),
     var(--brand-dark);
-  border-radius: 50%;
+  border-radius: 14px;
   font-weight: 800;
 }
 
@@ -83,8 +83,8 @@ a {
 
 .nav-links {
   display: flex;
-  gap: 28px;
-  color: #31413c;
+  gap: 24px;
+  color: #263a48;
   font-weight: 700;
 }
 
@@ -96,9 +96,9 @@ a {
   min-height: 620px;
   padding: 84px 6vw 72px;
   background:
-    linear-gradient(90deg, rgba(215, 201, 173, 0.22) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(215, 201, 173, 0.22) 1px, transparent 1px),
-    linear-gradient(120deg, rgba(15, 107, 95, 0.11), rgba(216, 95, 53, 0.07)),
+    linear-gradient(90deg, rgba(169, 199, 216, 0.28) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(169, 199, 216, 0.28) 1px, transparent 1px),
+    linear-gradient(120deg, rgba(28, 109, 208, 0.11), rgba(230, 93, 79, 0.07)),
     var(--paper);
   background-size: 44px 44px, 44px 44px, auto, auto;
 }
@@ -106,9 +106,11 @@ a {
 .hero-content h1 {
   max-width: 820px;
   margin: 10px 0 18px;
-  font-size: clamp(42px, 6.4vw, 88px);
-  line-height: 0.98;
+  font-size: clamp(36px, 5vw, 68px);
+  line-height: 1.12;
   letter-spacing: 0;
+  word-break: keep-all;
+  overflow-wrap: normal;
 }
 
 .eyebrow {
@@ -137,8 +139,8 @@ a {
   grid-template-rows: 1fr auto;
   min-height: 500px;
   padding: 26px;
-  background: #fefaf0;
-  border: 1px solid #cabd9f;
+  background: #ffffff;
+  border: 1px solid #c9d8e1;
   box-shadow: var(--shadow);
 }
 
@@ -158,10 +160,10 @@ a {
   position: relative;
   min-height: 360px;
   background:
-    linear-gradient(90deg, rgba(15, 107, 95, 0.12) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(15, 107, 95, 0.12) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(28, 109, 208, 0.12) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(28, 109, 208, 0.12) 1px, transparent 1px);
   background-size: 38px 38px;
-  border: 1px solid rgba(15, 107, 95, 0.2);
+  border: 1px solid rgba(28, 109, 208, 0.2);
   overflow: hidden;
 }
 
@@ -177,7 +179,7 @@ a {
   border-radius: 50%;
   font-size: 13px;
   font-weight: 900;
-  box-shadow: 0 12px 30px rgba(23, 65, 57, 0.22);
+  box-shadow: 0 12px 30px rgba(18, 48, 75, 0.22);
 }
 
 .node-seoul {
@@ -194,13 +196,13 @@ a {
 .node-incheon {
   bottom: 48px;
   left: 96px;
-  background: #495b4d;
+  background: #4b5e6a;
 }
 
 .node-busan {
   right: 28px;
   bottom: 34px;
-  background: #b48628;
+  background: var(--warning);
 }
 
 .map-line {
@@ -301,6 +303,8 @@ a {
 .content-hub,
 .region-section,
 .original-section,
+.signal-desk,
+.topic-hubs,
 .service-band,
 .split-section,
 .faq-section,
@@ -322,13 +326,16 @@ a {
   margin: 0;
   font-size: clamp(32px, 4vw, 56px);
   line-height: 1.06;
+  word-break: keep-all;
 }
 
 .result-grid,
 .service-grid,
 .article-grid,
 .region-grid,
-.original-grid {
+.original-grid,
+.signal-board,
+.hub-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
@@ -339,6 +346,8 @@ a {
 .article-card,
 .region-card,
 .original-card,
+.signal-card,
+.hub-card,
 .info-list article {
   min-height: 158px;
   padding: 20px;
@@ -388,11 +397,117 @@ a {
 }
 
 .region-section {
-  background: #eef2ec;
+  background: #edf4f8;
 }
 
 .original-section {
-  background: #fffaf0;
+  background: #fff7f4;
+}
+
+.topic-hubs {
+  background: #fff;
+}
+
+.hub-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.hub-card {
+  display: grid;
+  gap: 12px;
+  min-height: 245px;
+  background:
+    linear-gradient(180deg, rgba(28, 109, 208, 0.05), rgba(255, 255, 255, 0)),
+    #fff;
+  border-top: 5px solid var(--brand);
+}
+
+.hub-card span {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hub-card strong {
+  font-size: 23px;
+  line-height: 1.35;
+}
+
+.hub-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.signal-desk {
+  background: #17232b;
+  color: #fff;
+}
+
+.signal-desk .section-heading > p:not(.eyebrow) {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.signal-board {
+  align-items: stretch;
+}
+
+.signal-card {
+  display: grid;
+  gap: 14px;
+  min-height: 250px;
+  color: #17232b;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(238, 244, 247, 0.92));
+  border-color: rgba(255, 255, 255, 0.28);
+}
+
+.signal-card span {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  color: #fff;
+  background: var(--brand-dark);
+  border-radius: 50%;
+  font-weight: 900;
+}
+
+.signal-card strong {
+  font-size: 24px;
+}
+
+.signal-card p {
+  margin: 0;
+  color: #51626e;
+  line-height: 1.75;
+}
+
+.primary-signal {
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(28, 109, 208, 0.92), rgba(18, 48, 75, 0.94));
+}
+
+.primary-signal span,
+.check-signal span {
+  color: var(--brand-dark);
+  background: #fff;
+}
+
+.primary-signal p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.check-signal {
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(230, 93, 79, 0.94), rgba(183, 121, 31, 0.86));
+}
+
+.check-signal p {
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .section-heading > p:not(.eyebrow) {
@@ -456,7 +571,7 @@ a {
   gap: 12px;
   min-height: 260px;
   background:
-    linear-gradient(180deg, rgba(15, 107, 95, 0.04), rgba(216, 95, 53, 0.04)),
+    linear-gradient(180deg, rgba(28, 109, 208, 0.04), rgba(230, 93, 79, 0.04)),
     #fff;
   border-bottom: 4px solid var(--accent);
 }
@@ -521,7 +636,7 @@ a {
 
 .split-section {
   background:
-    linear-gradient(90deg, rgba(215, 201, 173, 0.24) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(169, 199, 216, 0.24) 1px, transparent 1px),
     var(--soft);
   background-size: 52px 52px;
 }
@@ -560,7 +675,7 @@ a {
   gap: 24px;
   padding: 38px 6vw;
   color: #fff;
-  background: #1d2722;
+  background: #17232b;
 }
 
 .site-footer strong,
@@ -593,6 +708,11 @@ a {
 .content-page h2 {
   margin-top: 34px;
   font-size: 25px;
+}
+
+.content-page h3 {
+  margin-top: 26px;
+  font-size: 20px;
 }
 
 .content-page p,
@@ -643,6 +763,42 @@ a {
 .related-links a {
   color: var(--brand-dark);
   font-weight: 800;
+}
+
+.note-box,
+.checklist-box,
+.source-box {
+  margin: 26px 0;
+  padding: 20px;
+  background: #fff7f4;
+  border: 1px solid var(--line);
+}
+
+.note-box strong,
+.checklist-box strong,
+.source-box strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.check-table {
+  width: 100%;
+  margin: 24px 0;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.check-table th,
+.check-table td {
+  padding: 14px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.check-table th {
+  color: var(--brand-dark);
+  background: var(--soft);
 }
 
 .faq-section {
@@ -698,6 +854,8 @@ a {
   .article-grid,
   .region-grid,
   .original-grid,
+  .signal-board,
+  .hub-grid,
   .info-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -712,6 +870,8 @@ a {
   .results-section,
   .region-section,
   .original-section,
+  .signal-desk,
+  .topic-hubs,
   .service-band,
   .split-section,
   .faq-section,
@@ -726,7 +886,7 @@ a {
   }
 
   .hero-content h1 {
-    font-size: 42px;
+    font-size: 34px;
   }
 
   .hero-copy {
@@ -739,6 +899,8 @@ a {
   .article-grid,
   .region-grid,
   .original-grid,
+  .signal-board,
+  .hub-grid,
   .info-list {
     grid-template-columns: 1fr;
   }
@@ -757,14 +919,50 @@ a {
   }
 
   .map-node {
-    width: 82px;
-    height: 82px;
+    width: 68px;
+    height: 68px;
     font-size: 11px;
+  }
+
+  .node-seoul {
+    top: 34px;
+    left: 42px;
+  }
+
+  .node-gyeonggi {
+    top: 112px;
+    right: 58px;
+  }
+
+  .node-incheon {
+    bottom: 48px;
+    left: 70px;
+  }
+
+  .node-busan {
+    right: 34px;
+    bottom: 28px;
   }
 
   .line-one,
   .line-two,
   .line-three {
-    width: 150px;
+    width: 120px;
+  }
+
+  .line-one {
+    top: 106px;
+    left: 96px;
+  }
+
+  .line-two {
+    top: 190px;
+    left: 128px;
+  }
+
+  .line-three {
+    bottom: 74px;
+    left: 132px;
   }
 }
+

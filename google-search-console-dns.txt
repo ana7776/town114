@@ -1,0 +1,10 @@
+Google Search Console domain property verification for town114.com
+
+DNS record to add in Cloudflare:
+
+Type: TXT
+Name: @
+Content: google-site-verification=IcdQTnYKZE3nsubq7PAuJ39PQRNHryUAFb3wMDLHWZI
+TTL: Auto
+
+After the TXT record is saved and propagated, return to Search Console and click Verify.

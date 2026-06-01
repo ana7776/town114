@@ -1,0 +1,8 @@
+Naver Search Advisor 등록 시 이 파일은 안내용으로만 사용합니다.
+
+1. https://searchadvisor.naver.com/ 에 접속합니다.
+2. town114.com 사이트를 추가합니다.
+3. 네이버가 제공하는 소유확인 HTML 파일 또는 meta 태그 값을 받아 사이트에 반영합니다.
+4. 소유확인 후 https://town114.com/sitemap.xml 을 제출합니다.
+
+실제 인증 토큰은 계정마다 다르므로 이 파일에 임의 값을 넣지 않습니다.

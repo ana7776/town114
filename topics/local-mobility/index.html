@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
@@ -16,10 +16,19 @@
     </header>
     <main class="plain-page">
       <article class="content-page">
-        <p class="eyebrow">LOCAL MOBILITY</p>
+        <p class="eyebrow">이동 생활정보</p>
         <h1>주차·정비·이동 생활정보 가이드</h1>
         <div class="article-meta"><span>주제 허브</span><span>업데이트: 2026-06-05</span></div>
         <p>차량 이동과 관련된 지역정보는 시간과 비용에 직접 영향을 줍니다. 주차장은 위치가 가까워도 요금과 출입 동선이 맞지 않으면 불편하고, 정비소는 가까운 곳보다 견적과 작업 보증이 더 중요할 수 있습니다.</p>
+
+        <div class="decision-box">
+          <strong>TOWN114 이동 비용 계산 순서</strong>
+          <ol>
+            <li>목적지까지의 거리보다 실제 진입 동선과 머무는 시간을 먼저 계산합니다.</li>
+            <li>주차요금, 충전요금, 정비 견적처럼 비용이 나뉘는 항목은 각각 따로 적습니다.</li>
+            <li>첫 후보가 막혔을 때 이동할 대체 주차장, 충전소, 정비소를 같은 방향 안에서 정합니다.</li>
+          </ol>
+        </div>
 
         <h2>이동 생활정보 확인 순서</h2>
         <table class="check-table">
@@ -37,12 +46,19 @@
           <a href="/services/parking/">공영주차장 요금·운영시간 확인 기준</a>
           <a href="/services/car-repair/">자동차 정비소 비교 기준</a>
           <a href="/articles/public-parking-guide/">공영주차장 이용 전 요금과 운영시간 확인법</a>
+          <a href="/articles/ev-charging-station-guide/">전기차 충전소 이용 전 확인할 충전기 상태와 요금 기준</a>
           <a href="/articles/car-service-guide/">동네 정비소를 고를 때 비교해야 할 항목</a>
           <a href="/articles/region-comparison-guide/">지역별 생활정보를 비교해서 보는 방법</a>
         </div>
 
-        <h2>데이터 확장 방향</h2>
-        <p>주차장과 정비소는 공공데이터포털 표준데이터를 기반으로 정적 페이지를 만들기 좋습니다. 운영 반영 시에는 주소, 전화번호, 좌표만 보여주는 것이 아니라 요금, 영업상태, 데이터 기준일, 최종 확인 필요성을 함께 표시합니다.</p>
+        <h2>이동 정보를 따로 계산해야 하는 이유</h2>
+        <p>주차장과 정비소, 전기차 충전소는 모두 지도에서 가까운 순서로 보이지만 실제 판단 기준은 다릅니다. 주차장은 머무는 시간과 할인 조건, 충전소는 충전 가능 상태와 대기 시간, 정비소는 증상에 맞는 작업 가능 여부가 중요합니다. 같은 이동 일정 안에서도 비용과 실패 위험을 따로 계산해야 합니다.</p>
+        <div class="field-memo" aria-label="이동 생활정보 비교 메모 양식">
+          <span>목적지와 체류 시간:</span>
+          <span>1순위 후보: 주차장 / 충전소 / 정비소</span>
+          <span>비용 항목: 주차요금 / 충전요금 / 견적 / 추가 가능 비용</span>
+          <span>대체 후보: 같은 방향 여부 / 거리 / 운영시간</span>
+        </div>
       </article>
     </main>
     <footer class="site-footer"><div><strong>TOWN114</strong><p>주차, 정비, 이동 기준을 함께 봅니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a></span></div></footer>

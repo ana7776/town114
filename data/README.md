@@ -2,12 +2,12 @@
 
 This folder keeps static data files used before API-based search is enabled.
 
-## Approval-stage approach
+## Static data approach
 
 - Keep API keys out of public HTML, JavaScript, and Git history.
-- Use small static JSON samples to show the site structure.
+- Use small static JSON examples to show the site structure.
 - Show source, baseline date, and "check before visiting" guidance on pages.
-- Replace samples with cached public-data results after Cloudflare Pages Functions or Workers are configured.
+- Replace examples with cached public-data results after Cloudflare Pages Functions or Workers are configured.
 
 ## Planned sources
 

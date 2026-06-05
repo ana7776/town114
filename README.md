@@ -6,19 +6,19 @@ The site is positioned as a local service portal: visitors can start from servic
 
 ## Site Structure
 
-- `/` - Home portal with search, quick categories, region links, and sample data
-- `/services/.../` - Service category pages with visit criteria, sample data structure, source plan, and related guides
+- `/` - Home portal with search, quick categories, region links, and example data
+- `/services/.../` - Service category pages with visit criteria, example data structure, source plan, and related guides
 - `/topics/.../` - SEO topic hubs for public services, local mobility, moving/housing, and family care
 - `/articles/.../` - Original editorial guides and checklists
 - `/regions/.../` - Regional local guides for Seoul, Gyeonggi, Incheon, and Busan
 - `/sources/` - Source policy, public-data plan, and editorial standards
 - `/sitemap/` - HTML sitemap for visitors and crawlers
-- `/data/` - Approval-stage sample data and future import notes
+- `/data/` - Static example data and future import notes
 - `/scripts/` - Public-data snapshot helper scripts
 
 ## Data Workflow
 
-Approval-stage pages use static sample data and original explanatory content. API keys must not be committed or exposed in client-side files.
+Current static pages use example data and original explanatory content. API keys must not be committed or exposed in client-side files.
 
 Planned data sources:
 
@@ -38,6 +38,16 @@ Use these settings:
 - Build command: leave empty
 - Build output directory: `/`
 
+## Local Preview
+
+Run a local static preview from the project root:
+
+```bash
+node scripts/local-static-server.mjs 4173
+```
+
+Then open `http://127.0.0.1:4173/`.
+
 After deployment, connect these custom domains:
 
 - `town114.com`
@@ -45,7 +55,7 @@ After deployment, connect these custom domains:
 
 ## AdSense Notes
 
-- Replace the placeholder publisher ID in `ads.txt` after Google AdSense provides the real publisher ID.
+- Add the official publisher line to `ads.txt` after Google AdSense provides the account-specific value.
 - Keep ads visually separate from editorial content and data tables.
 - Do not use wording that asks visitors to click ads.
 

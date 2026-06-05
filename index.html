@@ -1,11 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="TOWN114는 약국, 공영주차장, 도서관, 자동차 정비소, 주민센터처럼 자주 찾는 지역 생활시설을 방문 전 확인 기준과 샘플 데이터로 정리하는 로컬 생활정보 가이드입니다."
+      content="TOWN114는 약국, 공영주차장, 도서관, 자동차 정비소, 주민센터처럼 자주 찾는 지역 생활시설을 방문 전 확인 기준과 공식 자료 확인 순서로 정리하는 로컬 생활정보 가이드입니다."
     />
     <meta name="robots" content="index,follow" />
     <link rel="canonical" href="https://town114.com/" />
@@ -16,6 +16,8 @@
       content="약국, 주차장, 도서관, 정비소, 주민센터를 이용하기 전 운영시간, 요금, 준비물, 데이터 기준일을 함께 확인합니다."
     />
     <meta property="og:url" content="https://town114.com/" />
+    <meta property="og:image" content="https://town114.com/assets/town114-local-guide-hero.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
     <title>TOWN114 | 지역 생활시설 검색과 방문 전 확인 가이드</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="application/ld+json">
@@ -77,7 +79,7 @@
     <main>
       <section class="portal-hero">
         <div class="portal-copy">
-          <p class="eyebrow">LOCAL DATA · VISIT CHECKLIST</p>
+          <p class="eyebrow">지역 데이터 · 방문 전 체크</p>
           <h1>지역 생활시설을 검색하고, 방문 전 확인 기준까지 함께 봅니다</h1>
           <p class="hero-copy">
             TOWN114는 단순 전화번호부가 아니라 약국, 공영주차장, 도서관, 자동차 정비소, 주민센터를 이용하기 전
@@ -107,6 +109,13 @@
         </div>
 
         <aside class="data-board" aria-label="우선 제공 지역">
+          <img
+            class="hero-visual"
+            src="assets/town114-local-guide-hero.jpg"
+            alt="동네 생활시설과 공공서비스 안내를 떠올리게 하는 지역 거리 이미지"
+            width="1200"
+            height="675"
+          />
           <p class="eyebrow">우선 제공 지역</p>
           <h2>서울·경기·인천·부산 생활정보부터 확장합니다</h2>
           <div class="region-picker">
@@ -129,8 +138,8 @@
           <p class="eyebrow">생활정보 모듈</p>
           <h2>내 주변 생활시설을 데이터와 설명으로 확인합니다</h2>
           <p>
-            승인 전에는 API 키 노출이 없는 정적 샘플 데이터와 직접 작성한 설명 콘텐츠를 함께 제공합니다.
-            실제 공공데이터 인증키가 준비되면 같은 페이지에 캐시된 API 데이터로 교체합니다.
+            단순 시설 목록보다 방문 전 확인 기준과 직접 작성한 설명 콘텐츠를 먼저 제공합니다.
+            공식 자료, 현장 공지, 전화 확인이 필요한 항목을 함께 보여 방문 실패를 줄이는 데 집중합니다.
           </p>
         </div>
         <div class="module-grid">
@@ -164,14 +173,14 @@
 
       <section class="data-section">
         <div class="section-heading">
-          <p class="eyebrow">샘플 지역 데이터</p>
+          <p class="eyebrow">지역별 확인 기준</p>
           <h2>실제 데이터 연결 전에도 확인 기준을 먼저 제공합니다</h2>
           <p>
-            아래 데이터는 서비스 구조를 보여주는 승인 전 샘플입니다. 운영 반영 시 공공데이터포털 또는 지자체
-            공개자료의 기준일, 출처, 갱신 주기를 함께 표시합니다.
+            아래 표는 지역 생활시설을 볼 때 공통으로 확인할 항목입니다. 공공데이터포털 또는 지자체
+            공개자료를 볼 때도 기준일, 출처, 갱신 주기를 함께 확인해야 합니다.
           </p>
         </div>
-        <div class="data-table" role="table" aria-label="생활시설 샘플 데이터">
+        <div class="data-table" role="table" aria-label="생활시설 확인 기준">
           <div class="table-head" role="row">
             <span role="columnheader">분야</span>
             <span role="columnheader">지역</span>
@@ -246,31 +255,31 @@
 
       <section class="topic-hubs" id="topic-hubs">
         <div class="section-heading">
-          <p class="eyebrow">SEO TOPIC HUBS</p>
+          <p class="eyebrow">주제별 생활정보</p>
           <h2>검색 의도별 생활정보 허브</h2>
           <p>
-            승인 이후에는 단일 글보다 주제 묶음이 중요합니다. 공공 민원, 이동·주차, 주거·이사,
+            운영 확장 시에는 단일 글보다 주제 묶음이 중요합니다. 공공 민원, 이동·주차, 주거·이사,
             가족·돌봄처럼 검색 의도가 분명한 허브로 내부 링크를 정리합니다.
           </p>
         </div>
         <div class="hub-grid">
           <a href="/topics/public-services/" class="hub-card">
-            <span>Public Services</span>
+            <span>공공서비스</span>
             <strong>주민센터·서류·복지 이용 가이드</strong>
             <p>민원 서류, 복지관, 공공시설을 방문하기 전 준비할 항목을 모았습니다.</p>
           </a>
           <a href="/topics/local-mobility/" class="hub-card">
-            <span>Mobility</span>
+            <span>이동 생활</span>
             <strong>주차·정비·이동 생활정보</strong>
             <p>차량 이동, 공영주차장, 동네 정비소를 비교할 때 필요한 기준입니다.</p>
           </a>
           <a href="/topics/moving-housing/" class="hub-card">
-            <span>Housing</span>
+            <span>주거 생활</span>
             <strong>이사·관리비·생활 배출 체크리스트</strong>
             <p>주소 변경, 관리비 정산, 대형폐기물 배출처럼 생활비와 연결되는 정보를 정리합니다.</p>
           </a>
           <a href="/topics/family-care/" class="hub-card">
-            <span>Family Care</span>
+            <span>가족 생활</span>
             <strong>가족·보육·생활시설 방문 전 질문</strong>
             <p>어린이집, 도서관, 약국, 가족 서류처럼 가족 생활에 필요한 확인 기준입니다.</p>
           </a>
@@ -279,7 +288,7 @@
 
       <section class="region-section" id="regional-guides">
         <div class="section-heading">
-          <p class="eyebrow">REGIONAL GUIDES</p>
+          <p class="eyebrow">지역별 생활정보</p>
           <h2>지역별 생활정보</h2>
           <p>
             서울, 경기, 인천, 부산을 우선 제공 지역으로 두고, 이후 시군구 단위의 주차장·도서관·공공시설
@@ -316,7 +325,7 @@
 
       <section class="original-section" id="original-guides">
         <div class="section-heading">
-          <p class="eyebrow">ORIGINAL GUIDES</p>
+          <p class="eyebrow">직접 작성한 가이드</p>
           <h2>데이터를 해석하는 독자 설명 콘텐츠</h2>
           <p>
             공공데이터가 있어도 방문자가 실제로 필요한 것은 판단 기준입니다. 아래 글은 TOWN114가 직접 구성한
@@ -325,24 +334,39 @@
         </div>
         <div class="original-grid">
           <a href="/articles/how-we-verify-local-info/" class="original-card">
-            <span>01 · Editorial Standard</span>
+            <span>01 · 편집 기준</span>
             <strong>지역 생활정보를 확인하고 정리하는 기준</strong>
             <p>운영시간, 전화번호, 위치, 요금처럼 바뀌기 쉬운 정보를 확인하는 순서를 설명합니다.</p>
           </a>
           <a href="/articles/local-life-checklist/" class="original-card">
-            <span>02 · Checklist</span>
+            <span>02 · 체크리스트</span>
             <strong>동네 생활시설 방문 전 공통 체크리스트</strong>
             <p>약국, 주민센터, 주차장, 도서관 방문 전에 공통으로 확인할 항목을 정리했습니다.</p>
           </a>
           <a href="/articles/local-info-scorecard/" class="original-card">
-            <span>03 · Scorecard</span>
+            <span>03 · 판단표</span>
             <strong>방문 전 확인할 5가지 기준</strong>
             <p>공식성, 최근성, 접근성, 비용, 대체 선택지를 나눠 방문 실패를 줄이는 방법입니다.</p>
           </a>
           <a href="/articles/safe-local-search-guide/" class="original-card">
-            <span>04 · Safe Search</span>
+            <span>04 · 안전 검색</span>
             <strong>오래된 정보와 광고성 정보를 구분하는 법</strong>
             <p>검색 결과를 공식 안내, 최근 후기, 현장 정보로 교차 확인하는 방법입니다.</p>
+          </a>
+          <a href="/articles/unmanned-civil-kiosk-guide/" class="original-card">
+            <span>05 · 민원발급</span>
+            <strong>무인민원발급기 이용 전 확인할 위치와 서류 기준</strong>
+            <p>발급 가능 서류, 운영시간, 본인확인, 수수료를 방문 전에 점검합니다.</p>
+          </a>
+          <a href="/articles/ev-charging-station-guide/" class="original-card">
+            <span>06 · 전기차 충전</span>
+            <strong>전기차 충전소 이용 전 확인할 충전기 상태와 요금 기준</strong>
+            <p>급속·완속, 결제 방식, 주차요금, 충전 완료 후 이동 기준을 정리합니다.</p>
+          </a>
+          <a href="/articles/safety-report-guide/" class="original-card">
+            <span>07 · 생활안전</span>
+            <strong>안전신문고 신고 전 확인할 사진과 위치 기준</strong>
+            <p>긴급 신고와 생활불편 신고를 구분하고 사진·위치 기록 기준을 확인합니다.</p>
           </a>
         </div>
       </section>
@@ -378,8 +402,8 @@
         <p>지역 생활시설을 찾기 전에 운영시간, 요금, 위치, 준비물, 데이터 기준일을 함께 확인하는 로컬 생활정보 가이드입니다.</p>
       </div>
       <div>
-        <span><a href="/about/">About</a> · <a href="/contact/">Contact</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a></span>
-        <p><a href="/sources/">Sources</a> · <a href="/sitemap/">Sitemap</a> · <a href="/advertising-disclosure/">Advertising Disclosure</a></p>
+        <span><a href="/about/">소개</a> · <a href="/contact/">문의</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a></span>
+        <p><a href="/sources/">자료 출처</a> · <a href="/sitemap/">사이트맵</a> · <a href="/advertising-disclosure/">광고 및 제휴 고지</a></p>
       </div>
     </footer>
   </body>

@@ -1129,6 +1129,11 @@ a {
 }
 
 @media (max-width: 640px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   .site-header {
     padding: 0 20px;
   }
@@ -1159,8 +1164,54 @@ a {
     font-size: 34px;
   }
 
+  .portal-copy h1,
+  .section-heading h2,
+  .content-page h1 {
+    width: min(330px, calc(100vw - 40px));
+    max-width: min(330px, calc(100vw - 40px));
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    white-space: normal;
+  }
+
+  .portal-copy h1 {
+    font-size: 28px;
+    line-height: 1.22;
+  }
+
   .hero-copy {
+    width: min(330px, calc(100vw - 40px));
+    max-width: min(330px, calc(100vw - 40px));
     font-size: 16px;
+    overflow-wrap: anywhere;
+    word-break: break-all;
+  }
+
+  .portal-copy,
+  .data-board,
+  .search-box,
+  .search-box input,
+  .quick-buttons,
+  .quick-buttons a,
+  .region-picker a {
+    min-width: 0;
+    width: min(330px, calc(100vw - 40px));
+    max-width: min(330px, calc(100vw - 40px));
+  }
+
+  .hero-visual {
+    width: 100%;
+    height: auto;
+  }
+
+  .data-board h2,
+  .module-card strong,
+  .region-card strong,
+  .original-card strong,
+  .hub-card strong {
+    overflow-wrap: anywhere;
+    word-break: break-all;
+    white-space: normal;
   }
 
   .notice-list a,

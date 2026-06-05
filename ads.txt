@@ -1,2 +1,1 @@
-# AdSense publisher record is not configured yet.
-# Add the official Google-provided seller line after the account is issued.
+google.com, pub-5804969457082424, DIRECT, f08c47fec0942fa0

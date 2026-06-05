@@ -1,6 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
 Sitemap: https://town114.com/sitemap.xml
-Host: https://town114.com
-

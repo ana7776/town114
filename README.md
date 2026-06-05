@@ -1,18 +1,34 @@
-﻿# TOWN114
+# TOWN114
 
 TOWN114 is a static local information guide for `town114.com`.
 
+The site is positioned as a local service portal: visitors can start from service categories such as pharmacies, public parking, libraries, car repair shops, and community centers, then read visit-before-checking guides, source notes, and regional context.
+
 ## Site Structure
 
-- `/` - Home
-- `/about/` - About
-- `/contact/` - Contact
-- `/privacy/` - Privacy Policy
-- `/terms/` - Terms
-- `/articles/.../` - Original editorial guides
-- `/regions/.../` - Regional local guides
-- `/topics/.../` - SEO topic hubs
+- `/` - Home portal with search, quick categories, region links, and sample data
+- `/services/.../` - Service category pages with visit criteria, sample data structure, source plan, and related guides
+- `/topics/.../` - SEO topic hubs for public services, local mobility, moving/housing, and family care
+- `/articles/.../` - Original editorial guides and checklists
+- `/regions/.../` - Regional local guides for Seoul, Gyeonggi, Incheon, and Busan
+- `/sources/` - Source policy, public-data plan, and editorial standards
 - `/sitemap/` - HTML sitemap for visitors and crawlers
+- `/data/` - Approval-stage sample data and future import notes
+- `/scripts/` - Public-data snapshot helper scripts
+
+## Data Workflow
+
+Approval-stage pages use static sample data and original explanatory content. API keys must not be committed or exposed in client-side files.
+
+Planned data sources:
+
+- 공공데이터포털 전국주차장정보표준데이터
+- 공공데이터포털 전국도서관표준데이터
+- 공공데이터포털 전국자동차정비업체표준데이터
+- 보건의료 관련 공개자료 or official local notices for pharmacies
+- Official city, district, and public office pages for community centers
+
+When real data is added, show source, baseline date, and a visit-before-checking notice on the public page.
 
 ## Cloudflare Pages
 
@@ -27,9 +43,11 @@ After deployment, connect these custom domains:
 - `town114.com`
 - `www.town114.com`
 
-## Notes
+## AdSense Notes
 
-Replace the placeholder publisher ID in `ads.txt` after Google AdSense provides the real publisher ID.
+- Replace the placeholder publisher ID in `ads.txt` after Google AdSense provides the real publisher ID.
+- Keep ads visually separate from editorial content and data tables.
+- Do not use wording that asks visitors to click ads.
 
 ## Search Console / Search Advisor
 
@@ -38,5 +56,3 @@ After deploying the latest files:
 - Google Search Console: add `https://town114.com/`, verify ownership, submit `https://town114.com/sitemap.xml`.
 - Naver Search Advisor: add `https://town114.com/`, verify ownership, submit `https://town114.com/sitemap.xml`.
 - Do not add fake verification meta tags. Google and Naver verification tokens are unique to each account.
-
-

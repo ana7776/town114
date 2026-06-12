@@ -2,6 +2,14 @@
   {
     "date": "2026-06-12",
     "slot": "evening",
+    "slug": "2026-06-12-evening-library-evening-room-check",
+    "title": "야간 도서관 이용 전 자료실과 열람실 시간을 나눠 확인하기",
+    "category": "도서관",
+    "url": "/news/auto-posts/2026-06-12-evening-library-evening-room-check/"
+  },
+  {
+    "date": "2026-06-12",
+    "slot": "evening",
     "slug": "2026-06-12-evening-evening-pharmacy-call-check",
     "title": "야간 시간 약국 방문 전 전화로 확인할 질문",
     "category": "약국",

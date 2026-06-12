@@ -10,7 +10,7 @@ The site is positioned as a local service portal: visitors can start from servic
 - `/services/.../` - Service category pages with visit criteria, example data structure, source plan, and related guides
 - `/topics/.../` - SEO topic hubs for public services, local mobility, moving/housing, and family care
 - `/articles/.../` - Original editorial guides and checklists
-- `/regions/.../` - Regional local guides for Seoul, Gyeonggi, Incheon, and Busan
+- `/regions/.../` - Regional local guides for Seoul, Gyeonggi, Incheon, Busan, and Jeonbuk
 - `/sources/` - Source policy, public-data plan, and editorial standards
 - `/sitemap/` - HTML sitemap for visitors and crawlers
 - `/data/` - Static example data and future import notes
@@ -22,11 +22,12 @@ Current static pages use example data and original explanatory content. API keys
 
 Planned data sources:
 
-- 공공데이터포털 전국주차장정보표준데이터
-- 공공데이터포털 전국도서관표준데이터
-- 공공데이터포털 전국자동차정비업체표준데이터
-- 보건의료 관련 공개자료 or official local notices for pharmacies
+- Public Data Portal: national standard public parking lot data
+- Public Data Portal: national standard library data
+- Public Data Portal: national standard car repair business data
+- Public health and medical open data or official local notices for pharmacies
 - Official city, district, and public office pages for community centers
+- Culture Portal public pages or API for culture calendars, cultural spaces, support programs, and accessibility notes
 
 When real data is added, show source, baseline date, and a visit-before-checking notice on the public page.
 
@@ -47,6 +48,19 @@ node scripts/local-static-server.mjs 4173
 ```
 
 Then open `http://127.0.0.1:4173/`.
+
+## Auto Posts
+
+Daily scheduled tasks can add one afternoon post and one evening post from `data/auto-post-topics.json`.
+
+Manual test commands:
+
+```bash
+node scripts/auto-add-post.mjs --slot=afternoon --dry-run
+node scripts/auto-add-post.mjs --slot=evening --dry-run
+```
+
+The Windows Task Scheduler wrapper is `scripts/run-auto-post.ps1`. It creates a post under `/news/auto-posts/`, updates the auto-post index, updates `sitemap.xml`, then commits and pushes only when the working tree contains no unrelated changes.
 
 After deployment, connect these custom domains:
 

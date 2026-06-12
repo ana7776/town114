@@ -522,7 +522,7 @@ a {
 }
 
 .region-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .region-card {
@@ -667,6 +667,192 @@ a {
 .notice-list span {
   color: var(--warning);
   font-weight: 800;
+}
+
+.briefing-hero {
+  border-bottom: 1px solid var(--line);
+}
+
+.briefing-search {
+  margin-top: 28px;
+  padding: 18px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+}
+
+.briefing-search label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--brand-dark);
+  font-weight: 900;
+}
+
+.briefing-search div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.briefing-search input,
+.briefing-search button {
+  min-height: 48px;
+  border: 1px solid var(--line);
+  font: inherit;
+}
+
+.briefing-search input {
+  min-width: 0;
+  padding: 0 14px;
+  background: #fff;
+}
+
+.briefing-search button {
+  padding: 0 22px;
+  color: #fff;
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+  font-weight: 900;
+}
+
+.briefing-directory {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.category-panel {
+  display: grid;
+  gap: 10px;
+  min-height: 220px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 5px solid var(--accent);
+}
+
+.category-panel span {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.category-panel strong {
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.category-panel p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.notice-list-detailed a {
+  grid-template-columns: 120px minmax(180px, 0.8fr) minmax(0, 1fr) auto;
+  min-height: 82px;
+}
+
+.notice-list small {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.briefing-pager {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.briefing-pager a,
+.briefing-pager span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0 13px;
+  background: #fff;
+  border: 1px solid var(--line);
+  font-weight: 900;
+}
+
+.briefing-pager span {
+  color: #fff;
+  background: var(--brand-dark);
+  border-color: var(--brand-dark);
+}
+
+.tool-hero {
+  border-bottom: 1px solid var(--line);
+}
+
+.tool-section {
+  padding: 58px 6vw;
+  background: #edf4f8;
+}
+
+.tool-panel {
+  display: grid;
+  gap: 22px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+.tool-controls {
+  display: grid;
+  grid-template-columns: auto minmax(180px, 1fr) auto minmax(180px, 1fr);
+  gap: 12px;
+  align-items: center;
+}
+
+.tool-controls label {
+  color: var(--brand-dark);
+  font-weight: 900;
+}
+
+.tool-controls select {
+  min-height: 46px;
+  padding: 0 12px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+  font: inherit;
+}
+
+.tool-result {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tool-result > div,
+.reason-board {
+  padding: 20px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.tool-result h2 {
+  margin: 8px 0 10px;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.25;
+}
+
+.tool-result p,
+.reason-board p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.reason-board strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--brand-dark);
+  font-size: 20px;
 }
 
 .site-footer {
@@ -933,6 +1119,90 @@ a {
   cursor: pointer;
 }
 
+.search-results-panel {
+  display: grid;
+  gap: 12px;
+  width: min(780px, 100%);
+  margin-top: 12px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid #c9d8e1;
+  box-shadow: var(--shadow);
+}
+
+.search-results-panel[hidden] {
+  display: none;
+}
+
+.search-summary {
+  display: grid;
+  gap: 4px;
+}
+
+.search-summary strong {
+  color: var(--brand-dark);
+  font-size: 18px;
+}
+
+.search-summary span {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.search-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.search-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  color: #fff;
+  background: #03c75a;
+  border: 1px solid #03b553;
+  font-weight: 900;
+}
+
+.search-actions a + a {
+  color: var(--brand-dark);
+  background: #fff;
+  border-color: var(--line);
+}
+
+.search-result-list {
+  display: grid;
+  gap: 8px;
+}
+
+.search-result-list a {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 10px;
+  align-items: center;
+  min-height: 56px;
+  padding: 10px 12px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+}
+
+.search-result-list span {
+  color: var(--accent);
+  font-weight: 900;
+}
+
+.search-result-list strong {
+  color: var(--brand-dark);
+  overflow-wrap: anywhere;
+}
+
+.search-result-list small {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .quick-buttons,
 .region-picker {
   display: flex;
@@ -998,7 +1268,7 @@ a {
 
 .module-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -1119,11 +1389,13 @@ a {
   .article-grid,
   .region-grid,
   .original-grid,
-  .signal-board,
-  .hub-grid,
-  .module-grid,
-  .trust-grid,
-  .info-list {
+    .signal-board,
+    .hub-grid,
+    .briefing-directory,
+    .tool-result,
+    .module-grid,
+    .trust-grid,
+    .info-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -1218,18 +1490,24 @@ a {
   .result-grid,
   .service-grid,
   .article-grid,
-  .region-grid,
-  .original-grid,
-  .signal-board,
-  .hub-grid,
-  .module-grid,
-  .trust-grid,
-  .info-list {
+    .region-grid,
+    .original-grid,
+    .signal-board,
+    .hub-grid,
+    .briefing-directory,
+    .module-grid,
+    .trust-grid,
+    .info-list {
     grid-template-columns: 1fr;
   }
 
   .search-box div,
-  .data-table > div {
+  .briefing-search div,
+  .tool-controls,
+  .tool-result,
+  .notice-list-detailed a,
+  .data-table > div,
+  .search-result-list a {
     grid-template-columns: 1fr;
   }
 

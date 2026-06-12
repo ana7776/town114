@@ -1,3 +1,7 @@
 server-test.err
 server-test.out
 qa-screenshots/
+.env
+.env.*
+!.env.example
+data/generated/

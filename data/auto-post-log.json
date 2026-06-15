@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-06-15",
+    "slot": "evening",
+    "slug": "2026-06-15-evening-evening-pharmacy-call-check",
+    "title": "야간 시간 약국 방문 전 전화로 확인할 질문",
+    "category": "약국",
+    "url": "/news/auto-posts/2026-06-15-evening-evening-pharmacy-call-check/"
+  },
+  {
+    "date": "2026-06-15",
+    "slot": "afternoon",
+    "slug": "2026-06-15-afternoon-community-center-document-window",
+    "title": "주민센터 서류 발급 전 접수 창구와 마감 시간 확인법",
+    "category": "공공민원",
+    "url": "/news/auto-posts/2026-06-15-afternoon-community-center-document-window/"
+  },
+  {
     "date": "2026-06-12",
     "slot": "evening",
     "slug": "2026-06-12-evening-library-evening-room-check",

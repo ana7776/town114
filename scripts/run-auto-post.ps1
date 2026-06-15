@@ -22,6 +22,7 @@ if (-not $status) {
 
 $allowed = @(
   "data/auto-post-log.json",
+  "feed.xml",
   "sitemap.xml"
 )
 $blocked = @()
@@ -43,7 +44,7 @@ if ($blocked.Count -gt 0) {
   exit 0
 }
 
-git add -- "news/auto-posts" "data/auto-post-log.json" "sitemap.xml"
+git add -- "news/auto-posts" "data/auto-post-log.json" "feed.xml" "sitemap.xml"
 
 $staged = git diff --cached --name-only
 if (-not $staged) {

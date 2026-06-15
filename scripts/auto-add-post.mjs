@@ -49,6 +49,12 @@ if (!slotTopics.length) {
   throw new Error(`No auto post topics configured for slot: ${slot}`);
 }
 
+const existingSlotEntry = log.find((entry) => entry.date === date && entry.slot === slot);
+if (existingSlotEntry) {
+  console.log(`Auto post already exists for ${date} ${slot}: ${existingSlotEntry.url}`);
+  process.exit(0);
+}
+
 function baseSlug(value) {
   return String(value || "").replace(/^\d{4}-\d{2}-\d{2}-(afternoon|evening)-/, "");
 }
@@ -152,6 +158,7 @@ function renderIndex(entries) {
     <meta name="robots" content="index,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
     <link rel="canonical" href="https://town114.com/news/auto-posts/" />
+    <link rel="alternate" type="application/rss+xml" title="TOWN114 생활정보 업데이트" href="https://town114.com/feed.xml" />
     <title>자동 생활정보 글 목록 | TOWN114</title>
     <link rel="stylesheet" href="../../styles.css" />
   </head>
@@ -166,6 +173,39 @@ function renderIndex(entries) {
     <footer class="site-footer"><div><strong>TOWN114</strong><p>자동 글도 출처와 확인 기준을 함께 둡니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a></span></div></footer>
   </body>
 </html>
+`;
+}
+
+function formatRssDate(entry) {
+  const hour = entry.slot === "afternoon" ? "13" : "19";
+  return new Date(`${entry.date}T${hour}:00:00+09:00`).toUTCString();
+}
+
+function renderFeed(entries) {
+  const items = entries
+    .slice(0, 20)
+    .map((entry) => `    <item>
+      <title>${escapeHtml(entry.title)}</title>
+      <link>https://town114.com${entry.url}</link>
+      <guid isPermaLink="true">https://town114.com${entry.url}</guid>
+      <pubDate>${formatRssDate(entry)}</pubDate>
+      <category>${escapeHtml(entry.category)}</category>
+      <description>${escapeHtml(`${entry.category} 생활정보를 방문 전 확인 기준으로 정리한 글입니다.`)}</description>
+    </item>`)
+    .join("\n");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TOWN114 생활정보 업데이트</title>
+    <link>https://town114.com/</link>
+    <description>약국, 주차장, 도서관, 주민센터, 정비소처럼 자주 찾는 지역 생활정보를 방문 전 확인 기준으로 정리합니다.</description>
+    <language>ko-KR</language>
+    <lastBuildDate>${new Date(`${date}T12:00:00+09:00`).toUTCString()}</lastBuildDate>
+    <atom:link href="https://town114.com/feed.xml" rel="self" type="application/rss+xml" />
+${items}
+  </channel>
+</rss>
 `;
 }
 
@@ -197,6 +237,7 @@ await writeFile(outFile, pageHtml, "utf8");
 await writeFile(logPath, `${JSON.stringify(nextLog, null, 2)}\n`, "utf8");
 await mkdir(join(root, "news", "auto-posts"), { recursive: true });
 await writeFile(join(root, "news", "auto-posts", "index.html"), renderIndex(nextLog), "utf8");
+await writeFile(join(root, "feed.xml"), renderFeed(nextLog), "utf8");
 await updateSitemap();
 
 console.log(`Created auto post: ${urlPath}`);

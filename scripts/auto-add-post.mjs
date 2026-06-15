@@ -56,12 +56,18 @@ function baseSlug(value) {
 const todayUsedSlugs = new Set(
   log.filter((entry) => entry.date === date && entry.slot === slot).map((entry) => baseSlug(entry.slug)),
 );
+const previouslyUsedSlugs = new Set(
+  log.filter((entry) => entry.slot === slot).map((entry) => baseSlug(entry.slug)),
+);
 const lastSlotEntry = log.find((entry) => entry.slot === slot);
 const lastTopicIndex = slotTopics.findIndex((item) => item.slug === baseSlug(lastSlotEntry?.slug));
 const rotatedTopics = slotTopics
   .slice(lastTopicIndex + 1)
   .concat(slotTopics.slice(0, lastTopicIndex + 1));
-const topic = rotatedTopics.find((item) => !todayUsedSlugs.has(item.slug)) || rotatedTopics[0];
+const topic =
+  rotatedTopics.find((item) => !todayUsedSlugs.has(item.slug) && !previouslyUsedSlugs.has(item.slug)) ||
+  rotatedTopics.find((item) => !todayUsedSlugs.has(item.slug)) ||
+  rotatedTopics[0];
 const slug = `${date}-${slot}-${slugify(topic.slug || topic.title)}`;
 const urlPath = `/news/auto-posts/${slug}/`;
 const outDir = join(root, "news", "auto-posts", slug);
@@ -127,7 +133,14 @@ const nextLog = [
 ].slice(0, 200);
 
 function renderIndex(entries) {
-  const items = entries
+  const seenTopics = new Set();
+  const visibleEntries = entries.filter((entry) => {
+    const topicKey = `${entry.slot}:${baseSlug(entry.slug)}`;
+    if (seenTopics.has(topicKey)) return false;
+    seenTopics.add(topicKey);
+    return true;
+  });
+  const items = visibleEntries
     .map((entry) => `<a href="${entry.url}"><span>${escapeHtml(entry.category)}</span><strong>${escapeHtml(entry.title)}</strong><small>${entry.slot === "afternoon" ? "오후" : "야간"} 자동 발행</small><em>${entry.date.replaceAll("-", ".")}</em></a>`)
     .join("\n          ");
   return `<!doctype html>
@@ -135,7 +148,7 @@ function renderIndex(entries) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="TOWN114 자동 생활정보 글 목록입니다." />
+    <meta name="description" content="TOWN114 자동 생활정보 글 목록입니다. 최근 발행된 생활정보 중 주제가 겹치지 않는 확인 가이드를 우선 정리합니다." />
     <meta name="robots" content="index,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
     <link rel="canonical" href="https://town114.com/news/auto-posts/" />
@@ -145,7 +158,7 @@ function renderIndex(entries) {
   <body>
     <header class="site-header"><a class="brand" href="/"><span class="brand-mark">114</span><span><strong>TOWN114</strong><small>자동 생활정보</small></span></a><nav class="nav-links"><a href="/news/list/">브리핑</a><a href="/#service-directory">생활정보</a><a href="/sources/">자료 출처</a><a href="/contact/">오류 수정</a></nav></header>
     <main>
-      <section class="plain-page briefing-hero"><article class="content-page"><p class="eyebrow">Auto updates</p><h1>자동 생활정보 글 목록</h1><div class="article-meta"><span>매일 오후·야간 자동 추가</span><span>최종 정리: ${date}</span></div><p>예약 작업으로 추가되는 생활정보 글을 모은 목록입니다. 각 글은 방문 전 확인 질문, 비용·운영 기준, 대체 후보 점검을 중심으로 구성합니다.</p></article></section>
+      <section class="plain-page briefing-hero"><article class="content-page"><p class="eyebrow">Auto updates</p><h1>자동 생활정보 글 목록</h1><div class="article-meta"><span>매일 오후·야간 자동 추가</span><span>최종 정리: ${date}</span></div><p>예약 작업으로 추가되는 생활정보 글을 모은 목록입니다. 각 글은 방문 전 확인 질문, 비용·운영 기준, 대체 후보 점검을 중심으로 구성합니다. 검색엔진과 방문자가 반복 글보다 최신 주제별 가이드를 먼저 볼 수 있도록 같은 주제는 최신 글만 노출합니다.</p></article></section>
       <section class="notice-section"><div class="notice-list notice-list-detailed" aria-label="자동 생활정보 글 목록">
           ${items}
       </div></section>

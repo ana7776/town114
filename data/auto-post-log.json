@@ -1,6 +1,14 @@
 [
   {
     "date": "2026-06-15",
+    "slot": "afternoon",
+    "slug": "2026-06-15-afternoon-library-holiday-notice-check",
+    "title": "도서관 휴관일과 임시 운영 공지를 함께 확인하는 법",
+    "category": "도서관",
+    "url": "/news/auto-posts/2026-06-15-afternoon-library-holiday-notice-check/"
+  },
+  {
+    "date": "2026-06-15",
     "slot": "evening",
     "slug": "2026-06-15-evening-evening-pharmacy-call-check",
     "title": "야간 시간 약국 방문 전 전화로 확인할 질문",

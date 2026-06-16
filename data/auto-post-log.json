@@ -1,6 +1,14 @@
 [
   {
     "date": "2026-06-16",
+    "slot": "evening",
+    "slug": "2026-06-16-evening-weekend-pharmacy-stock-call-check",
+    "title": "주말 약국 방문 전 처방약 재고를 확인하는 질문",
+    "category": "약국",
+    "url": "/news/auto-posts/2026-06-16-evening-weekend-pharmacy-stock-call-check/"
+  },
+  {
+    "date": "2026-06-16",
     "slot": "afternoon",
     "slug": "2026-06-16-afternoon-car-repair-estimate-before-visit",
     "title": "동네 정비소 방문 전 견적 항목을 나눠 묻는 기준",

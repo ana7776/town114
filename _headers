@@ -19,7 +19,6 @@
 
 /ads.txt
   Content-Type: text/plain; charset=utf-8
-  X-Robots-Tag: noindex
 
 /google-search-console-dns.txt
   Content-Type: text/plain; charset=utf-8

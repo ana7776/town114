@@ -3,34 +3,118 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="약국, 주민센터, 주차장, 도서관, 정비소, 전기차 충전소 방문 전에 전화로 물어볼 질문과 확인 이유를 만들어 주는 TOWN114 생활정보 도구입니다." />
+    <meta name="description" content="약국, 주민센터, 주차장, 도서관, 정비소, 전기차 충전소 방문 전에 내 상황을 입력해 전화로 물어볼 질문과 확인 이유를 만드는 TOWN114 생활정보 도구입니다." />
     <meta name="robots" content="index,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
-    <link rel="canonical" href="https://town114.com/tools/visit-question-builder/" />
+    <link rel="canonical" href="https://town114.com/tools/visit-question-builder/" />    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
     <title>방문 전 질문 생성기 | TOWN114</title>
     <link rel="stylesheet" href="../../styles.css" />
   </head>
   <body>
     <header class="site-header"><a class="brand" href="/"><span class="brand-mark">114</span><span><strong>TOWN114</strong><small>방문 전 질문 생성기</small></span></a><nav class="nav-links"><a href="/news/list/">브리핑</a><a href="/#service-directory">생활정보</a><a href="/sources/">자료 출처</a><a href="/contact/">오류 수정</a></nav></header>
     <main>
-      <section class="plain-page tool-hero"><article class="content-page"><p class="eyebrow">Original tool</p><h1>방문 전 질문 생성기</h1><div class="article-meta"><span>직접 구성한 생활정보 도구</span><span>업데이트: 2026-06-10</span></div><p>검색 결과를 보고 바로 이동하기 전에, 내 상황에 맞는 질문을 먼저 정리해 보세요. 카테고리와 방문 상황을 고르면 전화로 물어볼 문장, 현장에서 확인할 항목, 그 질문이 필요한 이유를 함께 보여줍니다.</p></article></section>
-      <section class="tool-section" aria-label="방문 전 질문 생성 도구"><div class="tool-panel"><div class="tool-controls"><label for="visit-category">카테고리</label><select id="visit-category"><option value="pharmacy">약국</option><option value="community">주민센터</option><option value="parking">공영주차장</option><option value="library">도서관</option><option value="repair">자동차 정비소</option><option value="charging">전기차 충전소</option></select><label for="visit-situation">방문 상황</label><select id="visit-situation"><option value="urgent">오늘 바로 방문</option><option value="weekend">주말·야간 방문</option><option value="family">아이·가족 동반</option><option value="cost">비용 확인 필요</option></select></div><div class="tool-result" aria-live="polite"><div><p class="eyebrow">기본 질문</p><h2 id="basic-question"></h2><p id="basic-note"></p></div><div><p class="eyebrow">개선 질문</p><h2 id="better-question"></h2><p id="better-note"></p></div></div><div class="reason-board"><strong>추천 이유</strong><p id="reason-text"></p></div></div></section>
+      <section class="plain-page tool-hero"><article class="content-page"><p class="eyebrow">Original tool</p><h1>방문 전 질문 생성기</h1><div class="article-meta"><span>직접 구성한 생활정보 도구</span><span>업데이트: 2026-06-24</span></div><p>검색 결과를 보고 바로 이동하기 전에, 내 상황에 맞는 질문을 먼저 정리해 보세요. 카테고리와 방문 상황을 고르고 방문 목적을 입력하면 전화로 물어볼 문장, 현장에서 확인할 항목, 그 질문이 필요한 이유를 함께 보여줍니다.</p></article></section>
+      <section class="tool-section" aria-label="방문 전 질문 생성 도구">
+        <div class="tool-panel">
+          <div class="tool-controls">
+            <label for="visit-category">카테고리</label>
+            <select id="visit-category">
+              <option value="pharmacy">약국</option>
+              <option value="community">주민센터</option>
+              <option value="parking">공영주차장</option>
+              <option value="library">도서관</option>
+              <option value="repair">자동차 정비소</option>
+              <option value="charging">전기차 충전소</option>
+            </select>
+            <label for="visit-situation">방문 상황</label>
+            <select id="visit-situation">
+              <option value="urgent">오늘 바로 방문</option>
+              <option value="weekend">주말·야간 방문</option>
+              <option value="family">아이·가족 동반</option>
+              <option value="cost">비용 확인 필요</option>
+            </select>
+          </div>
+
+          <div class="tool-answer-fields">
+            <label for="place-name">방문할 곳</label>
+            <input id="place-name" type="text" placeholder="예: OO약국, OO도서관, 시청 앞 공영주차장" autocomplete="off" />
+            <label for="visit-purpose">방문 목적</label>
+            <input id="visit-purpose" type="text" placeholder="예: 처방 조제, 등본 발급, 2시간 주차, 자료 대출" autocomplete="off" />
+            <label for="arrival-time">도착 예정</label>
+            <input id="arrival-time" type="text" placeholder="예: 오늘 오후 6시 30분, 토요일 오전" autocomplete="off" />
+            <label for="extra-condition">추가 조건</label>
+            <textarea id="extra-condition" rows="3" placeholder="예: 아이 동반, 할인 대상, 대체 장소 필요, 주차 가능 여부 확인"></textarea>
+          </div>
+
+          <div class="tool-result" aria-live="polite">
+            <div>
+              <p class="eyebrow">기본 질문</p>
+              <h2 id="basic-question"></h2>
+              <p id="basic-note"></p>
+            </div>
+            <div>
+              <p class="eyebrow">상황 반영 질문</p>
+              <h2 id="better-question"></h2>
+              <p id="better-note"></p>
+            </div>
+          </div>
+          <div class="reason-board"><strong>확인 이유</strong><p id="reason-text"></p></div>
+        </div>
+      </section>
       <section class="plain-page"><article class="content-page"><h2>카테고리별 질문 예시</h2><table class="check-table"><thead><tr><th>카테고리</th><th>기본 질문</th><th>개선 질문</th></tr></thead><tbody><tr><td>약국</td><td>오늘 여나요?</td><td>지금 처방 조제가 가능하고 몇 시까지 접수해야 하나요?</td></tr><tr><td>주민센터</td><td>서류 발급 되나요?</td><td>이 서류가 본인 신청인지 대리 신청인지, 준비물이 무엇인지 확인해 주세요.</td></tr><tr><td>공영주차장</td><td>요금이 얼마인가요?</td><td>예상 체류 시간 기준 총요금과 할인 적용 조건을 알려 주세요.</td></tr><tr><td>도서관</td><td>오늘 열었나요?</td><td>자료실과 열람실 운영시간이 각각 같은지 확인해 주세요.</td></tr><tr><td>자동차 정비소</td><td>수리 가능한가요?</td><td>증상 점검이 가능하고 공임·부품·추가 비용을 분리한 견적을 받을 수 있나요?</td></tr><tr><td>전기차 충전소</td><td>충전 가능한가요?</td><td>차량 커넥터가 맞고 충전요금과 주차요금이 따로 있는지 확인해 주세요.</td></tr></tbody></table><h2>이 도구를 쓰는 이유</h2><p>지역 생활정보는 위치만으로 충분하지 않습니다. 실제 이용 가능 여부는 운영시간, 접수 마감, 비용 조건, 준비물, 대체 후보에 따라 달라집니다. 질문을 구체적으로 바꾸면 전화 확인 시간이 짧아지고 현장에서 다시 확인해야 하는 항목도 줄어듭니다.</p><div class="related-links"><strong>함께 보면 좋은 기준</strong><a href="/articles/local-life-checklist/">동네 생활시설 방문 전 공통 체크리스트</a><a href="/articles/local-info-scorecard/">동네 생활정보 판단표</a><a href="/news/list/">생활정보 브리핑 목록</a></div></article></section>
     </main>
     <footer class="site-footer"><div><strong>TOWN114</strong><p>방문 전 질문을 구체적으로 바꾸는 생활정보 도구입니다.</p></div><div><span><a href="/about/">소개</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/contact/">문의</a></span></div></footer>
     <script>
       const data = {
-        pharmacy:{label:'약국',basic:'오늘 여나요?',urgent:['지금 처방 조제가 가능하고 몇 시까지 접수해야 하나요?','영업 여부와 실제 조제 가능 시간을 함께 확인합니다.'],weekend:['오늘 실제 운영 종료 시간과 처방 조제 마감 시간이 어떻게 되나요?','주말·야간에는 임시 운영과 조제 마감이 다를 수 있습니다.'],family:['아이 나이와 증상 기준으로 상담이 가능하고 대체 약이 있나요?','아이 약은 복용 연령과 기존 복용약 확인이 중요합니다.'],cost:['처방 조제와 일반 의약품 구매 시 결제 방식 제한이 있나요?','결제 방식과 조제 가능 여부를 함께 확인하면 이동 실패를 줄일 수 있습니다.']},
-        community:{label:'주민센터',basic:'서류 발급 되나요?',urgent:['오늘 접수 마감 전에 이 서류를 발급받을 수 있나요?','운영시간이 남아도 업무 접수는 먼저 끝날 수 있습니다.'],weekend:['평일 방문이 필요한 업무인지, 온라인으로 처리 가능한지 확인해 주세요.','주민센터 업무는 주말 처리되지 않는 경우가 많습니다.'],family:['가족 대리 신청이면 위임장과 관계 증빙이 필요한가요?','본인 신청과 대리 신청은 준비물이 달라집니다.'],cost:['수수료와 결제 방식, 발급 부수를 확인해 주세요.','서류 종류와 부수에 따라 비용이 달라질 수 있습니다.']},
-        parking:{label:'공영주차장',basic:'요금이 얼마인가요?',urgent:['지금 만차 가능성이 있고 가까운 대체 주차장이 있나요?','행사나 점심시간에는 실시간 만차 가능성이 큽니다.'],weekend:['주말·공휴일 요금과 운영시간이 평일과 다른가요?','휴일 운영 조건은 평일과 다를 수 있습니다.'],family:['유모차나 고령자 동선에 맞는 출입구와 엘리베이터가 있나요?','가족 동반 이동은 보행 동선이 중요합니다.'],cost:['예상 체류 시간 기준 총요금과 할인 적용 조건을 알려 주세요.','기본요금보다 추가요금과 최대요금이 실제 비용을 좌우합니다.']},
-        library:{label:'도서관',basic:'오늘 열었나요?',urgent:['자료실과 열람실이 지금 모두 운영 중인가요?','도서관 전체 운영시간과 공간별 시간이 다를 수 있습니다.'],weekend:['주말 운영시간과 정기 휴관, 임시 휴관 공지가 있나요?','주말에는 자료실과 프로그램 운영이 달라질 수 있습니다.'],family:['어린이실 운영시간과 보호자 동반 기준을 확인해 주세요.','어린이실은 일반 자료실과 기준이 다를 수 있습니다.'],cost:['문화강좌 수강료나 주차요금이 따로 있나요?','이용은 무료여도 강좌와 주차에는 비용이 생길 수 있습니다.']},
-        repair:{label:'자동차 정비소',basic:'수리 가능한가요?',urgent:['이 증상으로 오늘 점검이 가능하고 예상 대기 시간이 얼마나 되나요?','정비 가능 여부와 당일 작업 가능 여부는 다릅니다.'],weekend:['주말 작업 가능 항목과 부품 수급 가능 여부를 확인해 주세요.','주말에는 작업 범위가 제한될 수 있습니다.'],family:['대기 공간과 예상 작업 시간이 가족 동반에 적합한가요?','가족 동반 시 대기 시간과 이동 대안이 중요합니다.'],cost:['공임, 부품, 추가 점검 비용을 분리한 견적을 받을 수 있나요?','견적 항목이 분리되어야 비교가 쉬워집니다.']},
-        charging:{label:'전기차 충전소',basic:'충전 가능한가요?',urgent:['지금 사용 가능한 충전기가 있고 내 차량 커넥터와 맞나요?','지도 표시는 실제 충전기 상태와 다를 수 있습니다.'],weekend:['주말에도 주차장 출입과 충전기 이용이 가능한가요?','건물 내부 충전소는 주차장 운영시간의 영향을 받을 수 있습니다.'],family:['충전 중 대기할 공간과 화장실 접근이 괜찮나요?','가족 동반 충전은 대기 환경이 중요합니다.'],cost:['충전요금 외 주차요금과 충전 완료 후 유예 요금이 있나요?','충전 요금 외 비용이 실제 지출을 올릴 수 있습니다.']}
+        pharmacy: { label: "약국", basic: "오늘 여나요?", purpose: "처방 조제", urgent: ["지금 처방 조제가 가능하고 몇 시까지 접수해야 하나요?", "영업 여부와 실제 조제 가능 시간은 다를 수 있습니다."], weekend: ["오늘 실제 운영 종료 시간과 처방 조제 마감 시간은 어떻게 되나요?", "주말·야간에는 임시 운영과 조제 마감이 다를 수 있습니다."], family: ["아이 나이와 증상 기준으로 상담이 가능하고 대체 약이 있나요?", "아이 약은 복용 연령과 기존 복용약 확인이 중요합니다."], cost: ["처방 조제와 일반 의약품 구매 때 결제 방식 제한이 있나요?", "결제 방식과 조제 가능 여부를 함께 확인하면 이동 실패를 줄일 수 있습니다."] },
+        community: { label: "주민센터", basic: "서류 발급 되나요?", purpose: "서류 발급", urgent: ["오늘 접수 마감 전에 필요한 서류를 발급받을 수 있나요?", "운영시간이 남아 있어도 민원 접수는 먼저 끝날 수 있습니다."], weekend: ["평일 방문이 필요한 업무인지, 온라인으로 처리 가능한지 확인해 주세요.", "주민센터 업무는 주말 처리되지 않는 경우가 많습니다."], family: ["가족 대리 신청이면 위임장과 관계 증빙이 필요한가요?", "본인 신청과 대리 신청은 준비물이 달라집니다."], cost: ["수수료와 결제 방식, 발급 부수를 확인해 주세요.", "서류 종류와 부수에 따라 비용이 달라질 수 있습니다."] },
+        parking: { label: "공영주차장", basic: "요금이 얼마인가요?", purpose: "주차 이용", urgent: ["지금 만차 가능성이 있고 가까운 대체 주차장이 있나요?", "행사나 점심시간에는 실시간 만차 가능성이 큽니다."], weekend: ["주말·공휴일 요금과 운영시간이 평일과 다른가요?", "휴일 운영 조건은 평일과 다를 수 있습니다."], family: ["유모차나 고령자 동선에 맞는 출입구와 엘리베이터가 있나요?", "가족 동반 이동은 보행 동선이 중요합니다."], cost: ["예상 체류 시간 기준 총요금과 할인 적용 조건을 알려 주세요.", "기본요금보다 추가요금과 최대요금이 실제 비용을 좌우합니다."] },
+        library: { label: "도서관", basic: "오늘 열었나요?", purpose: "도서관 이용", urgent: ["자료실과 열람실이 지금 모두 운영 중인가요?", "도서관 전체 운영시간과 공간별 시간이 다를 수 있습니다."], weekend: ["주말 운영시간과 정기 휴관, 임시 휴관 공지가 있나요?", "주말에는 자료실과 프로그램 운영이 달라질 수 있습니다."], family: ["어린이자료실 운영시간과 보호자 동반 기준을 확인해 주세요.", "어린이자료실은 일반 자료실과 기준이 다를 수 있습니다."], cost: ["문화강좌 수강료나 주차요금이 따로 있나요?", "이용은 무료여도 강좌와 주차에는 비용이 생길 수 있습니다."] },
+        repair: { label: "자동차 정비소", basic: "수리 가능한가요?", purpose: "차량 점검", urgent: ["이 증상으로 오늘 점검이 가능하고 예상 대기 시간은 얼마나 되나요?", "정비 가능 여부와 당일 작업 가능 여부는 다릅니다."], weekend: ["주말 작업 가능한 항목과 부품 수급 가능 여부를 확인해 주세요.", "주말에는 작업 범위가 제한될 수 있습니다."], family: ["대기 공간과 예상 작업 시간이 가족 동반에 적합한가요?", "가족 동반 때는 대기 시간과 이동 대안이 중요합니다."], cost: ["공임, 부품, 추가 점검 비용을 분리한 견적을 받을 수 있나요?", "견적 항목이 분리되어야 비교가 쉬워집니다."] },
+        charging: { label: "전기차 충전소", basic: "충전 가능한가요?", purpose: "전기차 충전", urgent: ["지금 사용 가능한 충전기가 있고 제 차량 커넥터와 맞나요?", "지도 표시와 실제 충전기 상태는 다를 수 있습니다."], weekend: ["주말에도 주차장 출입과 충전기 이용이 가능한가요?", "건물 안 충전소는 주차장 운영시간 영향을 받을 수 있습니다."], family: ["충전 중 대기할 공간과 화장실 접근이 괜찮나요?", "가족 동반 충전은 대기 환경이 중요합니다."], cost: ["충전요금 외 주차요금과 충전 완료 뒤 유예 요금이 있나요?", "충전요금 외 비용이 실제 지출을 키울 수 있습니다."] }
       };
-      const category=document.getElementById('visit-category'), situation=document.getElementById('visit-situation');
-      const basicQuestion=document.getElementById('basic-question'), basicNote=document.getElementById('basic-note'), betterQuestion=document.getElementById('better-question'), betterNote=document.getElementById('better-note'), reasonText=document.getElementById('reason-text');
-      function renderQuestion(){const selected=data[category.value]; const [question,reason]=selected[situation.value]; basicQuestion.textContent=selected.basic; basicNote.textContent='기본 질문은 짧지만 '+selected.label+' 이용 조건을 충분히 확인하지 못할 수 있습니다.'; betterQuestion.textContent=question; betterNote.textContent='방문 목적과 조건을 함께 말하도록 질문을 바꿨습니다.'; reasonText.textContent=reason;}
-      category.addEventListener('change',renderQuestion); situation.addEventListener('change',renderQuestion); renderQuestion();
+      const category = document.getElementById("visit-category");
+      const situation = document.getElementById("visit-situation");
+      const placeName = document.getElementById("place-name");
+      const visitPurpose = document.getElementById("visit-purpose");
+      const arrivalTime = document.getElementById("arrival-time");
+      const extraCondition = document.getElementById("extra-condition");
+      const basicQuestion = document.getElementById("basic-question");
+      const basicNote = document.getElementById("basic-note");
+      const betterQuestion = document.getElementById("better-question");
+      const betterNote = document.getElementById("better-note");
+      const reasonText = document.getElementById("reason-text");
+
+      function clean(value) {
+        return value.trim();
+      }
+
+      function renderQuestion() {
+        const selected = data[category.value];
+        const [question, reason] = selected[situation.value];
+        const place = clean(placeName.value) || selected.label;
+        const purpose = clean(visitPurpose.value) || selected.purpose;
+        const arrival = clean(arrivalTime.value);
+        const extra = clean(extraCondition.value);
+        const arrivalPart = arrival ? ` ${arrival}에 방문하려고 합니다.` : "";
+        const extraPart = extra ? ` 추가 조건은 ${extra}입니다.` : "";
+
+        basicQuestion.textContent = selected.basic;
+        basicNote.textContent = `기본 질문은 짧지만 ${selected.label} 이용 조건을 충분히 확인하지 못할 수 있습니다.`;
+        betterQuestion.textContent = `${place}에 ${purpose} 때문에 문의드립니다.${arrivalPart}${extraPart} ${question}`;
+        betterNote.textContent = "입력한 방문 목적과 조건을 함께 말하면 운영 여부, 마감 시간, 준비물, 비용을 한 번에 확인하기 쉽습니다.";
+        reasonText.textContent = reason;
+      }
+
+      [category, situation, placeName, visitPurpose, arrivalTime, extraCondition].forEach((element) => {
+        element.addEventListener("input", renderQuestion);
+        element.addEventListener("change", renderQuestion);
+      });
+
+      renderQuestion();
     </script>
   </body>
 </html>

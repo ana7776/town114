@@ -1,0 +1,33 @@
+name: Static site check
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate SEO files
+        run: npm run build
+
+      - name: Check generated files
+        run: |
+          test -s sitemap.xml
+          test -s robots.txt
+          grep -q "https://town114.com/sitemap.xml" robots.txt
+          grep -q "<urlset" sitemap.xml

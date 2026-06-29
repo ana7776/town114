@@ -4,6 +4,34 @@ Use this list when applying for API access at https://www.data.go.kr/.
 Keep issued service keys outside Git and public HTML. Store them in local
 environment variables or deployment secrets only.
 
+## Current setup status
+
+Checked on 2026-06-24:
+
+| Env var | Status | Local snapshot result |
+| --- | --- | --- |
+| `PUBLIC_DATA_SERVICE_KEY` | Set | Shared key available locally |
+| `PARKING_API_URL` | Set | 300 parking rows fetched |
+| `LIBRARY_API_URL` | Set | 300 library rows fetched |
+| `CAR_REPAIR_API_URL` | Set | 300 car-repair rows fetched |
+| `RENTAL_CAR_API_URL` | Set | 300 rental-car rows fetched |
+| `PHARMACY_API_URL` | Set | 81 pharmacy rows fetched |
+| `CIVIL_KIOSK_API_URL` | Missing | Add after approval |
+| `CULTURE_EVENT_API_URL` | Missing | Add after approval |
+| `CULTURE_FACILITY_API_URL` | Missing | Add after approval |
+| `EV_CHARGER_API_URL` | Missing | Add after approval |
+| `CHILDCARE_API_URL` | Missing | Add after approval |
+| `WELFARE_FACILITY_API_URL` | Missing | Add after approval |
+| `WORKNET_JOB_API_URL` | Missing | Add after approval |
+
+After adding more URLs to `.env.local`, run:
+
+```bash
+node scripts/check-public-data-env.mjs
+node scripts/fetch-public-data.mjs
+node scripts/build-public-data-summary.mjs
+```
+
 ## Priority 1: core TOWN114 listings
 
 | Service area | Data.go.kr dataset | Apply? | Suggested env var | Public page use |

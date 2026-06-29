@@ -1,0 +1,1173 @@
+{
+  "updatedAt": "2026-06-29T00:31:43.635Z",
+  "regions": [
+    "서울",
+    "경기",
+    "인천",
+    "부산",
+    "전북",
+    "전라북도",
+    "전주",
+    "군산",
+    "익산",
+    "정읍",
+    "남원"
+  ],
+  "note": "Public visitor-facing summary derived from local public-data snapshot. API keys and raw internal fields are not included.",
+  "totals": {
+    "configuredOk": 5,
+    "snapshotItems": 1281,
+    "publicSampleItems": 100
+  },
+  "services": [
+    {
+      "name": "parking",
+      "label": "공영주차장",
+      "sourceLabel": "전국주차장정보표준데이터",
+      "page": "/services/parking/",
+      "status": "ok",
+      "fetchedAt": "2026-06-24T00:58:32.940Z",
+      "totalCount": 18527,
+      "snapshotCount": 300,
+      "publicSampleCount": 20,
+      "items": [
+        {
+          "name": "청계8가",
+          "region": "서울시설공단 · 서울시설공단",
+          "address": "서울특별시 중구 흥인동 162-1",
+          "phone": "02-2274-2009",
+          "visitNote": "유료 · 평일+토요일+공휴일 · 노상",
+          "baselineDate": "2026-05-15",
+          "latitude": "37.56947694",
+          "longitude": "127.0160616"
+        },
+        {
+          "name": "창전동 임시 공영주차장",
+          "region": "경기도 이천시 · 경기도 이천시청",
+          "address": "경기도 이천시 어재연로 43",
+          "phone": "031-644-2333",
+          "visitNote": "혼합 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-04-23",
+          "latitude": "37.28031803",
+          "longitude": "127.4456086"
+        },
+        {
+          "name": "귤현 공영주차장",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 귤현동 529-4",
+          "phone": "032-262-7715",
+          "visitNote": "유료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5693389081",
+          "longitude": "126.7449666329"
+        },
+        {
+          "name": "동삼하리항",
+          "region": "부산광역시 영도구 · 부산광역시 영도구청",
+          "address": "부산광역시 영도구 하리해안길 17-5",
+          "phone": "051-419-4552",
+          "visitNote": "유료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-04-17",
+          "latitude": "35.06978487",
+          "longitude": "129.0812787"
+        },
+        {
+          "name": "반디행복누리 플랫폼 공영주차장",
+          "region": "전북특별자치도 무주군 · 전북특별자치도 무주군청",
+          "address": "전북특별자치도 무주군 무주읍 적천로 229",
+          "phone": "063-320-2364",
+          "visitNote": "유료 · 평일+토요일+공휴일 · 부설",
+          "baselineDate": "2026-05-07",
+          "latitude": "36.0044290",
+          "longitude": "127.6527370"
+        },
+        {
+          "name": "풍각시장고추전주차장",
+          "region": "경상북도 청도군 · 경상북도 청도군청",
+          "address": "경상북도 청도군 풍각면 송서5길 10",
+          "phone": "054-370-2492",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-04-23",
+          "latitude": "35.64082506",
+          "longitude": "128.6192927"
+        },
+        {
+          "name": "신안군산림조합주차장",
+          "region": "전라남도 신안군 · 전라남도 신안군청",
+          "address": "전라남도 신안군 압해읍 신장리 441-43번지",
+          "phone": "",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-13",
+          "latitude": "",
+          "longitude": ""
+        },
+        {
+          "name": "인화동2가104번지일원 노상주차장",
+          "region": "전북특별자치도 익산시 · 전북특별자치도 익산시청",
+          "address": "전북특별자치도 익산시 인화동2가 104(한씨네 ~ 세영하우징)",
+          "phone": "063-859-5695",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노상",
+          "baselineDate": "2026-04-16",
+          "latitude": "35.9288389497",
+          "longitude": "126.9518396434"
+        },
+        {
+          "name": "조곡천 들풀마당",
+          "region": "전북특별자치도 정읍시 · 전북특별자치도 정읍시청",
+          "address": "전븍특별자치도 정읍시 시기동 364",
+          "phone": "063-539-6833",
+          "visitNote": "유료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-04-17",
+          "latitude": "35.5655208",
+          "longitude": "126.856046"
+        },
+        {
+          "name": "남원식당~생초지리산식당",
+          "region": "경상남도 산청군 · 경상남도 산청군청",
+          "address": "경상남도 산청군 생초면 어서리 249",
+          "phone": "055-970-6752",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-04-22",
+          "latitude": "35.49215691",
+          "longitude": "127.8361598"
+        },
+        {
+          "name": "효성수영장 부설",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 안남로 483 (효성동)",
+          "phone": "032-262-7715",
+          "visitNote": "유료 · 평일+토요일+공휴일 · 부설",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5264947622",
+          "longitude": "126.7105894827"
+        },
+        {
+          "name": "계양구청 부설",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 계산새로 88 (계산동)",
+          "phone": "032-262-7715",
+          "visitNote": "유료 · 평일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5374405602",
+          "longitude": "126.7377600729"
+        },
+        {
+          "name": "계양역 공영주차장",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 다남로 24 (귤현동)",
+          "phone": "032-262-7715",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5716093704",
+          "longitude": "126.7360234007"
+        },
+        {
+          "name": "산아래쉼터 공영주차장",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 하느재로5번길 5 (계산동)",
+          "phone": "032-262-7715",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5439105188",
+          "longitude": "126.7243048245"
+        },
+        {
+          "name": "효성동 273-17",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 효성동 273-17",
+          "phone": "032-262-7715",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5262021867",
+          "longitude": "126.7115798903"
+        },
+        {
+          "name": "효성동 681",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 효성동 681",
+          "phone": "032-262-7715",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5288197764",
+          "longitude": "126.7149436021"
+        },
+        {
+          "name": "효성동 쌈지",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 효성동 172-19,20",
+          "phone": "032-262-7715",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노상",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5294950123",
+          "longitude": "126.7073324521"
+        },
+        {
+          "name": "효성동 81",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 효성동 81",
+          "phone": "032-262-7715",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5323731496",
+          "longitude": "126.7094207598"
+        },
+        {
+          "name": "황어장터(구 장기동1)",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 장기동 139",
+          "phone": "032-262-7715",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5787112679",
+          "longitude": "126.7355658807"
+        },
+        {
+          "name": "장터공원(구 장기동3)",
+          "region": "인천광역시계양구시설관리공단 · 인천광역시 계양구 시설관리공단",
+          "address": "인천광역시 계양구 장기동 144-3",
+          "phone": "032-262-7715",
+          "visitNote": "무료 · 평일+토요일+공휴일 · 노외",
+          "baselineDate": "2026-05-21",
+          "latitude": "37.5794253839",
+          "longitude": "126.7373951483"
+        }
+      ]
+    },
+    {
+      "name": "libraries",
+      "label": "도서관",
+      "sourceLabel": "전국도서관표준데이터",
+      "page": "/services/libraries/",
+      "status": "ok",
+      "fetchedAt": "2026-06-24T00:58:34.272Z",
+      "totalCount": 3554,
+      "snapshotCount": 300,
+      "publicSampleCount": 20,
+      "items": [
+        {
+          "name": "나무작은도서관",
+          "region": "서울특별시 · 노원구 · 서울특별시 노원구",
+          "address": "서울특별시 노원구 동일로1405,1층",
+          "phone": "070-4158-9660",
+          "visitNote": "작은도서관 · 법정공휴일+토+일 · 09:00 · 18:00",
+          "baselineDate": "2026-04-08",
+          "latitude": "37.65383103",
+          "longitude": "127.0601779"
+        },
+        {
+          "name": "서운작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 서운면 서운중앙길 23",
+          "phone": "031-678-0728",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "36.9433061468",
+          "longitude": "127.259551202"
+        },
+        {
+          "name": "만수2동어린이도서관",
+          "region": "인천광역시 · 남동구 · 인천광역시 남동구",
+          "address": "인천광역시 남동구 만수서로 46(만수동)",
+          "phone": "032-453-5741",
+          "visitNote": "공공도서관 · 월+국가지정 공휴일 · 09:00 · 18:00",
+          "baselineDate": "2026-03-16",
+          "latitude": "37.4613894",
+          "longitude": "126.7311617"
+        },
+        {
+          "name": "송정동어린이작은도서관",
+          "region": "부산광역시 · 해운대구 · 부산광역시 해운대구",
+          "address": "부산광역시 해운대구 송정중앙로21번길 20 (송정동)",
+          "phone": "051-749-5896",
+          "visitNote": "작은도서관 · 일+월+공휴일 · 09:00 · 18:00",
+          "baselineDate": "2026-05-13",
+          "latitude": "35.18366028",
+          "longitude": "129.2037147"
+        },
+        {
+          "name": "고슴도치작은도서관",
+          "region": "전북특별자치도 · 부안군 · 전북특별자치도 부안군",
+          "address": "전북특별자치도 부안군 위도면 진리안길 5, 2층",
+          "phone": "063-581-1988",
+          "visitNote": "작은도서관 · 월+일+법정공휴일 · 09:00 · 18:00",
+          "baselineDate": "2026-01-14",
+          "latitude": "35.60260275",
+          "longitude": "126.2930051"
+        },
+        {
+          "name": "순창군립도서관",
+          "region": "전라북도 · 순창군 · 전북특별자치도 순창군",
+          "address": "전라북도 순창군 순창읍 순창5길 18",
+          "phone": "063-650-5678",
+          "visitNote": "공공도서관 · 금+법정공휴일 · 09:00 · 23:00",
+          "baselineDate": "2022-06-15",
+          "latitude": "35.37373471",
+          "longitude": "127.1407399"
+        },
+        {
+          "name": "사랑의 문고",
+          "region": "대전광역시 · 중구 · 대전광역시 중구",
+          "address": "대전광역시 중구 수침로106번길 20, (태평동) 대전주님의교회 3층",
+          "phone": "042-524-1009",
+          "visitNote": "작은도서관 · 월 · 10:00 · 17:00",
+          "baselineDate": "2025-11-12",
+          "latitude": "36.32904345",
+          "longitude": "127.3999783"
+        },
+        {
+          "name": "회현작은도서관",
+          "region": "전북특별자치도 · 군산시 · 전북특별자치도 군산시",
+          "address": "전북특별자치도 군산시 회현면 회현로 181",
+          "phone": "063-454-5718",
+          "visitNote": "작은도서관 · 매주 일요일+국가지정 공휴일 · 09:00 · 18:00",
+          "baselineDate": "2025-10-01",
+          "latitude": "35.91330022",
+          "longitude": "126.7568927"
+        },
+        {
+          "name": "영등도서관",
+          "region": "전북특별자치도 · 익산시 · 전북특별자치도 익산시",
+          "address": "전북특별자치도 익산시 궁동로 57",
+          "phone": "063-859-4661",
+          "visitNote": "공공도서관 · 매주 월요일+일요일을 제외한 법정 공휴일 · 07:00 · 22:00",
+          "baselineDate": "2025-06-30",
+          "latitude": "35.962916",
+          "longitude": "126.977744"
+        },
+        {
+          "name": "송악도서관",
+          "region": "제주특별자치도 · 서귀포시 · 제주특별자치도교육청",
+          "address": "제주특별자치도 서귀포시 대정읍 동일하모로149번길 12",
+          "phone": "064-798-6800",
+          "visitNote": "공공도서관 · 매주 월요일+관공서 공휴일(일요일 제외)+12월31일 · 08:00 · 22:00",
+          "baselineDate": "2026-03-20",
+          "latitude": "33.22659364",
+          "longitude": "126.2491306"
+        },
+        {
+          "name": "제남도서관",
+          "region": "제주특별자치도 · 서귀포시 · 제주특별자치도교육청",
+          "address": "제주특별자치도 서귀포시 남원읍 남원체육관로 183",
+          "phone": "064-766-4600",
+          "visitNote": "공공도서관 · 매주 월요일+관공서 공휴일(일요일 제외)+12월31일 · 08:00 · 22:00",
+          "baselineDate": "2026-03-20",
+          "latitude": "33.27956449",
+          "longitude": "126.7049582"
+        },
+        {
+          "name": "원곡작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 원곡면 가천중앙1길 46",
+          "phone": "031-678-0724",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "37.0394285685",
+          "longitude": "127.1294469"
+        },
+        {
+          "name": "미양작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 미양면 양지길 29",
+          "phone": "031-678-0722",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "36.9753583473",
+          "longitude": "127.2153353993"
+        },
+        {
+          "name": "양성작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 양성면 읍내길 21",
+          "phone": "031-678-0721",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "37.06005113",
+          "longitude": "127.1946201"
+        },
+        {
+          "name": "대림동산작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 공도읍 대림동산길 38",
+          "phone": "070-4942-0049",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "37.01417739",
+          "longitude": "127.2031143"
+        },
+        {
+          "name": "삼죽작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 삼죽면 삼죽로 112",
+          "phone": "031-671-7940",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "37.0732062788",
+          "longitude": "127.3749052"
+        },
+        {
+          "name": "죽산작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 죽산면 중부길 41",
+          "phone": "031-677-7941",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "37.07700612",
+          "longitude": "127.4238612"
+        },
+        {
+          "name": "태산작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 공도읍 벚꽃길 36",
+          "phone": "031-618-0084",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "36.99983648",
+          "longitude": "127.1541057"
+        },
+        {
+          "name": "풍림작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 공도읍 서동대로 4079",
+          "phone": "031-618-0062",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "36.99829661",
+          "longitude": "127.1588306"
+        },
+        {
+          "name": "부영작은도서관",
+          "region": "경기도 · 안성시 · 경기도 안성시",
+          "address": "경기도 안성시 공도읍 만수로 31",
+          "phone": "031-618-0089",
+          "visitNote": "작은도서관 · 1)매주일요일 2)매주 월요일 3)국가지정공휴일 · 10:00 · 19:00",
+          "baselineDate": "2026-03-12",
+          "latitude": "37.00889641",
+          "longitude": "127.1837266"
+        }
+      ]
+    },
+    {
+      "name": "car-repair",
+      "label": "자동차 정비소",
+      "sourceLabel": "전국자동차정비업체표준데이터",
+      "page": "/services/car-repair/",
+      "status": "ok",
+      "fetchedAt": "2026-06-24T00:58:39.918Z",
+      "totalCount": 36163,
+      "snapshotCount": 300,
+      "publicSampleCount": 20,
+      "items": [
+        {
+          "name": "오토메틱코리아",
+          "region": "서울특별시 성북구 · 서울특별시 성북구청",
+          "address": "서울특별시 성북구 한천로 565(석관동)",
+          "phone": "02-6401-5656",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-04-03",
+          "latitude": "37.610258",
+          "longitude": "127.0629498"
+        },
+        {
+          "name": "좋은합성오일자동차공업사",
+          "region": "경기도 광명시 · 경기도 광명시청",
+          "address": "경기도 광명시 오리로 1028-1",
+          "phone": "02-2688-6451",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-04-14",
+          "latitude": "37.48111511",
+          "longitude": "126.8492687"
+        },
+        {
+          "name": "한국GM송도바로서비스",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 앵고개로 165(동춘동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.412612",
+          "longitude": "126.6638692"
+        },
+        {
+          "name": "센텀현대서비스",
+          "region": "부산광역시 해운대구 · 부산광역시 해운대구청 교통행정과",
+          "address": "부산광역시 해운대구 선수촌로157번길 10(반여동)",
+          "phone": "051-532-9978",
+          "visitNote": "2 · 1 · 09:00 · 19:30",
+          "baselineDate": "2026-05-18",
+          "latitude": "35.2075028",
+          "longitude": "129.1221822"
+        },
+        {
+          "name": "희망카쎈타",
+          "region": "전북특별자치도 임실군 · 전북특별자치도 임실군청",
+          "address": "전북특별자치도 임실군 신덕면 신덕평로 719",
+          "phone": "063-643-1134",
+          "visitNote": "3 · 1 · 09:00 · 18:00",
+          "baselineDate": "2026-05-07",
+          "latitude": "35.6739281535",
+          "longitude": "127.1619944143"
+        },
+        {
+          "name": "장학건설기계공업사",
+          "region": "전북특별자치도 순창군 · 전라북도 순창군",
+          "address": "전라북도 순창군 순창읍 담순로 1512",
+          "phone": "",
+          "visitNote": "03 · 01",
+          "baselineDate": "2022-06-15",
+          "latitude": "35.379355",
+          "longitude": "127.1603627"
+        },
+        {
+          "name": "정일카센타",
+          "region": "전북특별자치도 전주시 · 전북특별자치도 전주시 덕진구청",
+          "address": "전북특별자치도 전주시 덕진구 명주5길 20-6",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2025-02-10",
+          "latitude": "35.84414208",
+          "longitude": "127.1503264"
+        },
+        {
+          "name": "㈜지오하우스",
+          "region": "전북특별자치도 군산시 · 전북특별자치도 군산시청",
+          "address": "전북특별자치도 군산시 번영로 105",
+          "phone": "063-451-8500",
+          "visitNote": "2 · 1 · 10:00 · 18:00",
+          "baselineDate": "2025-12-05",
+          "latitude": "35.96889009",
+          "longitude": "126.7323276"
+        },
+        {
+          "name": "익산 살림보링",
+          "region": "전북특별자치도 익산시 · 전북특별자치도 익산시청 교통행정과",
+          "address": "전북특별자치도 익산시 황등면 도선길 79-1",
+          "phone": "",
+          "visitNote": "4 · 01",
+          "baselineDate": "2025-12-24",
+          "latitude": "35.99682294",
+          "longitude": "126.9544008"
+        },
+        {
+          "name": "현대자동차우정점",
+          "region": "경기도 화성시 · 경기도 화성시 차량등록과",
+          "address": "경기도 화성시 만세구 우정읍 기아자동차로 541",
+          "phone": "",
+          "visitNote": "03 · 01",
+          "baselineDate": "2026-02-01",
+          "latitude": "37.17817502",
+          "longitude": "126.8168244"
+        },
+        {
+          "name": "자동차나라",
+          "region": "전북특별자치도 남원시 · 전북특별자치도 남원시청",
+          "address": "전북특별자치도 남원시 동림로 50",
+          "phone": "063-625-4420",
+          "visitNote": "3 · 1 · 09:00 · 18:00",
+          "baselineDate": "2025-11-04",
+          "latitude": "35.413162",
+          "longitude": "127.388114"
+        },
+        {
+          "name": "아우토반자동차공업사",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 비류대로278번길 8-22(청학동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.426428",
+          "longitude": "126.6641412"
+        },
+        {
+          "name": "공임나라인천청학점",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 비류대로294번길 6-8(청학동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.425913",
+          "longitude": "126.6667784"
+        },
+        {
+          "name": "옥련점현대자동차",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 한나루로 153(옥련동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.423729",
+          "longitude": "126.654368"
+        },
+        {
+          "name": "한국지엠연수바로서비스",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 비류대로321번길 2-5(연수동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.425436",
+          "longitude": "126.670661"
+        },
+        {
+          "name": "우정카센타",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 학나래로118번길 23(선학동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.42734952",
+          "longitude": "126.698476"
+        },
+        {
+          "name": "미진자동차공업사",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 새말로 38(연수동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.42182403",
+          "longitude": "126.675153"
+        },
+        {
+          "name": "현대카세차장",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 새말로 74(연수동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.41941306",
+          "longitude": "126.677845"
+        },
+        {
+          "name": "GS오토오아시스 연수점",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 용담로 58(청학동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.418727",
+          "longitude": "126.673493"
+        },
+        {
+          "name": "르노삼성자동차서비스코너 송도점",
+          "region": "인천광역시 연수구 · 인천광역시 연수구청",
+          "address": "인천광역시 연수구 능허대로 261(동춘동)",
+          "phone": "",
+          "visitNote": "3 · 1",
+          "baselineDate": "2026-03-31",
+          "latitude": "37.413427",
+          "longitude": "126.653672"
+        }
+      ]
+    },
+    {
+      "name": "rental-cars",
+      "label": "렌터카",
+      "sourceLabel": "전국렌터카업체정보표준데이터",
+      "page": "/services/rental-cars/",
+      "status": "ok",
+      "fetchedAt": "2026-06-24T00:58:40.757Z",
+      "totalCount": 2137,
+      "snapshotCount": 300,
+      "publicSampleCount": 20,
+      "items": [
+        {
+          "name": "㈜씨앤피렌터카",
+          "region": "경기도 부천시",
+          "address": "경기도 부천시 원미구 송내대로 388",
+          "phone": "1661-2202",
+          "visitNote": "주사업장 · 53 · 41 · 12",
+          "baselineDate": "2026-03-24",
+          "latitude": "37.51687135",
+          "longitude": "126.7622683"
+        },
+        {
+          "name": "삼영렌트카㈜",
+          "region": "충청남도 천안시",
+          "address": "충청남도 천안시 서북구 쌍용대로 73",
+          "phone": "041-571-3040",
+          "visitNote": "주사업장 · 159 · 116 · 43",
+          "baselineDate": "2026-03-20",
+          "latitude": "36.804042",
+          "longitude": "127.131782"
+        },
+        {
+          "name": "㈜중호렌트카",
+          "region": "경기도 부천시",
+          "address": "경기도 부천시 원미구 길주로121번길 17-28",
+          "phone": "0507-1341-208",
+          "visitNote": "주사업장 · 49 · 41 · 8",
+          "baselineDate": "2026-03-24",
+          "latitude": "37.5068364037",
+          "longitude": "126.7550656634"
+        },
+        {
+          "name": "㈜마이오토링크",
+          "region": "부산광역시 수영구",
+          "address": "부산광역시 수영구 황령대로 505, 1층(남천동)",
+          "phone": "1566-2277",
+          "visitNote": "주사업장 · 147 · 147 · 0",
+          "baselineDate": "2026-05-01",
+          "latitude": "35.13759118",
+          "longitude": "129.1089789"
+        },
+        {
+          "name": "하늘모빌리티㈜",
+          "region": "전북특별자치도 군산시",
+          "address": "전북특별자치도 군산시 월명로 142",
+          "phone": "063-451-0303",
+          "visitNote": "주사업장 · 60 · 55 · 5",
+          "baselineDate": "2026-03-30",
+          "latitude": "35.956450",
+          "longitude": "126.7160247"
+        },
+        {
+          "name": "뉴드림렌터카",
+          "region": "전북특별자치도 순창군",
+          "address": "전라북도 순창군 순창읍 신기길 31-3",
+          "phone": "063-653-7240",
+          "visitNote": "영업소 · 8 · 6 · 2",
+          "baselineDate": "2022-06-15",
+          "latitude": "35.38791525",
+          "longitude": "127.1403049"
+        },
+        {
+          "name": "마스타자동차관리(주)",
+          "region": "서울특별시 서초구",
+          "address": "전북특별자치도 전주시 덕진구 신복1길 40",
+          "phone": "02-590-7260",
+          "visitNote": "영업소 · 0 · 0 · 0",
+          "baselineDate": "2026-02-19",
+          "latitude": "35.85326417",
+          "longitude": "127.1077484"
+        },
+        {
+          "name": "㈜스마트렌터카",
+          "region": "전북특별자치도 전주시",
+          "address": "전북특별자치도 전주시 덕진구 전주천동로 500(금암동)",
+          "phone": "063-272-7710",
+          "visitNote": "주사업장 · 59 · 57 · 2",
+          "baselineDate": "2025-08-06",
+          "latitude": "35.83667009",
+          "longitude": "127.1311069"
+        },
+        {
+          "name": "(주)도도렌트카",
+          "region": "서울특별시 서초구",
+          "address": "전북특별자치도 정읍시 문학길 6-3 (연지동)",
+          "phone": "02-3461-1437",
+          "visitNote": "영업소 · 15 · 12 · 3",
+          "baselineDate": "2026-02-19",
+          "latitude": "35.56883088",
+          "longitude": "126.8449433"
+        },
+        {
+          "name": "㈜신현대렌트카",
+          "region": "강원특별자치도 원주시",
+          "address": "강원특별자치도 원주시 판부면 남원로 246-10",
+          "phone": "000-000-0000",
+          "visitNote": "영업소 · 6 · 5 · 1",
+          "baselineDate": "2025-11-25",
+          "latitude": "37.31244452",
+          "longitude": "127.9298375"
+        },
+        {
+          "name": "미소렌터카㈜",
+          "region": "전북특별자치도 군산시",
+          "address": "전북특별자치도 군산시 계산로 96-13",
+          "phone": "063-467-8811",
+          "visitNote": "주사업장 · 157 · 150 · 7",
+          "baselineDate": "2026-03-30",
+          "latitude": "35.95037497",
+          "longitude": "126.7151676"
+        },
+        {
+          "name": "(유)현대렌트카",
+          "region": "전북특별자치도 군산시",
+          "address": "전북특별자치도 군산시 번영로 454",
+          "phone": "063-442-7474",
+          "visitNote": "주사업장 · 211 · 187 · 24",
+          "baselineDate": "2026-03-30",
+          "latitude": "35.96228537",
+          "longitude": "126.7672965"
+        },
+        {
+          "name": "(유)세진렌트카",
+          "region": "전북특별자치도 군산시",
+          "address": "전북특별자치도 군산시 진포로 116-6",
+          "phone": "063-466-5555",
+          "visitNote": "주사업장 · 196 · 175 · 21",
+          "baselineDate": "2026-03-30",
+          "latitude": "35.96858016",
+          "longitude": "126.7333036"
+        },
+        {
+          "name": "그린렌터카",
+          "region": "경기도 광명시",
+          "address": "경기도 광명시 오리로651번길 6",
+          "phone": "02-2615-6949",
+          "visitNote": "주사업장 · 134 · 129 · 5",
+          "baselineDate": "2026-04-14",
+          "latitude": "37.4595010575",
+          "longitude": "126.876184875"
+        },
+        {
+          "name": "지렌트카",
+          "region": "경기도 광명시",
+          "address": "경기도 광명시 범안로 992",
+          "phone": "02-898-1858",
+          "visitNote": "주사업장 · 252 · 239 · 13",
+          "baselineDate": "2026-04-14",
+          "latitude": "37.45919088",
+          "longitude": "126.8745105"
+        },
+        {
+          "name": "세븐렌탈㈜",
+          "region": "경기도 부천시",
+          "address": "경기도 부천시 원미구 부일로205번길 26",
+          "phone": "070-7644-7777",
+          "visitNote": "주사업장 · 477 · 460 · 17",
+          "baselineDate": "2026-03-24",
+          "latitude": "37.48961819",
+          "longitude": "126.7532798"
+        },
+        {
+          "name": "㈜피제이렌트카",
+          "region": "경기도 부천시",
+          "address": "경기도 부천시 원미구 상동로 84",
+          "phone": "032-322-7936",
+          "visitNote": "주사업장 · 479 · 466 · 13",
+          "baselineDate": "2026-03-24",
+          "latitude": "37.5045106",
+          "longitude": "126.7534856"
+        },
+        {
+          "name": "㈜신한렌터카",
+          "region": "경기도 부천시",
+          "address": "경기도 부천시 소사구 송내대로39번길 51",
+          "phone": "032-667-3506",
+          "visitNote": "주사업장 · 98 · 92 · 6",
+          "baselineDate": "2026-03-24",
+          "latitude": "37.48722821",
+          "longitude": "126.7504181"
+        },
+        {
+          "name": "㈜마이카렌트카",
+          "region": "경기도 부천시",
+          "address": "경기도 부천시 원미구 길주로77번길 55-25",
+          "phone": "032-324-8885",
+          "visitNote": "주사업장 · 51 · 48 · 3",
+          "baselineDate": "2026-03-24",
+          "latitude": "37.50724164",
+          "longitude": "126.7507003"
+        },
+        {
+          "name": "㈜카이스트",
+          "region": "경기도 부천시",
+          "address": "경기도 부천시 원미구 옥산로 7",
+          "phone": "032-329-1544",
+          "visitNote": "주사업장 · 55 · 55 · 0",
+          "baselineDate": "2026-03-24",
+          "latitude": "37.49538812",
+          "longitude": "126.7792269"
+        }
+      ]
+    },
+    {
+      "name": "pharmacies",
+      "label": "약국",
+      "sourceLabel": "약국정보서비스",
+      "page": "/services/pharmacies/",
+      "status": "ok",
+      "fetchedAt": "2026-06-24T00:58:41.578Z",
+      "totalCount": null,
+      "snapshotCount": 81,
+      "publicSampleCount": 20,
+      "items": [
+        {
+          "name": "대도약국",
+          "region": "서울 · 종로구 · 견지동",
+          "address": "서울특별시 종로구 우정국로 38-1, 1층 (견지동)",
+          "phone": "02-737-4510",
+          "visitNote": "약국",
+          "baselineDate": "19900516",
+          "latitude": "37.5724922",
+          "longitude": "126.9832750"
+        },
+        {
+          "name": "메디팜정연약국",
+          "region": "서울 · 강남구 · 도곡동",
+          "address": "서울특별시 강남구 강남대로 256, 103호 (도곡동, 대우양재디오빌)",
+          "phone": "02-522-5925",
+          "visitNote": "약국",
+          "baselineDate": "20121231",
+          "latitude": "37.4864916",
+          "longitude": "127.0335456"
+        },
+        {
+          "name": "진선약국",
+          "region": "서울 · 강남구 · 대치동",
+          "address": "서울특별시 강남구 선릉로 424, (대치동)",
+          "phone": "567-0429",
+          "visitNote": "약국",
+          "baselineDate": "19870512",
+          "latitude": "37.5029179",
+          "longitude": "127.0500875"
+        },
+        {
+          "name": "국민약국",
+          "region": "서울 · 강서구 · 화곡동",
+          "address": "서울특별시 강서구 곰달래로 225, 1,2층 (화곡동)",
+          "phone": "02-2602-4711",
+          "visitNote": "약국",
+          "baselineDate": "19821105",
+          "latitude": "37.5318488",
+          "longitude": "126.8580318"
+        },
+        {
+          "name": "더현대약국",
+          "region": "경기 · 여주시 · 가남읍",
+          "address": "경기도 여주시 가남읍 태평로 62, 1층",
+          "phone": "",
+          "visitNote": "약국",
+          "baselineDate": "20230425",
+          "latitude": "37.2053239",
+          "longitude": "127.5437799"
+        },
+        {
+          "name": "직영약국",
+          "region": "서울 · 강북구 · 미아동",
+          "address": "서울특별시 강북구 도봉로67길 13, (미아동)",
+          "phone": "02-989-2370",
+          "visitNote": "약국",
+          "baselineDate": "19980807",
+          "latitude": "37.6305897",
+          "longitude": "127.0235512"
+        },
+        {
+          "name": "새서울약국",
+          "region": "서울 · 강북구 · 미아동",
+          "address": "서울특별시 강북구 솔샘로 223, (미아동)",
+          "phone": "02-981-8215",
+          "visitNote": "약국",
+          "baselineDate": "20221011",
+          "latitude": "37.6202822",
+          "longitude": "127.0175897"
+        },
+        {
+          "name": "진하약국",
+          "region": "부산 · 부산기장군 · 일광읍",
+          "address": "부산광역시 기장군 일광읍 일광로 609, (일광읍)",
+          "phone": "051-728-6123",
+          "visitNote": "약국",
+          "baselineDate": "20130510",
+          "latitude": "35.2965245",
+          "longitude": "129.2587409"
+        },
+        {
+          "name": "금창약국",
+          "region": "서울 · 동대문구 · 제기동",
+          "address": "서울특별시 동대문구 약령시로 3, 1층 (제기동)",
+          "phone": "928-6985",
+          "visitNote": "약국",
+          "baselineDate": "20141208",
+          "latitude": "37.5828078",
+          "longitude": "127.0301301"
+        },
+        {
+          "name": "석산약국",
+          "region": "서울 · 성북구 · 하월곡동",
+          "address": "서울특별시 성북구 오패산로1길 1, (하월곡동)",
+          "phone": "02-912-2020",
+          "visitNote": "약국",
+          "baselineDate": "19800207",
+          "latitude": "37.6034744",
+          "longitude": "127.0368415"
+        },
+        {
+          "name": "왕십리약국",
+          "region": "서울 · 성동구 · 하왕십리동",
+          "address": "서울특별시 성동구 무학봉길 92, (하왕십리동)",
+          "phone": "02-2292-4247",
+          "visitNote": "약국",
+          "baselineDate": "19820726",
+          "latitude": "37.5622059",
+          "longitude": "127.0322163"
+        },
+        {
+          "name": "더사랑약국",
+          "region": "인천 · 인천서구 · 가정동",
+          "address": "인천광역시 서구 가경주로40번길 20-10, 1호 (가정동)",
+          "phone": "070-4388-5131",
+          "visitNote": "약국",
+          "baselineDate": "20190103",
+          "latitude": "37.5163566",
+          "longitude": "126.6758308"
+        },
+        {
+          "name": "더조은약국",
+          "region": "인천 · 인천서구 · 당하동",
+          "address": "인천광역시 서구 원당대로 856, 마크포레스트 어반 B102호 (당하동)",
+          "phone": "032-562-9270",
+          "visitNote": "약국",
+          "baselineDate": "20230904",
+          "latitude": "37.5933070",
+          "longitude": "126.6965865"
+        },
+        {
+          "name": "라라약국",
+          "region": "서울 · 관악구 · 신림동",
+          "address": "서울특별시 관악구 남부순환로 1619, 영일빌딩 1층 (신림동)",
+          "phone": "",
+          "visitNote": "약국",
+          "baselineDate": "20240927",
+          "latitude": "37.4846557",
+          "longitude": "126.9305190"
+        },
+        {
+          "name": "참조은약국",
+          "region": "서울 · 동작구 · 신대방동",
+          "address": "서울특별시 동작구 보라매로 105, 101호 (신대방동)",
+          "phone": "02-3280-0702",
+          "visitNote": "약국",
+          "baselineDate": "20251021",
+          "latitude": "37.4986636",
+          "longitude": "126.9277740"
+        },
+        {
+          "name": "화생약국",
+          "region": "서울 · 성동구 · 금호동1가",
+          "address": "서울특별시 성동구 행당로 1, 103호 (금호동1가)",
+          "phone": "02-2293-4858",
+          "visitNote": "약국",
+          "baselineDate": "20090504",
+          "latitude": "37.5548181",
+          "longitude": "127.0203600"
+        },
+        {
+          "name": "길목약국",
+          "region": "인천 · 인천부평구 · 부개동",
+          "address": "인천광역시 부평구 길주남로101번길 4-20, (부개동)",
+          "phone": "032-512-0008",
+          "visitNote": "약국",
+          "baselineDate": "19901228",
+          "latitude": "37.5045174",
+          "longitude": "126.7341635"
+        },
+        {
+          "name": "이층약국",
+          "region": "서울 · 은평구 · 역촌동",
+          "address": "서울특별시 은평구 연서로 9, 2층 205(상가)호 (역촌동, 센타폴리스)",
+          "phone": "02-6085-0466",
+          "visitNote": "약국",
+          "baselineDate": "20180207",
+          "latitude": "37.6001182",
+          "longitude": "126.9156678"
+        },
+        {
+          "name": "21세기상계약국",
+          "region": "서울 · 노원구 · 상계동",
+          "address": "서울특별시 노원구 동일로 1548, (상계동)",
+          "phone": "937-2288",
+          "visitNote": "약국",
+          "baselineDate": "20050401",
+          "latitude": "37.6666795",
+          "longitude": "127.0576424"
+        },
+        {
+          "name": "석계이화약국",
+          "region": "서울 · 노원구 · 월계동",
+          "address": "서울특별시 노원구 화랑로 337, 106호, 107호 (월계동, 인현빌딩)",
+          "phone": "941-3838",
+          "visitNote": "약국",
+          "baselineDate": "20110531",
+          "latitude": "37.6152426",
+          "longitude": "127.0651817"
+        }
+      ]
+    },
+    {
+      "name": "civil-kiosks",
+      "label": "무인민원발급기정보 조회서비스",
+      "sourceLabel": "무인민원발급기정보 조회서비스",
+      "page": "",
+      "status": "missing_url",
+      "fetchedAt": "2026-06-24T00:58:41.578Z",
+      "totalCount": null,
+      "snapshotCount": 0,
+      "publicSampleCount": 0,
+      "items": []
+    },
+    {
+      "name": "culture-events",
+      "label": "문화행사 정보",
+      "sourceLabel": "문화행사 정보",
+      "page": "",
+      "status": "missing_url",
+      "fetchedAt": "2026-06-24T00:58:41.578Z",
+      "totalCount": null,
+      "snapshotCount": 0,
+      "publicSampleCount": 0,
+      "items": []
+    },
+    {
+      "name": "culture-facilities",
+      "label": "문화시설 정보",
+      "sourceLabel": "문화시설 정보",
+      "page": "",
+      "status": "missing_url",
+      "fetchedAt": "2026-06-24T00:58:41.578Z",
+      "totalCount": null,
+      "snapshotCount": 0,
+      "publicSampleCount": 0,
+      "items": []
+    },
+    {
+      "name": "ev-chargers",
+      "label": "전기자동차 충전소 정보",
+      "sourceLabel": "전기자동차 충전소 정보",
+      "page": "",
+      "status": "missing_url",
+      "fetchedAt": "2026-06-24T00:58:41.578Z",
+      "totalCount": null,
+      "snapshotCount": 0,
+      "publicSampleCount": 0,
+      "items": []
+    },
+    {
+      "name": "childcare",
+      "label": "어린이집 정보",
+      "sourceLabel": "어린이집 정보",
+      "page": "",
+      "status": "missing_url",
+      "fetchedAt": "2026-06-24T00:58:41.578Z",
+      "totalCount": null,
+      "snapshotCount": 0,
+      "publicSampleCount": 0,
+      "items": []
+    },
+    {
+      "name": "welfare-facilities",
+      "label": "사회복지시설 정보",
+      "sourceLabel": "사회복지시설 정보",
+      "page": "",
+      "status": "missing_url",
+      "fetchedAt": "2026-06-24T00:58:41.578Z",
+      "totalCount": null,
+      "snapshotCount": 0,
+      "publicSampleCount": 0,
+      "items": []
+    },
+    {
+      "name": "worknet-jobs",
+      "label": "워크넷 채용정보",
+      "sourceLabel": "워크넷 채용정보",
+      "page": "",
+      "status": "missing_url",
+      "fetchedAt": "2026-06-24T00:58:41.578Z",
+      "totalCount": null,
+      "snapshotCount": 0,
+      "publicSampleCount": 0,
+      "items": []
+    }
+  ]
+}

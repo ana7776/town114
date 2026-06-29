@@ -6,17 +6,22 @@ import { fileURLToPath } from "node:url";
 const scriptDir = dirname(fileURLToPath(import.meta.url));
 const root = normalize(join(scriptDir, ".."));
 const slotArg = process.argv.find((arg) => arg.startsWith("--slot="))?.split("=")[1];
+const dateArg = process.argv.find((arg) => arg.startsWith("--date="))?.split("=")[1];
 const dryRun = process.argv.includes("--dry-run");
 const slot = slotArg || (new Date().getHours() < 18 ? "afternoon" : "evening");
 
-const dateParts = new Intl.DateTimeFormat("en-CA", {
+const dateParts = dateArg ? null : new Intl.DateTimeFormat("en-CA", {
   timeZone: "Asia/Seoul",
   year: "numeric",
   month: "2-digit",
   day: "2-digit",
 }).formatToParts(new Date());
 const part = (type) => dateParts.find((item) => item.type === type)?.value || "";
-const date = `${part("year")}-${part("month")}-${part("day")}`;
+const date = dateArg || `${part("year")}-${part("month")}-${part("day")}`;
+
+if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+  throw new Error(`Invalid date. Use --date=YYYY-MM-DD, got: ${date}`);
+}
 
 function escapeHtml(value) {
   return String(value)

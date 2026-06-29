@@ -1,0 +1,57 @@
+name: Crawl images to Cloudflare R2
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Run without uploading to R2"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+      limit:
+        description: "Maximum images to process"
+        required: false
+        default: "30"
+
+jobs:
+  crawl-images:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET }}
+      R2_PUBLIC_BASE_URL: ${{ secrets.R2_PUBLIC_BASE_URL }}
+      R2_IMAGE_PREFIX: ${{ vars.R2_IMAGE_PREFIX || 'images/crawled' }}
+      IMAGE_CRAWL_SOURCES: ${{ vars.IMAGE_CRAWL_SOURCES }}
+      IMAGE_WEBP_MAX_WIDTH: ${{ vars.IMAGE_WEBP_MAX_WIDTH || '1600' }}
+      IMAGE_WEBP_QUALITY: ${{ vars.IMAGE_WEBP_QUALITY || '80' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Crawl, convert, and upload images
+        run: |
+          ARGS="--limit=${{ inputs.limit }}"
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            ARGS="$ARGS --dry-run"
+          fi
+          npm run images:r2 -- $ARGS
+
+      - name: Upload manifest artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: r2-image-manifest
+          path: data/r2-image-manifest.json

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="TOWN114는 약국, 공영주차장, 도서관, 자동차 정비소, 주민센터처럼 자주 찾는 지역 생활시설을 방문 전 확인 기준과 공식 자료 확인 순서로 정리하는 로컬 생활정보 가이드입니다."
+      content="TOWN114는 약국, 공영주차장, 도서관, 자동차 정비소, 주민센터, 생활폐기물 배출, 지역 공지처럼 자주 찾는 생활정보를 방문 전 확인 기준과 공식 자료 확인 순서로 정리하는 로컬 생활정보 가이드입니다."
     />
     <meta name="robots" content="index,follow" />
     <meta name="naver-site-verification" content="b1956b391871ef877fb21e667e768276d76c6654" />
@@ -15,12 +15,15 @@
     <meta property="og:title" content="TOWN114 | 지역 생활시설 검색과 방문 전 확인 가이드" />
     <meta
       property="og:description"
-      content="약국, 주차장, 도서관, 정비소, 주민센터를 이용하기 전 운영시간, 요금, 준비물, 데이터 기준일을 함께 확인합니다."
+      content="약국, 주차장, 도서관, 정비소, 주민센터, 생활폐기물 배출과 지역 공지를 확인하기 전 운영시간, 요금, 준비물, 기준일을 함께 확인합니다."
     />
     <meta property="og:url" content="https://town114.com/" />
     <meta property="og:image" content="https://town114.com/assets/town114-local-guide-hero.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="alternate" type="application/rss+xml" title="TOWN114 생활정보 업데이트" href="https://town114.com/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="TOWN114 생활정보 업데이트" href="https://town114.com/feed.xml" />    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
     <title>TOWN114 | 지역 생활시설 검색과 방문 전 확인 가이드</title>
     <link rel="stylesheet" href="styles.css" />
     <script type="application/ld+json">
@@ -60,36 +63,75 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="/" aria-label="TOWN114 home">
-        <span class="brand-mark">114</span>
-        <span>
-          <strong>TOWN114</strong>
-          <small>지역 생활정보 가이드</small>
+      <a class="brand town-brand" href="/" aria-label="Town114 home">
+        <span class="town-pin" aria-hidden="true"></span>
+        <span class="town-logo-stack">
+          <span class="town-word"><strong>Town</strong><b>114</b></span>
+          <small>우리동네 생활정보</small>
         </span>
       </a>
 
       <nav class="nav-links" aria-label="Primary navigation">
-        <a href="/services/pharmacies/">생활편의</a>
-        <a href="/services/community-centers/">공공시설</a>
-        <a href="/services/parking/">자동차·주차</a>
-        <a href="/services/libraries/">가족·복지</a>
-        <a href="/news/list/">생활 브리핑</a>
-        <a href="#regional-guides">지역별 보기</a>
-        <a href="/sources/">자료 출처</a>
-        <a href="/contact/">오류 수정</a>
+        <a href="#service-directory">생활정보</a>
+        <a href="#regional-guides">지역별 정보</a>
+        <a href="#topic-hubs">테마 정보</a>
+        <a href="#life-briefing">생활 브리핑</a>
+        <a href="/sources/">이용 안내</a>
       </nav>
+      <form class="header-search" action="/sitemap/" method="get" role="search">
+        <label for="header-site-search">검색</label>
+        <input id="header-site-search" name="q" type="search" placeholder="검색어를 입력하세요" />
+        <button type="submit" aria-label="검색">⌕</button>
+      </form>
+      <button class="menu-button" type="button" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
     </header>
 
     <main>
       <section class="portal-hero">
         <div class="portal-copy">
-          <p class="eyebrow">지역 데이터 · 방문 전 체크</p>
-          <h1>지역 생활시설을 검색하고, 방문 전 확인 기준까지 함께 봅니다</h1>
+          <p class="eyebrow">방문 전에 꼭 확인해야 하는 생활정보</p>
+          <h1>우리동네 <span>생활정보</span><br />쉽고 빠르게 확인하세요</h1>
           <p class="hero-copy">
-            TOWN114는 단순 전화번호부가 아니라 약국, 공영주차장, 도서관, 자동차 정비소, 주민센터를 이용하기 전
-            운영시간·요금·준비물·데이터 기준일을 함께 확인하도록 돕는 지역 생활정보 서비스입니다.
+            운영시간, 위치, 요금, 준비물까지 방문 전에 꼭 알아야 할 생활정보를
+            공식 출처와 확인 기준 중심으로 정리합니다.
           </p>
 
+          <div class="hero-actions" aria-label="주요 이동">
+            <a class="primary-action" href="#local-search"><span>⌖</span> 내 주변 생활정보 찾기</a>
+            <a class="secondary-action" href="#regional-guides"><span>▧</span> 지역 선택하기</a>
+          </div>
+
+          <div class="hero-trust-row" aria-label="TOWN114 운영 기준">
+            <span>공식 출처 우선</span>
+            <span>정기 업데이트</span>
+            <span>누구나 쉽게 이용</span>
+          </div>
+        </div>
+
+        <aside class="service-panel" aria-label="주요 생활정보 바로가기">
+          <div class="service-panel-grid">
+            <a href="/services/pharmacies/" class="service-tile green-tile"><span class="tile-icon">✚</span><strong>약국</strong><p>운영시간·위치 안내</p></a>
+            <a href="/services/community-centers/" class="service-tile yellow-tile"><span class="tile-icon">⌂</span><strong>주민센터</strong><p>위치와 주요 민원</p></a>
+            <a href="/services/parking/" class="service-tile green-tile"><span class="tile-icon">P</span><strong>공영주차장</strong><p>요금·할인 정보</p></a>
+            <a href="/services/libraries/" class="service-tile yellow-tile"><span class="tile-icon">▤</span><strong>도서관</strong><p>휴관일·운영시간</p></a>
+            <a href="/services/car-repair/" class="service-tile green-tile"><span class="tile-icon">⚒</span><strong>자동차정비소</strong><p>연락처·서비스 안내</p></a>
+            <a href="/news/list/" class="service-tile yellow-tile"><span class="tile-icon">◔</span><strong>생활브리핑</strong><p>알짜 정보 브리핑</p></a>
+          </div>
+          <div class="service-panel-meta" aria-label="정보 확인 기준">
+            <span>◷ 운영시간</span>
+            <span>⌖ 위치안내</span>
+            <span>₩ 이용요금</span>
+            <span>▣ 방문준비물</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="local-search-band" id="local-search" aria-label="내 주변 생활정보 검색">
+        <div class="local-search-copy">
+          <strong>내 주변 생활정보 검색</strong>
+          <p>주소 또는 장소명을 검색하면 주변의 생활정보를 빠르게 찾을 수 있어요.</p>
+        </div>
+        <div class="local-search-main">
           <form class="search-box" action="/sitemap/" method="get">
             <label for="site-search">생활시설 검색</label>
             <div>
@@ -97,12 +139,11 @@
                 id="site-search"
                 name="q"
                 type="search"
-                placeholder="약국, 주차장, 도서관, 정비소, 주민센터 검색"
+                placeholder="예) 강남구 주민센터, 서초동 약국, 공영주차장"
               />
-              <button type="submit">검색</button>
+              <button type="submit" aria-label="검색">⌕</button>
             </div>
           </form>
-
           <div class="search-results-panel" id="search-results-panel" aria-live="polite" hidden>
             <div class="search-summary">
               <strong id="search-summary-title">검색 결과</strong>
@@ -114,178 +155,183 @@
             </div>
             <div class="search-result-list" id="search-result-list"></div>
           </div>
-
-          <div class="quick-buttons" aria-label="빠른 카테고리">
+          <div class="popular-keywords" aria-label="인기 검색어">
+            <span>인기 검색어</span>
+            <a href="/services/community-centers/">주민센터</a>
             <a href="/services/pharmacies/">약국</a>
             <a href="/services/parking/">공영주차장</a>
             <a href="/services/libraries/">도서관</a>
-            <a href="/services/car-repair/">자동차 정비소</a>
-            <a href="/services/community-centers/">주민센터</a>
+            <a href="/services/car-repair/">정비소</a>
           </div>
         </div>
-
-        <aside class="data-board" aria-label="우선 제공 지역">
-          <img
-            class="hero-visual"
-            src="assets/town114-local-guide-hero.jpg"
-            alt="동네 생활시설과 공공서비스 안내를 떠올리게 하는 지역 거리 이미지"
-            width="1200"
-            height="675"
-          />
-          <p class="eyebrow">우선 제공 지역</p>
-          <h2>서울·경기·인천·부산·전북 생활정보부터 확장합니다</h2>
-          <div class="region-picker">
-            <a href="/regions/seoul-local-guide/">서울</a>
-            <a href="/regions/gyeonggi-local-guide/">경기</a>
-            <a href="/regions/incheon-local-guide/">인천</a>
-            <a href="/regions/busan-local-guide/">부산</a>
-            <a href="/regions/jeonbuk-local-guide/">전북</a>
-          </div>
-          <dl>
-            <div><dt>주차장</dt><dd>요금, 운영시간, 할인 대상, 결제 방식</dd></div>
-            <div><dt>도서관</dt><dd>휴관일, 자료실, 회원가입, 상호대차</dd></div>
-            <div><dt>정비소</dt><dd>영업상태, 견적, 부품, 작업 보증</dd></div>
-            <div><dt>약국</dt><dd>야간·주말 운영, 처방 조제, 대체 약국</dd></div>
-          </dl>
-        </aside>
+        <a class="map-promo" href="/sitemap/">
+          <span>지도에서 한눈에!</span>
+          <strong>생활정보 전체보기</strong>
+          <em>›</em>
+        </a>
       </section>
 
-      <section class="results-section" id="service-directory">
-        <div class="section-heading">
-          <p class="eyebrow">생활정보 모듈</p>
-          <h2>내 주변 생활시설을 데이터와 설명으로 확인합니다</h2>
-          <p>
-            단순 시설 목록보다 방문 전 확인 기준과 직접 작성한 설명 콘텐츠를 먼저 제공합니다.
-            공식 자료, 현장 공지, 전화 확인이 필요한 항목을 함께 보여 방문 실패를 줄이는 데 집중합니다.
-          </p>
-        </div>
-        <div class="module-grid">
-          <a href="/services/parking/" class="module-card">
-            <span>주차장</span>
-            <strong>주차장 요금 확인</strong>
-            <p>기본요금, 추가요금, 할인 조건, 운영 요일을 방문 목적별로 비교합니다.</p>
-          </a>
-          <a href="/services/libraries/" class="module-card">
-            <span>도서관</span>
-            <strong>도서관 휴관일 확인</strong>
-            <p>자료실 운영시간, 휴관일, 회원가입, 상호대차 기준을 정리합니다.</p>
-          </a>
-          <a href="/services/car-repair/" class="module-card">
-            <span>정비소</span>
-            <strong>정비소 영업상태 확인</strong>
-            <p>정비 범위, 견적 항목, 부품 선택, 작업 보증을 확인합니다.</p>
-          </a>
-          <a href="/services/rental-cars/" class="module-card">
-            <span>렌터카</span>
-            <strong>렌터카 예약 전 확인</strong>
-            <p>주사업장·영업소, 보유 차량, 보험·면책, 반납 기준을 비교합니다.</p>
-          </a>
-          <a href="/services/community-centers/" class="module-card">
-            <span>공공시설</span>
-            <strong>주민센터 방문 전 준비물</strong>
-            <p>전입신고, 등본, 복지 상담처럼 업무별 준비물과 접수 시간을 확인합니다.</p>
-          </a>
-          <a href="/articles/pharmacy-weekend-guide/" class="module-card">
-            <span>약국</span>
-            <strong>주말 약국 확인 가이드</strong>
-            <p>야간·주말 운영, 처방 조제 가능 여부, 대체 약국 확인법을 안내합니다.</p>
-          </a>
-          <a href="/news/list/" class="module-card">
-            <span>브리핑</span>
-            <strong>생활정보 브리핑 목록</strong>
-            <p>주차장, 주민센터, 약국, 충전소 이용 전 확인할 주제를 자체 글로 정리합니다.</p>
-          </a>
-          <a href="/news/auto-posts/" class="module-card">
-            <span>자동 업데이트</span>
-            <strong>최신 방문 전 확인 글</strong>
-            <p>반복 주제는 최신 글만 모아 검색엔진과 방문자가 새 확인 기준을 빠르게 찾도록 정리합니다.</p>
-          </a>
-          <a href="/tools/visit-question-builder/" class="module-card">
-            <span>도구</span>
-            <strong>방문 전 질문 생성기</strong>
-            <p>카테고리와 상황을 고르면 전화로 물어볼 질문과 추천 이유를 비교해 보여줍니다.</p>
-          </a>
+      <section class="trust-ribbon" aria-label="TOWN114 신뢰 기준">
+        <article><span>▣</span><strong>정확하고 신뢰할 수 있는 정보</strong><p>공공기관 및 공식 데이터를 기준으로 제공합니다.</p></article>
+        <article><span>↻</span><strong>정기 업데이트</strong><p>최신 정보를 주기적으로 업데이트합니다.</p></article>
+        <article><span>♡</span><strong>누구나 쉽게 이용</strong><p>필요한 정보를 쉽고 빠르게 찾을 수 있어요.</p></article>
+        <article><span>▢</span><strong>안심하고 이용하세요</strong><p>광고보다 사용자에게 필요한 정보를 우선합니다.</p></article>
+      </section>
+
+      <section class="results-section service-strip" id="service-directory">
+        <div class="module-grid feature-grid">
+          <a href="/services/pharmacies/" class="module-card"><span class="service-icon green">+</span><strong>약국 찾기</strong><p>영업시간, 야간약국, 조제 가능 여부 확인</p><em>→</em></a>
+          <a href="/services/parking/" class="module-card"><span class="service-icon blue">P</span><strong>공영주차장</strong><p>위치, 요금, 할인정보, 실시간 주차 가능 확인</p><em>→</em></a>
+          <a href="/services/community-centers/" class="module-card"><span class="service-icon purple">민</span><strong>주민센터</strong><p>민원 업무, 준비물, 접수시간 확인</p><em>→</em></a>
+          <a href="/services/libraries/" class="module-card"><span class="service-icon orange">책</span><strong>도서관</strong><p>운영시간, 휴관일, 시설 정보 확인</p><em>→</em></a>
+          <a href="/services/car-repair/" class="module-card"><span class="service-icon sky">공</span><strong>정비소 찾기</strong><p>자동차 정비, 검사소 위치 및 연락처 확인</p><em>→</em></a>
+          <a href="/articles/ev-charging-station-guide/" class="module-card"><span class="service-icon mint">전</span><strong>전기차 충전소</strong><p>충전소 위치, 요금, 실시간 사용 가능 확인</p><em>→</em></a>
         </div>
       </section>
 
-      <section class="data-section">
-        <div class="section-heading">
-          <p class="eyebrow">지역별 확인 기준</p>
-          <h2>실제 데이터 연결 전에도 확인 기준을 먼저 제공합니다</h2>
-          <p>
-            아래 표는 지역 생활시설을 볼 때 공통으로 확인할 항목입니다. 공공데이터포털 또는 지자체
-            공개자료를 볼 때도 기준일, 출처, 갱신 주기를 함께 확인해야 합니다.
-          </p>
+      <section class="visit-flow" id="visit-check">
+        <div class="compact-heading">
+          <h2>방문 전, 이것만 확인하세요!</h2>
+          <p>헛걸음 없이 한 번에 해결하는 5단계 체크</p>
         </div>
-        <div class="data-table" role="table" aria-label="생활시설 확인 기준">
-          <div class="table-head" role="row">
-            <span role="columnheader">분야</span>
-            <span role="columnheader">지역</span>
-            <span role="columnheader">방문 전 확인 항목</span>
-            <span role="columnheader">상세</span>
+        <div class="flow-grid">
+          <article><span>01</span><strong>운영시간</strong><p>영업시간 / 휴무일 확인하기</p></article>
+          <article><span>02</span><strong>준비물</strong><p>필요 서류 / 준비물을 미리 챙기기</p></article>
+          <article><span>03</span><strong>요금</strong><p>이용 요금 / 결제 방법 확인하기</p></article>
+          <article><span>04</span><strong>예약</strong><p>예약 필요 여부 확인하기</p></article>
+          <article><span>05</span><strong>전화 확인</strong><p>방문 전 전화로 최종 확인하기</p></article>
+        </div>
+      </section>
+
+      <section class="assistant-panel">
+        <div class="helper-robot" aria-hidden="true"><span></span></div>
+        <div>
+          <h2>무엇을 도와드릴까요?</h2>
+          <p>AI 챗봇 도우미가 궁금한 정보를 빠르게 찾아드려요!</p>
+          <div class="helper-tags">
+            <a href="/services/pharmacies/">약국 찾기</a>
+            <a href="/services/parking/">주차장 정보</a>
+            <a href="/services/community-centers/">민원 안내</a>
+            <a href="/services/libraries/">도서관 정보</a>
+            <a href="/services/car-repair/">정비소 찾기</a>
           </div>
-          <div role="row">
-            <span role="cell">공영주차장</span>
-            <span role="cell">서울</span>
-            <span role="cell">기본요금, 운영시간, 할인 대상, 출입 동선</span>
-            <a role="cell" href="/services/parking/">보기</a>
+        </div>
+        <form class="mini-question" action="/sitemap/" method="get">
+          <input name="q" type="search" placeholder="예) 야간에 운영하는 약국 찾아줘!" />
+          <button type="submit">물어보기</button>
+        </form>
+      </section>
+
+      <section class="popular-section">
+        <div class="inline-heading">
+          <div>
+            <h2>많이 찾는 서비스</h2>
+            <p>자주 찾는 생활정보를 빠르게 이용해보세요.</p>
           </div>
-          <div role="row">
-            <span role="cell">도서관</span>
-            <span role="cell">인천</span>
-            <span role="cell">휴관일, 자료실 운영시간, 상호대차 가능 여부</span>
-            <a role="cell" href="/services/libraries/">보기</a>
+          <a href="/sitemap/">전체 보기 ›</a>
+        </div>
+        <div class="popular-grid">
+          <a href="/services/pharmacies/"><span class="service-icon green">+</span>약국 찾기</a>
+          <a href="/services/parking/"><span class="service-icon blue">P</span>공영주차장</a>
+          <a href="/services/community-centers/"><span class="service-icon purple">민</span>주민센터</a>
+          <a href="/services/libraries/"><span class="service-icon orange">책</span>도서관</a>
+          <a href="/services/car-repair/"><span class="service-icon sky">공</span>정비소 찾기</a>
+          <a href="/articles/ev-charging-station-guide/"><span class="service-icon mint">전</span>전기차 충전소</a>
+          <a href="/articles/safety-report-guide/"><span class="service-icon red">구</span>응급실 찾기</a>
+          <a href="/articles/local-recycling-disposal-guide/"><span class="service-icon gray">통</span>쓰레기 배출일</a>
+        </div>
+      </section>
+
+      <section class="neighborhood-section" id="neighborhood-check">
+        <div class="inline-heading">
+          <div>
+            <h2>동네 생활 체크</h2>
+            <p>배출 요일, 판매처, 지역 공지, 민원 접수처럼 실제로 찾아보는 내용을 한곳에 모았습니다.</p>
           </div>
-          <div role="row">
-            <span role="cell">자동차 정비소</span>
-            <span role="cell">경기</span>
-            <span role="cell">영업상태, 견적, 작업 보증, 예약 필요 여부</span>
-            <a role="cell" href="/services/car-repair/">보기</a>
-          </div>
-          <div role="row">
-            <span role="cell">주민센터</span>
-            <span role="cell">부산</span>
-            <span role="cell">민원별 준비물, 접수 마감, 담당 창구</span>
-            <a role="cell" href="/services/community-centers/">보기</a>
-          </div>
-          <div role="row">
-            <span role="cell">약국</span>
-            <span role="cell">전국 공통</span>
-            <span role="cell">야간·주말 운영, 처방 조제, 전화 확인</span>
-            <a role="cell" href="/services/pharmacies/">보기</a>
-          </div>
+          <a href="/topics/moving-housing/">생활 주제 보기 ›</a>
+        </div>
+        <div class="neighborhood-grid">
+          <a href="/articles/local-recycling-disposal-guide/" class="neighborhood-card">
+            <span>배출 안내</span>
+            <strong>생활폐기물·재활용 배출 전 확인</strong>
+            <p>품목, 배출 요일, 스티커 필요 여부, 수거 제외일을 지자체 공지 기준으로 점검합니다.</p>
+          </a>
+          <a href="/articles/local-recycling-disposal-guide/" class="neighborhood-card">
+            <span>봉투 판매</span>
+            <strong>종량제 봉투 판매처를 찾을 때</strong>
+            <p>판매 품목, 최근 판매 여부, 주소와 전화번호를 함께 확인해 헛걸음을 줄입니다.</p>
+          </a>
+          <a href="/articles/public-notice-guide/" class="neighborhood-card">
+            <span>지역 공지</span>
+            <strong>동네 소식과 행사를 보기 전</strong>
+            <p>시행일, 대상 지역, 신청 경로, 담당 기관을 나눠 오래된 안내를 걸러냅니다.</p>
+          </a>
+          <a href="/articles/safety-report-guide/" class="neighborhood-card">
+            <span>생활 민원</span>
+            <strong>불편 신고와 민원 접수 준비</strong>
+            <p>사진, 위치, 긴급 여부, 담당 창구를 먼저 정리해 접수 실패를 줄입니다.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="today-section" id="today-briefing">
+        <div class="today-main">
+          <p class="eyebrow">오늘 보강한 글</p>
+          <h2>지도 검색 결과와 공식 안내가 다를 때 확인하는 순서</h2>
+          <p>
+            2026년 6월 26일 기준으로, 방문 전 실패를 줄이는 데 가장 필요한 보강 글을 추가했습니다.
+            운영시간, 요금, 준비물처럼 자주 바뀌는 정보는 검색 결과보다 공식 안내와 전화 확인을 함께 보는 것이 안전합니다.
+          </p>
+          <a href="/news/local-official-source-check/">오늘 글 보기</a>
+        </div>
+        <div class="today-checks" aria-label="오늘 글 핵심 확인 항목">
+          <article>
+            <span>01</span>
+            <strong>기준일 확인</strong>
+            <p>페이지 하단, 공지일, 수정일을 먼저 봅니다.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <strong>공식 경로 확인</strong>
+            <p>시설 공식 안내와 지자체 공지를 우선합니다.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <strong>현장 변수 확인</strong>
+            <p>점심시간, 접수 마감, 재고 여부는 전화로 확인합니다.</p>
+          </article>
         </div>
       </section>
 
       <section class="signal-desk" id="signal-desk">
         <div class="section-heading">
-          <p class="eyebrow">방문 전 판단 기준</p>
-          <h2>얇은 목록보다 중요한 것은 확인 순서입니다</h2>
+          <p class="eyebrow">가기 전에 꼭 볼 것</p>
+          <h2>운영시간, 비용, 준비물을 먼저 확인하세요</h2>
           <p>
-            같은 시설 정보라도 목적, 시간대, 이동 방식에 따라 확인해야 할 항목이 달라집니다.
-            TOWN114는 데이터 목록과 함께 사용자가 직접 판단할 기준을 제공합니다.
+            검색 결과에 장소가 나와도 실제로 문을 여는지, 비용이 얼마인지, 예약이나 서류가 필요한지는 따로 확인해야 합니다.
+            TOWN114는 방문 전에 바로 확인할 내용을 생활용어로 정리합니다.
           </p>
         </div>
         <div class="signal-board" aria-label="동네 생활정보 확인 흐름">
           <article class="signal-card primary-signal">
             <span>01</span>
-            <strong>공식 신호</strong>
-            <p>지자체, 기관 홈페이지, 시설 공지처럼 책임 주체가 분명한 안내를 먼저 확인합니다.</p>
+            <strong>운영시간</strong>
+            <p>오늘 문을 여는지, 점심시간이나 휴무일이 있는지 먼저 확인합니다.</p>
           </article>
           <article class="signal-card">
             <span>02</span>
-            <strong>데이터 신호</strong>
-            <p>공공데이터의 기준일, 좌표, 전화번호, 운영상태가 최신인지 함께 봅니다.</p>
+            <strong>위치와 전화번호</strong>
+            <p>주소가 맞는지, 이전이나 폐업 정보는 없는지 전화번호와 함께 봅니다.</p>
           </article>
           <article class="signal-card">
             <span>03</span>
-            <strong>상황 신호</strong>
-            <p>야간, 주말, 차량 이동, 민원 마감시간처럼 내 상황에 맞는 조건을 겹쳐 봅니다.</p>
+            <strong>비용과 준비물</strong>
+            <p>요금, 할인, 신분증, 신청서, 처방전처럼 필요한 물건을 미리 챙깁니다.</p>
           </article>
           <article class="signal-card check-signal">
             <span>04</span>
-            <strong>마지막 확인</strong>
-            <p>비용·예약·방문 성공에 영향을 주는 항목은 전화 또는 공식 접수 화면으로 다시 확인합니다.</p>
+            <strong>예약 필요 여부</strong>
+            <p>대기 시간이 길거나 접수 마감이 있는 곳은 방문 전에 전화로 한 번 더 확인합니다.</p>
           </article>
         </div>
       </section>
@@ -446,6 +492,21 @@
             <strong>문화취약계층과 접근성 정보 확인 기준</strong>
             <p>이동, 좌석, 할인, 관람 지원 조건을 가족·복지 관점에서 확인합니다.</p>
           </a>
+          <a href="/articles/national-dermatology-visit-guide/" class="original-card">
+            <span>15 · 병원 방문</span>
+            <strong>전국 피부과 병원 정보 확인 기준</strong>
+            <p>전국 피부과 후보를 지역, 전문의 여부, 야간·일요일·비대면 진료 기준으로 나눠 봅니다.</p>
+          </a>
+          <a href="/articles/local-business-check-guide/" class="original-card">
+            <span>16 · 지역 업체</span>
+            <strong>지역 소상공인과 동네 업체 정보 조회 전 확인 기준</strong>
+            <p>상호, 주소, 업종, 영업상태, 전화번호, 공식 출처를 함께 확인하는 방법입니다.</p>
+          </a>
+          <a href="/articles/bulky-waste-online-report-guide/" class="original-card">
+            <span>17 · 생활 배출</span>
+            <strong>대형폐기물 온라인 배출 신고 전 확인할 절차</strong>
+            <p>품목 선택, 수수료, 결제, 배출번호, 수거일, 스티커 판매소를 순서대로 점검합니다.</p>
+          </a>
         </div>
       </section>
 
@@ -459,6 +520,9 @@
           </p>
         </div>
         <div class="notice-list" aria-label="생활정보 브리핑">
+          <a href="/news/local-official-source-check/"><span>운영기준</span><strong>지도 검색 결과와 공식 안내가 다를 때 확인하는 순서</strong><em>2026.06.26</em></a>
+          <a href="/articles/local-business-check-guide/"><span>지역업체</span><strong>지역 소상공인과 동네 업체 정보 조회 전 확인 기준</strong><em>2026.06.26</em></a>
+          <a href="/articles/bulky-waste-online-report-guide/"><span>생활배출</span><strong>대형폐기물 온라인 배출 신고 전 확인할 절차</strong><em>2026.06.26</em></a>
           <a href="/news/jeonbuk-pharmacy-parking-check/"><span>전북</span><strong>전주 약국과 공영주차장 방문 전 확인 기준</strong><em>2026.06.11</em></a>
           <a href="/news/parking-fee-before-visit/"><span>주차장</span><strong>공영주차장 요금표를 보기 전에 확인할 4가지</strong><em>2026.06.08</em></a>
           <a href="/news/community-center-document-visit/"><span>공공민원</span><strong>주민센터 서류 발급 방문 전 접수 마감과 준비물 점검</strong><em>2026.06.08</em></a>
@@ -538,6 +602,13 @@
           summary: "운영시간, 처방 조제 가능 여부, 전화 확인 기준을 먼저 봅니다."
         },
         {
+          title: "지역 소상공인과 동네 업체 정보 조회 전 확인 기준",
+          href: "/articles/local-business-check-guide/",
+          category: "지역업체",
+          keywords: ["소상공인", "업체", "상호", "전화번호", "가게", "매장", "사업자", "영업상태", "지역업체"],
+          summary: "상호, 주소, 업종, 영업상태, 전화번호, 공식 출처를 함께 확인합니다."
+        },
+        {
           title: "주말과 야간에 문 여는 약국 찾는 법",
           href: "/articles/pharmacy-weekend-guide/",
           category: "약국",
@@ -578,6 +649,48 @@
           category: "주민센터",
           keywords: ["주민센터", "행정복지센터", "민원", "등본", "서류"],
           summary: "업무별 준비물, 접수 마감, 담당 창구를 방문 전에 점검합니다."
+        },
+        {
+          title: "생활폐기물과 재활용 배출 전 확인",
+          href: "/articles/local-recycling-disposal-guide/",
+          category: "배출안내",
+          keywords: ["쓰레기", "폐기물", "재활용", "배출", "배출일", "대형폐기물", "스티커", "종량제"],
+          summary: "품목, 배출 요일, 스티커 필요 여부, 수거 제외일을 확인합니다."
+        },
+        {
+          title: "대형폐기물 온라인 배출 신고 전 확인할 절차",
+          href: "/articles/bulky-waste-online-report-guide/",
+          category: "생활배출",
+          keywords: ["대형폐기물", "온라인신고", "배출번호", "스티커", "수수료", "수거일", "폐가전", "폐건전지", "폐의약품"],
+          summary: "품목 선택, 수수료, 결제, 배출번호, 수거일, 스티커 판매소를 순서대로 점검합니다."
+        },
+        {
+          title: "종량제 봉투 판매처 확인 기준",
+          href: "/articles/local-recycling-disposal-guide/",
+          category: "봉투판매",
+          keywords: ["종량제", "봉투", "판매처", "쓰레기봉투", "판매점"],
+          summary: "판매 품목, 최근 판매 여부, 주소와 전화번호를 함께 확인합니다."
+        },
+        {
+          title: "지역 공지와 생활 소식 확인 기준",
+          href: "/articles/public-notice-guide/",
+          category: "지역공지",
+          keywords: ["공지", "소식", "행사", "축제", "지원", "신청", "지역정보"],
+          summary: "시행일, 대상 지역, 신청 경로, 담당 기관을 나눠 확인합니다."
+        },
+        {
+          title: "지도 검색 결과와 공식 안내가 다를 때 확인하는 순서",
+          href: "/news/local-official-source-check/",
+          category: "운영기준",
+          keywords: ["공식", "출처", "기준일", "운영시간", "지도", "검색결과", "전화확인"],
+          summary: "지도 검색과 공식 안내가 다를 때 기준일, 담당 기관, 전화 확인 순서로 점검합니다."
+        },
+        {
+          title: "생활불편 신고 전 확인 기준",
+          href: "/articles/safety-report-guide/",
+          category: "생활민원",
+          keywords: ["민원", "신고", "생활불편", "안전신문고", "사진", "위치"],
+          summary: "사진, 위치, 긴급 여부, 담당 창구를 먼저 정리합니다."
         },
         {
           title: "방문 전 질문 생성기",

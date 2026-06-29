@@ -36,8 +36,57 @@ When real data is added, show source, baseline date, and a visit-before-checking
 Use these settings:
 
 - Framework preset: `None`
-- Build command: leave empty
+- Build command: `npm run build`
 - Build output directory: `/`
+- Environment variable: `SITE_URL=https://town114.com`
+
+The build command regenerates `sitemap.xml` and `robots.txt` before deployment. See `DEPLOYMENT_GUIDE.md` for the full GitHub + Cloudflare Pages setup.
+
+## Cloudflare R2 Image Automation
+
+The image automation script crawls configured pages, extracts image URLs, converts each image to WebP, uploads it to Cloudflare R2 through the S3-compatible API, and writes `data/r2-image-manifest.json`.
+
+Local setup:
+
+```bash
+npm install
+cp .env.example .env.local
+```
+
+Fill these values in `.env.local`:
+
+- `CLOUDFLARE_ACCOUNT_ID`
+- `R2_ACCESS_KEY_ID`
+- `R2_SECRET_ACCESS_KEY`
+- `R2_BUCKET`
+- `R2_PUBLIC_BASE_URL`
+- `IMAGE_CRAWL_SOURCES`
+
+Dry run with configured sources:
+
+```bash
+npm run images:r2:dry-run
+```
+
+Dry run with a specific URL:
+
+```bash
+npm run images:r2:dry-run -- --url=https://town114.com/
+```
+
+Upload to R2:
+
+```bash
+npm run images:r2 -- --limit=30
+```
+
+GitHub Actions workflow:
+
+- `.github/workflows/r2-images.yml`
+- Required GitHub Secrets: `CLOUDFLARE_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`, `R2_SECRET_ACCESS_KEY`, `R2_BUCKET`, `R2_PUBLIC_BASE_URL`
+- Required GitHub Variables: `IMAGE_CRAWL_SOURCES`
+- Optional GitHub Variables: `R2_IMAGE_PREFIX`, `IMAGE_WEBP_MAX_WIDTH`, `IMAGE_WEBP_QUALITY`
+- Default image quality: WebP quality `80`
 
 ## Local Preview
 
@@ -72,6 +121,7 @@ After deployment, connect these custom domains:
 - Add the official publisher line to `ads.txt` after Google AdSense provides the account-specific value.
 - Keep ads visually separate from editorial content and data tables.
 - Do not use wording that asks visitors to click ads.
+- Keep empty or thin categories hidden until each hub has enough original text and related articles. See `ADSENSE_SEO_AUDIT.md`.
 
 ## Search Console / Search Advisor
 

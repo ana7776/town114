@@ -15,9 +15,11 @@ Use this after the latest files are deployed to `https://town114.com/`.
 1. Open `https://search.google.com/search-console`.
 2. Select the `town114.com` domain property.
 3. Go to `Sitemaps`.
-4. Submit `https://town114.com/sitemap.xml`.
-5. Use `URL inspection` for the important new URLs below.
-6. If Google says the URL is available to Google, click `Request indexing`.
+4. If an old sitemap row named only `town114.com` shows `Couldn't fetch` or `Not found`, remove that row from the sitemap list.
+5. Submit only `https://town114.com/sitemap.xml`.
+6. Do not submit `town114.com`, `https://town114.com/`, or `/` as a sitemap URL.
+7. Use `URL inspection` for the important new URLs below.
+8. If Google says the URL is available to Google, click `Request indexing`.
 
 ## Naver Search Advisor
 
@@ -57,7 +59,8 @@ Use this after the latest files are deployed to `https://town114.com/`.
 
 ## Current production note
 
-Checked on 2026-06-12: `https://town114.com/` is live, but the latest local
-news/tools/auto-post pages were not yet deployed. The new URLs currently return
-the home page HTML instead of their own page content. Do not request indexing
-for the new URLs until production returns the correct page content for each URL.
+Checked on 2026-06-24: Search Console may still show a failed sitemap row named
+`town114.com` from an earlier incorrect submission. That row points to the site
+itself, not to the XML sitemap. Delete it and submit `https://town114.com/sitemap.xml`.
+After deployment, confirm the latest local pages are visible on production
+before requesting indexing for updated URLs.

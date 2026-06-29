@@ -1,41 +1,56 @@
 {
-  "updatedAt": "2026-06-05",
-  "sourceNote": "Example data for the current static information guide. Replace with public data or official local sources before production-scale listing.",
+  "updatedAt": "2026-06-24",
+  "sourceNote": "Public-data summary sample derived from local API snapshot. Confirm current conditions before visiting.",
   "items": [
     {
       "category": "parking",
-      "region": "서울",
-      "name": "도심 공영주차장 예시",
-      "checkpoints": ["기본요금", "일 최대 요금", "운영시간", "할인 대상"],
-      "source": "전국주차장정보표준데이터 연동 예정"
+      "region": "서울시설공단 · 서울시설공단",
+      "name": "청계8가",
+      "address": "서울특별시 중구 흥인동 162-1",
+      "phone": "02-2274-2009",
+      "checkpoints": ["요금", "운영일", "주차면수", "기준일"],
+      "source": "전국주차장정보표준데이터",
+      "baselineDate": "2026-05-15"
     },
     {
-      "category": "library",
-      "region": "인천",
-      "name": "구립 공공도서관 예시",
-      "checkpoints": ["정기 휴관일", "자료실 운영시간", "회원가입", "상호대차"],
-      "source": "전국도서관표준데이터 연동 예정"
+      "category": "libraries",
+      "region": "서울특별시 · 노원구 · 서울특별시 노원구",
+      "name": "나무작은도서관",
+      "address": "서울특별시 노원구 동일로1405,1층",
+      "phone": "070-4158-9660",
+      "checkpoints": ["휴관일", "운영시간", "회원가입", "상호대차"],
+      "source": "전국도서관표준데이터",
+      "baselineDate": "2026-04-08"
     },
     {
       "category": "car-repair",
-      "region": "경기",
-      "name": "종합 자동차 정비소 예시",
-      "checkpoints": ["영업상태", "견적 방식", "부품 선택", "작업 보증"],
-      "source": "전국자동차정비업체표준데이터 연동 예정"
+      "region": "서울특별시 성북구 · 서울특별시 성북구청",
+      "name": "오토메틱코리아",
+      "address": "서울특별시 성북구 한천로 565(석관동)",
+      "phone": "02-6401-5656",
+      "checkpoints": ["영업상태", "정비업 구분", "견적", "전화 확인"],
+      "source": "전국자동차정비업체표준데이터",
+      "baselineDate": "2026-04-03"
     },
     {
-      "category": "community-center",
-      "region": "부산",
-      "name": "동 주민센터 예시",
-      "checkpoints": ["민원별 준비물", "접수 마감", "담당 창구", "공식 안내"],
-      "source": "지자체 공식 안내 확인 예정"
+      "category": "rental-cars",
+      "region": "경기도 부천시",
+      "name": "㈜씨앤피렌터카",
+      "address": "경기도 부천시 원미구 송내대로 388",
+      "phone": "1661-2202",
+      "checkpoints": ["영업소", "보유 차량", "차고지", "예약 조건"],
+      "source": "전국렌터카업체정보표준데이터",
+      "baselineDate": "2026-03-24"
     },
     {
-      "category": "pharmacy",
-      "region": "전국 공통",
-      "name": "주말 운영 약국 예시",
-      "checkpoints": ["야간 운영", "주말 운영", "처방 조제", "전화 확인"],
-      "source": "보건의료 공개자료 검토 예정"
+      "category": "pharmacies",
+      "region": "서울 · 종로구 · 견지동",
+      "name": "대도약국",
+      "address": "서울특별시 종로구 우정국로 38-1, 1층 (견지동)",
+      "phone": "02-737-4510",
+      "checkpoints": ["전화번호", "처방 조제", "주말 운영", "재고 확인"],
+      "source": "약국정보서비스",
+      "baselineDate": "19900516"
     }
   ]
 }

@@ -1,1 +1,5 @@
 https://www.town114.com/* https://town114.com/:splat 301
+/favicon.ico /favicon.svg 302
+/town114.com /sitemap.xml 301
+/town114.com/ /sitemap.xml 301
+/sitemapxml /sitemap.xml 301

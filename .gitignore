@@ -1,6 +1,8 @@
 server-test.err
 server-test.out
 qa-screenshots/
+node_modules/
+data/r2-image-manifest.json
 .env
 .env.*
 !.env.example

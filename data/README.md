@@ -7,7 +7,29 @@ This folder keeps static data files used before API-based search is enabled.
 - Keep API keys out of public HTML, JavaScript, and Git history.
 - Use small static JSON examples to show the site structure.
 - Show source, baseline date, and "check before visiting" guidance on pages.
-- Replace examples with cached public-data results after Cloudflare Pages Functions or Workers are configured.
+- Publish reduced cached summaries instead of raw API payloads.
+
+## Current public-data snapshot
+
+Checked on 2026-06-24, the local `.env.local` has working values for:
+
+- `PARKING_API_URL`
+- `LIBRARY_API_URL`
+- `CAR_REPAIR_API_URL`
+- `RENTAL_CAR_API_URL`
+- `PHARMACY_API_URL`
+
+The latest local fetch produced:
+
+- Parking: 300 snapshot rows from national parking standard data
+- Libraries: 300 snapshot rows from national library standard data
+- Car repair: 300 snapshot rows from national car repair standard data
+- Rental cars: 300 snapshot rows from national rental car standard data
+- Pharmacies: 81 snapshot rows from pharmacy information service
+
+Raw fetch output is written to `data/generated/public-data-snapshot.json`, which
+is ignored by Git. Public visitor-facing data is reduced into
+`data/public-data-summary.json` with API keys and unnecessary raw fields removed.
 
 ## Planned sources
 
@@ -58,6 +80,15 @@ Fetch a local editorial snapshot after the required values are set:
 ```bash
 node scripts/fetch-public-data.mjs
 ```
+
+Then build the public summary:
+
+```bash
+node scripts/build-public-data-summary.mjs
+```
+
+Use `data/public-data-summary.json` for page enrichment and search features.
+Do not publish `data/generated/public-data-snapshot.json` directly.
 
 ## Update rule
 

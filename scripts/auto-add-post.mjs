@@ -109,7 +109,7 @@ const pageHtml = `<!doctype html>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="${escapeHtml(topic.summary)}" />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content="noindex,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
     <link rel="canonical" href="https://town114.com${urlPath}" />
     <title>${escapeHtml(topic.title)} | TOWN114</title>
@@ -160,7 +160,7 @@ function renderIndex(entries) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="TOWN114 자동 생활정보 글 목록입니다. 최근 발행된 생활정보 중 주제가 겹치지 않는 확인 가이드를 우선 정리합니다." />
-    <meta name="robots" content="index,follow" />
+    <meta name="robots" content="noindex,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
     <link rel="canonical" href="https://town114.com/news/auto-posts/" />
     <link rel="alternate" type="application/rss+xml" title="TOWN114 생활정보 업데이트" href="https://town114.com/feed.xml" />
@@ -217,10 +217,7 @@ ${items}
 async function updateSitemap() {
   const sitemapPath = join(root, "sitemap.xml");
   let sitemap = await readFile(sitemapPath, "utf8");
-  const entries = [
-    `  <url><loc>https://town114.com/news/auto-posts/</loc><lastmod>${date}</lastmod><priority>0.7</priority></url>`,
-    `  <url><loc>https://town114.com${urlPath}</loc><lastmod>${date}</lastmod><priority>0.7</priority></url>`,
-  ];
+  const entries = [];
   for (const entry of entries) {
     const loc = entry.match(/<loc>(.*?)<\/loc>/)?.[1];
     if (!loc) continue;

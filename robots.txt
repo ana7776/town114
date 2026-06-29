@@ -2,4 +2,3 @@ User-agent: *
 Allow: /
 
 Sitemap: https://town114.com/sitemap.xml
-Sitemap: https://town114.com/feed.xml

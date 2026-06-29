@@ -1,4 +1,4 @@
-import { readdir, stat, writeFile } from "node:fs/promises";
+import { readFile, readdir, stat, writeFile } from "node:fs/promises";
 import { join, relative, sep } from "node:path";
 
 const root = process.cwd();
@@ -38,8 +38,19 @@ function xmlEscape(value) {
     .replaceAll('"', "&quot;");
 }
 
+async function isIndexable(filePath) {
+  const html = await readFile(filePath, "utf8");
+  const robots = html.match(/<meta[^>]+name=["']robots["'][^>]+content=["']([^"']*)["']/i)?.[1] || "";
+  return !robots.toLowerCase().split(",").map((value) => value.trim()).includes("noindex");
+}
+
 const files = await findIndexPages(root);
-const urls = await Promise.all(files.map(async (file) => {
+const indexableFiles = [];
+for (const file of files) {
+  if (await isIndexable(file)) indexableFiles.push(file);
+}
+
+const urls = await Promise.all(indexableFiles.map(async (file) => {
   const fileStat = await stat(file);
   const pathname = toUrlPath(file);
   return {
@@ -66,7 +77,6 @@ const robots = `User-agent: *
 Allow: /
 
 Sitemap: ${siteUrl}/sitemap.xml
-Sitemap: ${siteUrl}/feed.xml
 `;
 
 await writeFile(join(root, "sitemap.xml"), sitemap, "utf8");

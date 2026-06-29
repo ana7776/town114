@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>이슈스팟 보험금 청구 정보</title>
+    <link>https://issuespot.co.kr/articles/</link>
+    <description>보험금 청구 서류, 실손보험 청구, 보험나이 계산, 약관 확인, 공공데이터 기반 보험 자료를 정리합니다.</description>
+    <language>ko-KR</language>
+    <lastBuildDate>Thu, 25 Jun 2026 15:05:00 +0900</lastBuildDate>
+    <item>
+      <title>보험나이 계산기와 상령일 확인 방법</title>
+      <link>https://issuespot.co.kr/insurance-age-calculator</link>
+      <guid>https://issuespot.co.kr/insurance-age-calculator</guid>
+      <pubDate>Thu, 25 Jun 2026 15:05:00 +0900</pubDate>
+      <description>생년월일과 기준일을 입력해 보험나이, 만 나이, 상령일, 다음 나이 변경일까지 남은 날짜를 확인하는 계산기입니다.</description>
+    </item>
+    <item>
+      <title>보험금 청구 처음 가이드: 서류 준비부터 지급 확인까지</title>
+      <link>https://issuespot.co.kr/insurance-claim-roadmap</link>
+      <guid>https://issuespot.co.kr/insurance-claim-roadmap</guid>
+      <pubDate>Thu, 25 Jun 2026 14:08:00 +0900</pubDate>
+      <description>보험금 청구를 처음 준비하는 독자를 위해 서류 준비, 접수 방법, 보완 요청, 지급 확인, 개인정보 가리기 기준을 순서대로 정리했습니다.</description>
+    </item>
+    <item>
+      <title>실비보험 청구기간과 3년 소멸시효 확인 기준</title>
+      <link>https://issuespot.co.kr/articles/actual-loss-claim-period</link>
+      <guid>https://issuespot.co.kr/articles/actual-loss-claim-period</guid>
+      <pubDate>Thu, 25 Jun 2026 14:35:00 +0900</pubDate>
+      <description>실비보험 청구기간을 놓치지 않도록 치료일, 진단일, 사고일, 오래된 영수증 확인 순서를 정리했습니다.</description>
+    </item>
+    <item>
+      <title>비급여 실비보험 청구 때 확인할 항목과 서류 기준</title>
+      <link>https://issuespot.co.kr/articles/non-covered-medical-expense-claim</link>
+      <guid>https://issuespot.co.kr/articles/non-covered-medical-expense-claim</guid>
+      <pubDate>Thu, 25 Jun 2026 14:35:00 +0900</pubDate>
+      <description>비급여 진료비가 포함된 실비보험 청구에서 진료비 세부내역서, 치료 목적, 약관상 제한 항목을 확인하는 기준입니다.</description>
+    </item>
+    <item>
+      <title>보험금 청구서 작성 때 확인할 항목과 실수 줄이는 방법</title>
+      <link>https://issuespot.co.kr/articles/insurance-claim-form-write</link>
+      <guid>https://issuespot.co.kr/articles/insurance-claim-form-write</guid>
+      <pubDate>Thu, 25 Jun 2026 14:35:00 +0900</pubDate>
+      <description>보험금 청구서 작성 때 계약자, 피보험자, 수익자, 계좌, 사고 내용, 진료 기간을 확인하는 방법입니다.</description>
+    </item>
+  </channel>
+</rss>

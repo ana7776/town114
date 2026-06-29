@@ -1,0 +1,165 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>공공데이터 자동차보험 피해자 통계로 보상 흐름 이해하기 | 이슈스팟</title>
+  <meta name="description" content="공공데이터포털 금융위원회 자동차보험 피해자 통계정보를 바탕으로 부상급수, 장애 여부, 평균 대인보험금을 해석하는 방법입니다. 이슈스팟은 보험금 청구 서류, 접수 방법, 병원 발급 자료, 공공데이터 출처를 함께 정리합니다.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://issuespot.co.kr/articles/public-data-auto-insurance-victim-statistics">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/styles.css?v=20260625-1505">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://issuespot.co.kr/#organization",
+        "name": "이슈스팟",
+        "url": "https://issuespot.co.kr/",
+        "logo": "https://issuespot.co.kr/assets/favicon.svg"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://issuespot.co.kr/#website",
+        "name": "이슈스팟",
+        "url": "https://issuespot.co.kr/",
+        "inLanguage": "ko-KR",
+        "publisher": {
+          "@id": "https://issuespot.co.kr/#organization"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://issuespot.co.kr/articles/public-data-auto-insurance-victim-statistics#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://issuespot.co.kr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "보험금 청구 정보",
+            "item": "https://issuespot.co.kr/articles/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "공공데이터 자동차보험 피해자 통계로 보상 흐름 이해하기",
+            "item": "https://issuespot.co.kr/articles/public-data-auto-insurance-victim-statistics"
+          }
+        ]
+      },
+      {
+        "@type": "Article",
+        "@id": "https://issuespot.co.kr/articles/public-data-auto-insurance-victim-statistics#article",
+        "headline": "공공데이터 자동차보험 피해자 통계로 보상 흐름 이해하기",
+        "description": "공공데이터포털 금융위원회 자동차보험 피해자 통계정보를 바탕으로 부상급수, 장애 여부, 평균 대인보험금을 해석하는 방법입니다. 이슈스팟은 보험금 청구 서류, 접수 방법, 병원 발급 자료, 공공데이터 출처를 함께 정리합니다.",
+        "url": "https://issuespot.co.kr/articles/public-data-auto-insurance-victim-statistics",
+        "mainEntityOfPage": "https://issuespot.co.kr/articles/public-data-auto-insurance-victim-statistics",
+        "datePublished": "2026-06-10",
+        "dateModified": "2026-06-29",
+        "inLanguage": "ko-KR",
+        "author": {
+          "@type": "Organization",
+          "name": "이슈스팟"
+        },
+        "publisher": {
+          "@id": "https://issuespot.co.kr/#organization"
+        },
+        "isPartOf": {
+          "@id": "https://issuespot.co.kr/#website"
+        }
+      }
+    ]
+  }
+  </script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5804969457082424"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="/"><span class="brand-mark">IS</span><span>이슈스팟</span></a><nav class="nav" aria-label="주요 메뉴">      <a href="/insurance-claim-roadmap">&#52376;&#51020; &#44032;&#51060;&#46300;</a>
+      <a href="/insurance-age-calculator">&#48372;&#54744;&#45208;&#51060; &#44228;&#49328;&#44592;</a>
+<a href="/directory">보험사 자료</a><a href="/claim-guide">청구 가이드</a><a href="/articles/">업무 노트</a><a href="/about">소개</a></nav><nav class="article-mega-nav" aria-label="&#48372;&#54744;&#44552; &#52397;&#44396; &#44544; &#48148;&#47196;&#44032;&#44592;"><div><strong>&#49892;&#49552; &#52397;&#44396;</strong><a href="/insurance-claim-roadmap">&#52376;&#51020; &#44032;&#51060;&#46300;</a><a href="/articles/actual-loss-claim-basic">&#44592;&#48376; &#49436;&#47448;</a><a href="/articles/actual-loss-claim-period">&#52397;&#44396;&#44592;&#44036;</a><a href="/articles/non-covered-medical-expense-claim">&#48708;&#44553;&#50668; &#52397;&#44396;</a></div><div><strong>&#49436;&#47448; &#51456;&#48708;</strong><a href="/articles/claim-document-type-checklist">&#54637;&#47785;&#48324; &#49436;&#47448;</a><a href="/articles/outpatient-claim-documents">&#53685;&#50896; &#52824;&#47308;</a><a href="/articles/inpatient-surgery-claim-documents">&#51077;&#50896;&middot;&#49688;&#49696;</a><a href="/articles/pharmacy-receipt-claim">&#50557;&#51228;&#48708; &#50689;&#49688;&#51613;</a></div><div><strong>&#51217;&#49688;&middot;&#44592;&#47197;</strong><a href="/articles/insurance-claim-form-write">&#52397;&#44396;&#49436; &#51089;&#49457;</a><a href="/articles/claim-by-fax-or-app">&#50545;&middot;&#54057;&#49828; &#49440;&#53469;</a><a href="/articles/mobile-claim-photo-check">&#49324;&#51652; &#52392;&#48512;</a><a href="/articles/claim-receipt-number-check">&#51217;&#49688;&#48264;&#54840; &#44592;&#47197;</a></div><div><strong>&#44228;&#49328; &#46020;&#44396;</strong><a href="/insurance-age-calculator">&#48372;&#54744;&#45208;&#51060; &#44228;&#49328;&#44592;</a><a href="/articles/claim-payment-delay-reason">&#51648;&#44553; &#51648;&#50672;</a><a href="/articles/claim-supplement-request">&#48372;&#50756; &#50836;&#52397;</a><a href="/review-method">&#51088;&#47308; &#44160;&#49688; &#44592;&#51456;</a></div></nav></header>
+  <main class="page">
+    <nav class="breadcrumb" aria-label="현재 위치"><a href="/">홈</a><span>/</span><a href="/articles/">업무 노트</a><span>/</span><span>자동차보험 통계</span></nav>
+    <h1>공공데이터 자동차보험 피해자 통계로 보상 흐름 이해하기</h1>
+    <p class="page-meta"><time datetime="2026-06-10">2026.06.10</time> · 공공데이터 점검</p>
+    <aside class="article-trust" aria-label="자료 검수 정보">
+      <strong>자료 검수 정보</strong>
+      <span>작성: 이슈스팟 보험금 청구 자료실</span>
+      <span>검수 기준: 보험사 공식 안내, 약관 확인 절차, 공공기관 소비자 안내</span>
+      <span>최근 확인: 2026.06.29</span>
+    </aside>
+    </aside>
+    <div class="content">
+      <p>자동차보험 보상은 사고 접수만으로 바로 금액이 확정되는 구조가 아닙니다. 피해자의 사망·부상 구분, 부상급수, 장애 여부, 치료 경과, 약관과 손해사정 기준이 함께 검토됩니다. 그래서 자동차보험 자료를 볼 때는 통계와 실제 보상 심사를 구분해서 이해해야 합니다.</p>
+      <p>공공데이터포털의 금융위원회 자동차보험 피해자 통계정보는 기준연월, 사망부상구분명, 장애 여부, 부상급수코드, 장애급수코드, 인원수, 평균 1인당 대인보험금 같은 항목을 제공합니다. 이 데이터는 개별 사고의 보험금 산정표가 아니라 자동차보험 보상 규모를 이해하는 참고 통계로 보는 것이 적절합니다.</p>
+
+      <h2>데이터에서 확인할 수 있는 항목</h2>
+      <ul>
+        <li>기준연월별 자동차보험 피해자 통계를 볼 수 있습니다.</li>
+        <li>사망과 부상 구분에 따라 인원수와 평균 대인보험금 정보를 나누어 확인할 수 있습니다.</li>
+        <li>부상급수코드와 장애급수코드가 통계 항목으로 포함됩니다.</li>
+        <li>장애 여부에 따라 피해자 통계가 다르게 집계될 수 있습니다.</li>
+        <li>평균 1인당 대인보험금은 실제 개별 지급액과 다를 수 있습니다.</li>
+      </ul>
+
+      <h2>자동차보험 청구 안내에 활용하는 방법</h2>
+      <p>자동차 사고 상담에서는 평균 보험금보다 사고 사실과 치료 기록을 먼저 정리해야 합니다. 통계는 보상 구조를 설명하는 자료로 쓰고, 실제 청구 준비는 사고 접수번호, 진단서, 치료비 영수증, 진료비 세부내역서, 입퇴원확인서, 후유장해 관련 자료를 기준으로 진행합니다.</p>
+      <ul>
+        <li>사고 접수번호와 담당 보상 직원 연락처를 기록합니다.</li>
+        <li>진단명, 부상 부위, 치료 기간, 입원 여부를 날짜순으로 정리합니다.</li>
+        <li>후유장해가 예상되는 경우 장해진단 시점과 필요 서류를 별도로 확인합니다.</li>
+        <li>합의 전에는 향후 치료 가능성, 추가 검사, 서류 보완 가능성을 먼저 점검합니다.</li>
+      </ul>
+
+      <h2>주의할 점</h2>
+      <p>평균 대인보험금은 전체 통계의 평균값이므로, 개별 사고의 적정 보상액을 직접 의미하지 않습니다. 같은 부상급수라도 치료 기간, 과실 비율, 소득 자료, 후유장해 여부, 약관 기준에 따라 실제 보상 내용은 달라질 수 있습니다.</p>
+
+      <section class="data-api-panel" aria-labelledby="auto-api-title">
+        <div>
+          <h2 id="auto-api-title">공공데이터 API 조회</h2>
+          <p>기준연월을 입력하면 자동차보험 피해자 통계정보를 API로 확인할 수 있습니다. 개별 사고 보험금 산정이 아니라 통계 참고용입니다.</p>
+        </div>
+        <form class="api-form" data-endpoint="/api/public-data/auto-victim">
+          <label>기준연월
+            <input name="basYm" type="search" inputmode="numeric" placeholder="예: 202406" autocomplete="off">
+          </label>
+          <label>조회 건수
+            <select name="numOfRows">
+              <option value="5">5건</option>
+              <option value="10">10건</option>
+              <option value="20">20건</option>
+            </select>
+          </label>
+          <button type="submit">조회하기</button>
+        </form>
+        <pre class="api-result" aria-live="polite">조회 조건을 입력하고 실행하세요.</pre>
+      </section>
+
+      <div class="source-box">
+        <h2>공공데이터 출처</h2>
+        <p>자료 기준은 공공데이터포털의 <a href="https://www.data.go.kr/data/15151234/openapi.do" rel="nofollow noopener">금융위원회_자동차보험 피해자 통계정보</a>입니다. 공공데이터포털 설명에 따르면 이 API는 기준연월, 사망부상구분명, 장애 여부, 부상급수코드, 장애급수코드, 인원수, 평균 1인당 대인보험금 조회 기능을 제공합니다.</p>
+      </div>
+
+      <div class="related-links">
+        <h2>함께 볼 자료</h2>
+        <ul>
+          <li><a href="/articles/claim-receipt-number-check">보험금 청구 접수번호를 확인하고 기록하는 방법</a></li>
+          <li><a href="/articles/medical-receipt-detail-check">진료비 영수증과 세부내역서를 확인할 때 보는 항목</a></li>
+          <li><a href="/articles/claim-delay-contact-script">보험금 지급 지연 문의 전에 준비할 질문과 기록 항목</a></li>
+          <li><a href="/articles/claim-supplement-request">보험사 보완 요청을 받았을 때 고객에게 확인할 내용</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div><strong>이슈스팟</strong><p>공공데이터 기반 보험 보상 정보를 정리합니다.</p></div><nav aria-label="하단 메뉴"><a href="/editorial-policy">편집 정책</a><a href="/review-method">자료 검수 기준</a><a href="/terms">이용약관</a><a href="/privacy">개인정보처리방침</a><a href="/cookie-policy">쿠키 안내</a><a href="/advertising-policy">광고 고지</a><a href="/contact">문의</a></nav></footer>
+  <script src="/assets/public-data-api.js?v=20260612"></script>
+</body>
+</html>
+

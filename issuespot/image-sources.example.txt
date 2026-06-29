@@ -1,0 +1,4 @@
+# Add one page URL per line.
+# Lines starting with # are ignored.
+https://example.com/page-a
+https://example.com/page-b

@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+image-sources.txt
+
+local-secret-notes.md
+
+.wrangler/
+cloudflare-pages-site/
+node_modules/
+.cache/
+dist/
+.DS_Store
+Thumbs.db
+
+*.zip

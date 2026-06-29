@@ -1,0 +1,20 @@
+{
+  "name": "issuespot-ops",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "pages:deploy": "npm run build && npx wrangler pages deploy dist --project-name issuespot --branch main --commit-dirty=true",
+    "images:crawl": "node scripts/crawl-images.mjs",
+    "images:crawl:free": "node scripts/crawl-images.mjs --local-only",
+    "images:crawl:dry": "node scripts/crawl-images.mjs --dry-run",
+    "images:crawl:local": "node scripts/crawl-images.mjs --local-only"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.840.0",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "sharp": "^0.33.5"
+  }
+}

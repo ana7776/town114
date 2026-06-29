@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://issuespot.co.kr/sitemap.xml
-Sitemap: https://issuespot.co.kr/rss.xml

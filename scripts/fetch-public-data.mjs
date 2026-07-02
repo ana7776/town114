@@ -53,6 +53,12 @@ const sources = [
     regionKeywords: ["서울", "경기", "인천", "부산", "전북", "전라북도", "전주", "군산", "익산", "정읍", "남원"]
   },
   {
+    name: "hospitals",
+    label: "국립중앙의료원_전국 병·의원 찾기 서비스",
+    url: process.env.HOSPITAL_API_URL,
+    regionKeywords: ["서울", "경기", "인천", "부산", "전북", "전라북도", "전주", "군산", "익산", "정읍", "남원"]
+  },
+  {
     name: "civil-kiosks",
     label: "무인민원발급기정보 조회서비스",
     url: process.env.CIVIL_KIOSK_API_URL,

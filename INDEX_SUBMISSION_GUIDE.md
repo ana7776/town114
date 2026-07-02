@@ -7,6 +7,7 @@ Use this after the latest files are deployed to `https://town114.com/`.
 - Open `https://town114.com/sitemap.xml`.
 - Confirm the sitemap includes the latest `/news/`, `/articles/`, and `/tools/` URLs.
 - Confirm `https://town114.com/news/auto-posts/` shows the auto-post index, not the home page.
+- Confirm `/news/auto-posts/` pages remain `noindex,follow` unless a page has been manually promoted and rewritten as an indexable guide.
 - Confirm `https://town114.com/tools/visit-question-builder/` shows the question builder page, not the home page.
 - Confirm `https://town114.com/robots.txt` includes `Sitemap: https://town114.com/sitemap.xml`.
 
@@ -20,6 +21,7 @@ Use this after the latest files are deployed to `https://town114.com/`.
 6. Do not submit `town114.com`, `https://town114.com/`, or `/` as a sitemap URL.
 7. Use `URL inspection` for the important new URLs below.
 8. If Google says the URL is available to Google, click `Request indexing`.
+9. Do not request indexing for URLs that contain `<meta name="robots" content="noindex,follow">`.
 
 ## Naver Search Advisor
 
@@ -47,15 +49,10 @@ Use this after the latest files are deployed to `https://town114.com/`.
 - `https://town114.com/articles/culture-calendar-check-guide/`
 - `https://town114.com/articles/culture-benefit-application-guide/`
 - `https://town114.com/articles/culture-accessibility-guide/`
-- `https://town114.com/news/auto-posts/`
-- `https://town114.com/news/auto-posts/2026-06-09-afternoon-weekday-parking-fee-check/`
-- `https://town114.com/news/auto-posts/2026-06-09-evening-evening-pharmacy-call-check/`
-- `https://town114.com/news/auto-posts/2026-06-10-afternoon-weekday-parking-fee-check/`
-- `https://town114.com/news/auto-posts/2026-06-10-evening-evening-pharmacy-call-check/`
-- `https://town114.com/news/auto-posts/2026-06-11-afternoon-community-center-document-window/`
-- `https://town114.com/news/auto-posts/2026-06-11-evening-library-evening-room-check/`
-- `https://town114.com/news/auto-posts/2026-06-12-afternoon-weekday-parking-fee-check/`
-- `https://town114.com/news/auto-posts/2026-06-12-evening-evening-pharmacy-call-check/`
+
+## Auto-post policy
+
+The `/news/auto-posts/` section is intentionally kept out of Google/Naver indexing while AdSense review is pending. These pages can still help internal discovery through `follow`, but they should not be submitted through URL inspection until they are merged, rewritten, or promoted into a stronger indexable guide.
 
 ## Current production note
 

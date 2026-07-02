@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="동네 약국을 찾기 전 주말·야간 운영, 처방 조제 가능 여부, 전화 확인 항목을 정리한 TOWN114 약국 생활정보 페이지입니다." />
+    <meta name="description" content="동네 약국을 찾기 전 주말·야간 운영, 처방 조제 가능 여부, 전화 확인 항목과 Google 지도 이동 방법을 정리한 TOWN114 약국 생활정보 페이지입니다." />
     <meta name="robots" content="index,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5804969457082424" crossorigin="anonymous"></script>
     <link rel="canonical" href="https://town114.com/services/pharmacies/" />    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -24,6 +25,49 @@
       <div class="article-meta"><span>서비스 카테고리</span><span>방문 전 확인 기준</span><span>업데이트: 2026-06-24</span></div>
       <p>약국 정보는 지도에 표시된 영업시간과 실제 조제 가능 시간이 다를 수 있습니다. TOWN114는 약국을 찾을 때 확인해야 할 기준을 먼저 정리합니다. 주소나 영업시간만 보는 대신 조제 가능 시간, 재고, 대체 약국, 전화 확인 순서를 함께 보는 것이 핵심입니다.</p>
       <p>현재 공공데이터포털 약국정보서비스에서 서울·경기·인천·부산·전북 중심의 스냅샷 81건을 수집해 약국명, 주소, 전화번호, 좌표 확인 기준을 보강했습니다. 주말·야간 운영, 처방 조제 가능 시간, 약 재고는 방문 전 전화로 다시 확인해야 합니다.</p>
+
+      <section class="pharmacy-map-widget" aria-labelledby="pharmacy-map-title">
+        <div class="pharmacy-map-copy">
+          <p class="eyebrow">Google 지도 이동</p>
+          <h2 id="pharmacy-map-title">찾는 약국 위치를 지도에서 바로 확인하기</h2>
+          <p>약국명, 동네, 주소를 함께 입력하면 아래 Google 지도가 해당 검색 위치로 이동합니다. 같은 이름의 약국이 여러 곳일 수 있으므로 지도 결과의 주소와 전화번호를 한 번 더 대조한 뒤 이동하세요.</p>
+          <form class="pharmacy-map-search" id="pharmacy-map-search">
+            <label for="pharmacy-map-query">약국명 또는 주소</label>
+            <div>
+              <input id="pharmacy-map-query" name="q" type="search" value="서울 중구 약국" autocomplete="off" />
+              <button type="submit">지도 보기</button>
+            </div>
+          </form>
+          <div class="pharmacy-map-shortcuts" aria-label="빠른 지도 검색">
+            <button type="button" data-map-query="서울 중구 약국">서울 중구</button>
+            <button type="button" data-map-query="경기 수원시 약국">경기 수원</button>
+            <button type="button" data-map-query="인천 부평구 약국">인천 부평</button>
+            <button type="button" data-map-query="부산 해운대구 약국">부산 해운대</button>
+            <button type="button" data-map-query="전주 완산구 약국">전주 완산</button>
+          </div>
+          <p class="pharmacy-map-hint">검색 결과에서 원하는 약국을 고르면 지도 위치가 바뀌고, 길찾기 버튼으로 바로 이동 경로를 열 수 있습니다.</p>
+        </div>
+        <div class="pharmacy-map-frame">
+          <iframe
+            id="pharmacy-google-map"
+            title="약국 Google 지도 검색 결과"
+            src="https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%95%BD%EA%B5%AD&amp;output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a id="pharmacy-map-open" href="https://www.google.com/maps/search/?api=1&amp;query=%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%EC%95%BD%EA%B5%AD" target="_blank" rel="noopener">Google 지도에서 크게 보기</a>
+        </div>
+      </section>
+
+      <section class="pharmacy-finder" aria-labelledby="pharmacy-finder-title">
+        <div class="inline-heading">
+          <div>
+            <h2 id="pharmacy-finder-title">약국 목록에서 바로 이동하기</h2>
+            <p>약국명, 동네, 주소로 검색한 뒤 원하는 약국의 지도나 길찾기를 바로 열 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="pharmacy-finder-status" id="pharmacy-finder-status" aria-live="polite">약국 데이터를 불러오는 중입니다.</div>
+        <div class="pharmacy-result-list" id="pharmacy-result-list"></div>
+      </section>
 
       <div class="decision-box">
         <strong>TOWN114 약국 방문 판단법</strong>
@@ -57,6 +101,7 @@
 
       <h2>확인할 공식 자료</h2>
       <p>약국 정보는 보건의료 공개자료, 지자체 안내, 약국의 현장 운영 상황을 함께 봐야 합니다. 특히 야간·주말 방문, 처방 조제, 특정 의약품 재고는 이동 전에 전화로 다시 확인하는 편이 안전합니다.</p>
+      <p>공휴일이나 연휴에는 당번약국 안내가 있어도 접수 마감, 조제 가능 인력, 약 재고가 달라질 수 있습니다. 아이 약, 고령자 복용약, 냉장 보관 의약품처럼 대체가 어려운 경우에는 약 이름과 처방전 여부를 먼저 말하고 확인하는 것이 좋습니다.</p>
       <div class="field-memo" aria-label="약국 방문 전 메모 양식">
         <span>방문 목적: 처방 조제 / 일반 의약품 / 상담 / 재고 확인</span>
         <span>시간 조건: 평일 / 야간 / 토요일 / 일요일 / 공휴일</span>
@@ -65,6 +110,159 @@
       </div>
       <div class="related-links"><strong>관련 콘텐츠</strong><a href="/articles/pharmacy-weekend-guide/">주말과 야간에 문 여는 약국 찾는 법</a><a href="/articles/local-life-checklist/">동네 생활시설 방문 전 공통 체크리스트</a><a href="/topics/family-care/">가족·보육·생활시설 방문 전 질문</a></div>
     </article></main>
-    <footer class="site-footer"><div><strong>TOWN114</strong><p>약국 이용 전 확인 기준을 정리합니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a></span></div></footer>
+    <footer class="site-footer"><div><strong>TOWN114</strong><p>약국 이용 전 확인 기준을 정리합니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a> · <a href="/contact/">문의</a></span></div></footer>
+    <script>
+      (() => {
+        const form = document.querySelector("#pharmacy-map-search");
+        const input = document.querySelector("#pharmacy-map-query");
+        const iframe = document.querySelector("#pharmacy-google-map");
+        const openLink = document.querySelector("#pharmacy-map-open");
+        const shortcutButtons = document.querySelectorAll("[data-map-query]");
+        const resultList = document.querySelector("#pharmacy-result-list");
+        const finderStatus = document.querySelector("#pharmacy-finder-status");
+
+        if (!form || !input || !iframe || !openLink) return;
+
+        const getMapQuery = (pharmacy) => {
+          if (!pharmacy) return "";
+          if (pharmacy.latitude && pharmacy.longitude) return `${pharmacy.latitude},${pharmacy.longitude}`;
+          return `${pharmacy.name} ${pharmacy.address}`.trim();
+        };
+
+        const getSearchLabel = (pharmacy) => {
+          if (!pharmacy) return "";
+          return `${pharmacy.name} ${pharmacy.address}`.trim();
+        };
+
+        const getDirectionsHref = (pharmacy) => {
+          const destination = getMapQuery(pharmacy);
+          return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(destination)}`;
+        };
+
+        const updateMap = (query, label = query) => {
+          const normalizedQuery = query.trim() || "서울 중구 약국";
+          const encodedQuery = encodeURIComponent(normalizedQuery);
+          iframe.src = `https://maps.google.com/maps?q=${encodedQuery}&output=embed`;
+          openLink.href = `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
+          openLink.textContent = `${label.trim() || normalizedQuery} Google 지도에서 크게 보기`;
+        };
+
+        const selectPharmacy = (pharmacy) => {
+          const label = getSearchLabel(pharmacy);
+          input.value = label;
+          updateMap(getMapQuery(pharmacy), label);
+          document.querySelector("#pharmacy-google-map")?.scrollIntoView({ behavior: "smooth", block: "center" });
+        };
+
+        const normalize = (value) => value.toLowerCase().replace(/\s+/g, " ").trim();
+
+        const renderPharmacies = (items) => {
+          if (!resultList || !finderStatus) return;
+
+          const query = normalize(input.value);
+          const filtered = items
+            .filter((item) => {
+              if (!query || query === "서울 중구 약국") return true;
+              const target = normalize(`${item.name} ${item.region} ${item.address} ${item.phone}`);
+              return query
+                .replace(/약국/g, "")
+                .split(" ")
+                .filter(Boolean)
+                .every((term) => target.includes(term));
+            })
+            .slice(0, 8);
+
+          finderStatus.textContent = filtered.length
+            ? `${filtered.length}개 약국을 표시합니다. 방문 전 전화로 운영 여부와 조제 가능 시간을 확인하세요.`
+            : "일치하는 약국이 없습니다. 동네명이나 약국명을 조금 짧게 입력해 보세요.";
+
+          resultList.replaceChildren();
+          filtered.forEach((item) => {
+            const label = getSearchLabel(item);
+            const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(getMapQuery(item))}`;
+            const phoneHref = item.phone ? `tel:${item.phone.replace(/[^0-9+]/g, "")}` : "";
+            const card = document.createElement("article");
+            const info = document.createElement("div");
+            const name = document.createElement("strong");
+            const address = document.createElement("p");
+            const meta = document.createElement("small");
+            const actions = document.createElement("div");
+            const mapButton = document.createElement("button");
+            const directionsLink = document.createElement("a");
+            const mapLink = document.createElement("a");
+
+            card.className = "pharmacy-result-card";
+            actions.className = "pharmacy-result-actions";
+            name.textContent = item.name || "약국명 확인 필요";
+            address.textContent = item.address || "주소 확인 필요";
+            meta.textContent = `${item.region || "지역 정보 확인 필요"} · 기준일 ${item.baselineDate || "확인 필요"}`;
+
+            mapButton.type = "button";
+            mapButton.textContent = "지도 보기";
+            mapButton.addEventListener("click", () => selectPharmacy(item));
+
+            directionsLink.href = getDirectionsHref(item);
+            directionsLink.target = "_blank";
+            directionsLink.rel = "noopener";
+            directionsLink.setAttribute("aria-label", `${label} 길찾기`);
+            directionsLink.textContent = "길찾기";
+
+            mapLink.href = mapHref;
+            mapLink.target = "_blank";
+            mapLink.rel = "noopener";
+            mapLink.setAttribute("aria-label", `${label} Google 지도 새 창 열기`);
+            mapLink.textContent = "새 창";
+
+            info.append(name, address, meta);
+            actions.append(mapButton, directionsLink);
+            if (phoneHref) {
+              const phoneLink = document.createElement("a");
+              phoneLink.href = phoneHref;
+              phoneLink.setAttribute("aria-label", `${item.name} 전화하기`);
+              phoneLink.textContent = "전화";
+              actions.append(phoneLink);
+            } else {
+              const noPhone = document.createElement("span");
+              noPhone.textContent = "전화 없음";
+              actions.append(noPhone);
+            }
+            actions.append(mapLink);
+            card.append(info, actions);
+            resultList.append(card);
+          });
+        };
+
+        form.addEventListener("submit", (event) => {
+          event.preventDefault();
+          updateMap(input.value);
+          if (window.pharmacyItems) renderPharmacies(window.pharmacyItems);
+        });
+
+        input.addEventListener("input", () => {
+          if (window.pharmacyItems) renderPharmacies(window.pharmacyItems);
+        });
+
+        shortcutButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            input.value = button.dataset.mapQuery || "";
+            updateMap(input.value);
+            if (window.pharmacyItems) renderPharmacies(window.pharmacyItems);
+          });
+        });
+
+        fetch("/data/public-data-summary.json")
+          .then((response) => {
+            if (!response.ok) throw new Error("약국 데이터를 불러오지 못했습니다.");
+            return response.json();
+          })
+          .then((data) => {
+            window.pharmacyItems = data.services?.find((service) => service.name === "pharmacies")?.items || [];
+            renderPharmacies(window.pharmacyItems);
+          })
+          .catch(() => {
+            if (finderStatus) finderStatus.textContent = "약국 목록을 불러오지 못했습니다. 위 검색창에서 직접 약국명이나 주소를 입력해 지도 검색을 이용하세요.";
+          });
+      })();
+    </script>
   </body>
 </html>

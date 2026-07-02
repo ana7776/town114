@@ -111,6 +111,7 @@ const pageHtml = `<!doctype html>
     <meta name="description" content="${escapeHtml(topic.summary)}" />
     <meta name="robots" content="noindex,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5804969457082424" crossorigin="anonymous"></script>
     <link rel="canonical" href="https://town114.com${urlPath}" />
     <title>${escapeHtml(topic.title)} | TOWN114</title>
     <link rel="stylesheet" href="../../../styles.css" />
@@ -133,7 +134,7 @@ const pageHtml = `<!doctype html>
       ${renderTable()}
       <div class="related-links"><strong>함께 보기</strong>${relatedLinks.map(([href, label]) => `<a href="${href}">${escapeHtml(label)}</a>`).join("")}</div>
     </article></main>
-    <footer class="site-footer"><div><strong>TOWN114</strong><p>지역 생활정보를 방문 전 확인 기준으로 정리합니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a></span></div></footer>
+    <footer class="site-footer"><div><strong>TOWN114</strong><p>지역 생활정보를 방문 전 확인 기준으로 정리합니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a> · <a href="/contact/">문의하기</a></span></div></footer>
   </body>
 </html>
 `;
@@ -162,6 +163,7 @@ function renderIndex(entries) {
     <meta name="description" content="TOWN114 자동 생활정보 글 목록입니다. 최근 발행된 생활정보 중 주제가 겹치지 않는 확인 가이드를 우선 정리합니다." />
     <meta name="robots" content="noindex,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5804969457082424" crossorigin="anonymous"></script>
     <link rel="canonical" href="https://town114.com/news/auto-posts/" />
     <link rel="alternate" type="application/rss+xml" title="TOWN114 생활정보 업데이트" href="https://town114.com/feed.xml" />
     <title>자동 생활정보 글 목록 | TOWN114</title>
@@ -175,7 +177,7 @@ function renderIndex(entries) {
           ${items}
       </div></section>
     </main>
-    <footer class="site-footer"><div><strong>TOWN114</strong><p>자동 글도 출처와 확인 기준을 함께 둡니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a></span></div></footer>
+    <footer class="site-footer"><div><strong>TOWN114</strong><p>자동 글도 출처와 확인 기준을 함께 둡니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a> · <a href="/contact/">문의하기</a></span></div></footer>
   </body>
 </html>
 `;

@@ -10,6 +10,7 @@ const requiredKeys = [
 ];
 
 const optionalKeys = [
+  "HOSPITAL_API_URL",
   "RENTAL_CAR_API_URL",
   "CIVIL_KIOSK_API_URL",
   "CULTURE_EVENT_API_URL",

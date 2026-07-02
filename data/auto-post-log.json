@@ -1,5 +1,45 @@
 [
   {
+    "date": "2026-07-01",
+    "slot": "evening",
+    "slug": "2026-07-01-evening-evening-pharmacy-call-check",
+    "title": "야간 시간 약국 방문 전 전화로 확인할 질문",
+    "category": "약국",
+    "url": "/news/auto-posts/2026-07-01-evening-evening-pharmacy-call-check/"
+  },
+  {
+    "date": "2026-07-01",
+    "slot": "afternoon",
+    "slug": "2026-07-01-afternoon-weekday-parking-fee-check",
+    "title": "평일 공영주차장 이용 전 요금표를 다시 보는 기준",
+    "category": "주차장",
+    "url": "/news/auto-posts/2026-07-01-afternoon-weekday-parking-fee-check/"
+  },
+  {
+    "date": "2026-06-30",
+    "slot": "evening",
+    "slug": "2026-06-30-evening-library-study-room-seat-check",
+    "title": "저녁 도서관 열람실 좌석 확인 전에 볼 기준",
+    "category": "도서관",
+    "url": "/news/auto-posts/2026-06-30-evening-library-study-room-seat-check/"
+  },
+  {
+    "date": "2026-06-29",
+    "slot": "evening",
+    "slug": "2026-06-29-evening-community-center-kiosk-after-hours",
+    "title": "업무시간 이후 무인민원발급기 이용 전 확인할 항목",
+    "category": "공공민원",
+    "url": "/news/auto-posts/2026-06-29-evening-community-center-kiosk-after-hours/"
+  },
+  {
+    "date": "2026-06-29",
+    "slot": "afternoon",
+    "slug": "2026-06-29-afternoon-family-document-proxy-check",
+    "title": "가족 서류 대리 발급 전 위임장과 신분증 확인법",
+    "category": "공공민원",
+    "url": "/news/auto-posts/2026-06-29-afternoon-family-document-proxy-check/"
+  },
+  {
     "date": "2026-06-25",
     "slot": "afternoon",
     "slug": "2026-06-25-afternoon-public-parking-discount-proof-check",

@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node scripts/build-sitemap.mjs",
     "seo:sitemap": "node scripts/build-sitemap.mjs",
+    "seo:audit": "node scripts/seo-structure-audit.mjs",
     "preview": "node scripts/local-static-server.mjs 4173",
     "images:r2": "node scripts/crawl-images-to-r2.mjs",
     "images:r2:dry-run": "node scripts/crawl-images-to-r2.mjs --dry-run"

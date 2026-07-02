@@ -73,6 +73,20 @@ const sourceMap = {
       latitude: ["YPos"],
       longitude: ["XPos"]
     }
+  },
+  hospitals: {
+    label: "병원",
+    page: "/services/hospitals/",
+    fields: {
+      name: ["dutyName", "yadmNm"],
+      region: ["dutyAddr", "sidoCdNm", "sgguCdNm"],
+      address: ["dutyAddr", "addr"],
+      phone: ["dutyTel1", "telno"],
+      note: ["dutyDivNam", "dutyEmclsName", "dutyTime1s", "dutyTime1c", "dutyTime6s", "dutyTime6c", "dutyTime7s", "dutyTime7c"],
+      baselineDate: ["rnum"],
+      latitude: ["wgs84Lat", "YPos"],
+      longitude: ["wgs84Lon", "XPos"]
+    }
   }
 };
 

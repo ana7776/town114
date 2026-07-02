@@ -16,6 +16,7 @@ Checked on 2026-06-24:
 | `CAR_REPAIR_API_URL` | Set | 300 car-repair rows fetched |
 | `RENTAL_CAR_API_URL` | Set | 300 rental-car rows fetched |
 | `PHARMACY_API_URL` | Set | 81 pharmacy rows fetched |
+| `HOSPITAL_API_URL` | Approved, URL not set locally | Add National Medical Center hospital search URL |
 | `CIVIL_KIOSK_API_URL` | Missing | Add after approval |
 | `CULTURE_EVENT_API_URL` | Missing | Add after approval |
 | `CULTURE_FACILITY_API_URL` | Missing | Add after approval |
@@ -41,6 +42,7 @@ node scripts/build-public-data-summary.mjs
 | Car repair | 전국자동차정비업체표준데이터 | Yes | `CAR_REPAIR_API_URL` | `/services/car-repair/`, vehicle guides |
 | Rental cars | 전국렌터카업체정보표준데이터 (`https://www.data.go.kr/data/15025689/standard.do`) | Optional | `RENTAL_CAR_API_URL` | `/services/rental-cars/`, local mobility guides |
 | Pharmacies | 건강보험심사평가원_약국정보서비스 or 국립중앙의료원_전국 약국 정보 조회 서비스 | Yes | `PHARMACY_API_URL` | `/services/pharmacies/`, weekend/night pharmacy guides |
+| Hospitals | 국립중앙의료원_전국 병·의원 찾기 서비스 (`https://www.data.go.kr/data/15000736/openapi.do`) | Approved | `HOSPITAL_API_URL` | `/services/hospitals/`, hospital visit and map guides |
 
 ## Priority 2: useful local-service expansion
 

@@ -5,8 +5,16 @@
     <link>https://town114.com/</link>
     <description>약국, 주차장, 도서관, 주민센터, 정비소처럼 자주 찾는 지역 생활정보를 방문 전 확인 기준으로 정리합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Wed, 01 Jul 2026 03:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jul 2026 03:00:00 GMT</lastBuildDate>
     <atom:link href="https://town114.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>주민센터 서류 발급 전 접수 창구와 마감 시간 확인법</title>
+      <link>https://town114.com/news/auto-posts/2026-07-02-afternoon-community-center-document-window/</link>
+      <guid isPermaLink="true">https://town114.com/news/auto-posts/2026-07-02-afternoon-community-center-document-window/</guid>
+      <pubDate>Thu, 02 Jul 2026 04:00:00 GMT</pubDate>
+      <category>공공민원</category>
+      <description>공공민원 생활정보를 방문 전 확인 기준으로 정리한 글입니다.</description>
+    </item>
     <item>
       <title>야간 시간 약국 방문 전 전화로 확인할 질문</title>
       <link>https://town114.com/news/auto-posts/2026-07-01-evening-evening-pharmacy-call-check/</link>
@@ -158,14 +166,6 @@
       <pubDate>Wed, 17 Jun 2026 04:00:00 GMT</pubDate>
       <category>주차장</category>
       <description>주차장 생활정보를 방문 전 확인 기준으로 정리한 글입니다.</description>
-    </item>
-    <item>
-      <title>주말 약국 방문 전 처방약 재고를 확인하는 질문</title>
-      <link>https://town114.com/news/auto-posts/2026-06-16-evening-weekend-pharmacy-stock-call-check/</link>
-      <guid isPermaLink="true">https://town114.com/news/auto-posts/2026-06-16-evening-weekend-pharmacy-stock-call-check/</guid>
-      <pubDate>Tue, 16 Jun 2026 10:00:00 GMT</pubDate>
-      <category>약국</category>
-      <description>약국 생활정보를 방문 전 확인 기준으로 정리한 글입니다.</description>
     </item>
   </channel>
 </rss>

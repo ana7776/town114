@@ -5,8 +5,16 @@
     <link>https://town114.com/</link>
     <description>약국, 주차장, 도서관, 주민센터, 정비소처럼 자주 찾는 지역 생활정보를 방문 전 확인 기준으로 정리합니다.</description>
     <language>ko-KR</language>
-    <lastBuildDate>Thu, 02 Jul 2026 03:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 04 Jul 2026 03:00:00 GMT</lastBuildDate>
     <atom:link href="https://town114.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>도서관 휴관일과 임시 운영 공지를 함께 확인하는 법</title>
+      <link>https://town114.com/news/auto-posts/2026-07-04-afternoon-library-holiday-notice-check/</link>
+      <guid isPermaLink="true">https://town114.com/news/auto-posts/2026-07-04-afternoon-library-holiday-notice-check/</guid>
+      <pubDate>Sat, 04 Jul 2026 04:00:00 GMT</pubDate>
+      <category>도서관</category>
+      <description>도서관 생활정보를 방문 전 확인 기준으로 정리한 글입니다.</description>
+    </item>
     <item>
       <title>주민센터 서류 발급 전 접수 창구와 마감 시간 확인법</title>
       <link>https://town114.com/news/auto-posts/2026-07-02-afternoon-community-center-document-window/</link>
@@ -158,14 +166,6 @@
       <pubDate>Wed, 17 Jun 2026 10:00:00 GMT</pubDate>
       <category>전기차 충전</category>
       <description>전기차 충전 생활정보를 방문 전 확인 기준으로 정리한 글입니다.</description>
-    </item>
-    <item>
-      <title>공영주차장 할인 증빙을 출차 전 확인하는 방법</title>
-      <link>https://town114.com/news/auto-posts/2026-06-17-afternoon-public-parking-discount-proof-check/</link>
-      <guid isPermaLink="true">https://town114.com/news/auto-posts/2026-06-17-afternoon-public-parking-discount-proof-check/</guid>
-      <pubDate>Wed, 17 Jun 2026 04:00:00 GMT</pubDate>
-      <category>주차장</category>
-      <description>주차장 생활정보를 방문 전 확인 기준으로 정리한 글입니다.</description>
     </item>
   </channel>
 </rss>

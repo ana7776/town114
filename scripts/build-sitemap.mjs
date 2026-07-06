@@ -73,7 +73,13 @@ ${urls.map((item) => `  <url><loc>${xmlEscape(item.loc)}</loc><lastmod>${item.la
 </urlset>
 `;
 
-const robots = `User-agent: *
+const robots = `User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Google-Display-Ads-Bot
+Allow: /
+
+User-agent: *
 Allow: /
 
 Sitemap: ${siteUrl}/sitemap.xml

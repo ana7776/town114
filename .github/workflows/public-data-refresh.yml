@@ -1,0 +1,54 @@
+name: Refresh public data snapshot
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    # 매주 월요일 04:00 UTC (한국시간 13:00)에 자동 실행
+    - cron: "0 4 * * 1"
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Fetch public data snapshot
+        env:
+          PUBLIC_DATA_SERVICE_KEY: ${{ secrets.PUBLIC_DATA_SERVICE_KEY }}
+          PARKING_API_URL: ${{ secrets.PARKING_API_URL }}
+          LIBRARY_API_URL: ${{ secrets.LIBRARY_API_URL }}
+          CAR_REPAIR_API_URL: ${{ secrets.CAR_REPAIR_API_URL }}
+          RENTAL_CAR_API_URL: ${{ secrets.RENTAL_CAR_API_URL }}
+          PHARMACY_API_URL: ${{ secrets.PHARMACY_API_URL }}
+          HOSPITAL_API_URL: ${{ secrets.HOSPITAL_API_URL }}
+        run: node scripts/fetch-public-data.mjs
+
+      - name: Build public data summary
+        run: node scripts/build-public-data-summary.mjs
+
+      - name: Build sitemap and robots
+        run: npm run build
+
+      - name: Commit updated data if changed
+        run: |
+          git config user.name "town114-data-bot"
+          git config user.email "town114-data-bot@users.noreply.github.com"
+          git add data/public-data-summary.json sitemap.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No data changes detected."
+          else
+            git commit -m "chore: refresh public data snapshot [automated]"
+            git push
+          fi

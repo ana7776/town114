@@ -68,8 +68,15 @@
             <p>예시 목록은 방문 전 확인 기준을 보여주기 위한 축약 데이터입니다. 실제 진료 가능 여부는 병원에 직접 확인하세요.</p>
           </div>
         </div>
-        <div class="pharmacy-finder-status" id="hospital-finder-status" aria-live="polite">병원 예시 데이터를 불러오는 중입니다.</div>
-        <div class="pharmacy-result-list" id="hospital-result-list"></div>
+        <div class="pharmacy-finder-status" id="hospital-finder-status" aria-live="polite">전국 병원 예시 30건 중 6건을 표시합니다. 실제 접수 가능 여부는 병원에 직접 확인하세요.</div>
+        <div class="pharmacy-result-list" id="hospital-result-list">
+          <article class="pharmacy-result-card"><div><strong>(복지)예사랑병원</strong><p>부산광역시 서구 옥천로130번길 38, (아미동2가)</p><small>정신병원 · 부산 부산서구 · 의사 2명</small></div><div class="pharmacy-result-actions"><button type="button" data-static-map-query="35.0973247,129.0133103" data-static-map-label="(복지)예사랑병원 부산광역시 서구 옥천로130번길 38, (아미동2가)">지도 보기</button><a href="https://www.google.com/maps/dir/?api=1&destination=35.0973247%2C129.0133103" target="_blank" rel="noopener">길찾기</a><a href="tel:2489000">전화</a></div></article>
+          <article class="pharmacy-result-card"><div><strong>(사)경찰공제회 강서적성의원</strong><p>서울특별시 강서구 남부순환로 171, 강서운전면허시험장만남의광장 적성검사소호 (외발산동)</p><small>의원 · 서울 강서구 · 의사 1명</small></div><div class="pharmacy-result-actions"><button type="button" data-static-map-query="37.5494984,126.8219847" data-static-map-label="(사)경찰공제회 강서적성의원 서울특별시 강서구 남부순환로 171, 강서운전면허시험장만남의광장 적성검사소호 (외발산동)">지도 보기</button><a href="https://www.google.com/maps/dir/?api=1&destination=37.5494984%2C126.8219847" target="_blank" rel="noopener">길찾기</a><a href="tel:15771120">전화</a></div></article>
+          <article class="pharmacy-result-card"><div><strong>(사)경찰공제회남부의원</strong><p>인천광역시 남동구 아암대로 1247, (고잔동)</p><small>의원 · 인천 인천남동구 · 의사 1명</small></div><div class="pharmacy-result-actions"><button type="button" data-static-map-query="37.3849097,126.7088609" data-static-map-label="(사)경찰공제회남부의원 인천광역시 남동구 아암대로 1247, (고잔동)">지도 보기</button><a href="https://www.google.com/maps/dir/?api=1&destination=37.3849097%2C126.7088609" target="_blank" rel="noopener">길찾기</a><a href="tel:0328112500">전화</a></div></article>
+          <article class="pharmacy-result-card"><div><strong>(사)대한산업보건협회 남부산의원</strong><p>부산광역시 강서구 명지국제6로1번길 30, A동 3층 (명지동)</p><small>의원 · 부산 부산강서구 · 의사 5명</small></div><div class="pharmacy-result-actions"><button type="button" data-static-map-query="35.0947002,128.9001499" data-static-map-label="(사)대한산업보건협회 남부산의원 부산광역시 강서구 명지국제6로1번길 30, A동 3층 (명지동)">지도 보기</button><a href="https://www.google.com/maps/dir/?api=1&destination=35.0947002%2C128.9001499" target="_blank" rel="noopener">길찾기</a><a href="tel:0517106888">전화</a></div></article>
+          <article class="pharmacy-result-card"><div><strong>(사)대한산업보건협회 부설 한마음의원</strong><p>경기도 군포시 산본로48번길 8, 3층 (당정동)</p><small>의원 · 경기 군포시 · 의사 0명</small></div><div class="pharmacy-result-actions"><button type="button" data-static-map-query="37.3572562,126.9599347" data-static-map-label="(사)대한산업보건협회 부설 한마음의원 경기도 군포시 산본로48번길 8, 3층 (당정동)">지도 보기</button><a href="https://www.google.com/maps/dir/?api=1&destination=37.3572562%2C126.9599347" target="_blank" rel="noopener">길찾기</a><a href="tel:025862415">전화</a></div></article>
+          <article class="pharmacy-result-card"><div><strong>(사)대한산업보건협회 전북지역본부 전북의원</strong><p>전북특별자치도 전주시 덕진구 기린대로 1030, (여의동)</p><small>의원 · 전북 전주덕진구 · 의사 6명</small></div><div class="pharmacy-result-actions"><button type="button" data-static-map-query="35.8683951,127.0738726" data-static-map-label="(사)대한산업보건협회 전북지역본부 전북의원 전북특별자치도 전주시 덕진구 기린대로 1030, (여의동)">지도 보기</button><a href="https://www.google.com/maps/dir/?api=1&destination=35.8683951%2C127.0738726" target="_blank" rel="noopener">길찾기</a><a href="tel:0632251242">전화</a></div></article>
+        </div>
       </section>
 
       <div class="decision-box">
@@ -126,6 +133,16 @@
         const status = document.querySelector("#hospital-finder-status");
 
         if (!form || !input || !iframe || !openLink || !directionsLink) return;
+
+        // 서버 렌더링된 정적 카드용 지도 보기 버튼 (JS 미실행/데이터 fetch 실패 시에도 동작)
+        list?.addEventListener("click", (event) => {
+          const staticButton = event.target.closest("[data-static-map-query]");
+          if (!staticButton) return;
+          const query = staticButton.getAttribute("data-static-map-query") || "";
+          const label = staticButton.getAttribute("data-static-map-label") || query;
+          input.value = label;
+          updateMap(query);
+        });
 
         const updateMap = (query) => {
           const normalizedQuery = query.trim() || "서울 강남구 내과";

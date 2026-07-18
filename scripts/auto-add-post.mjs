@@ -75,10 +75,15 @@ const lastTopicIndex = slotTopics.findIndex((item) => item.slug === baseSlug(las
 const rotatedTopics = slotTopics
   .slice(lastTopicIndex + 1)
   .concat(slotTopics.slice(0, lastTopicIndex + 1));
-const topic =
-  rotatedTopics.find((item) => !todayUsedSlugs.has(item.slug) && !previouslyUsedSlugs.has(item.slug)) ||
-  rotatedTopics.find((item) => !todayUsedSlugs.has(item.slug)) ||
-  rotatedTopics[0];
+const topic = rotatedTopics.find(
+  (item) => !todayUsedSlugs.has(item.slug) && !previouslyUsedSlugs.has(item.slug),
+);
+if (!topic) {
+  // 중복 발행 방지: 미사용 주제가 없으면 같은 글을 날짜만 바꿔 재발행하지 않고 중단한다.
+  // 새 글을 내려면 data/auto-post-topics.json에 새 주제를 추가할 것. (CONTENT_GUIDELINES.md 참고)
+  console.log(`[auto-post] No unused topics left for slot "${slot}". Skipping to avoid duplicate content.`);
+  process.exit(0);
+}
 const slug = `${date}-${slot}-${slugify(topic.slug || topic.title)}`;
 const urlPath = `/news/auto-posts/${slug}/`;
 const outDir = join(root, "news", "auto-posts", slug);

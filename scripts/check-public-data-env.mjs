@@ -39,14 +39,13 @@ function describeValue(value) {
   return "set";
 }
 
-if (!existsSync(".env.local")) {
-  console.log(".env.local is missing. Copy .env.example to .env.local first.");
-  process.exit(1);
-}
-
-const env = parseEnv(await readFile(".env.local", "utf8"));
+// .env.local이 없으면(예: GitHub Actions) process.env를 검사 대상으로 사용한다.
+const env = existsSync(".env.local")
+  ? { ...process.env, ...parseEnv(await readFile(".env.local", "utf8")) }
+  : { ...process.env };
 
 console.log("Public-data environment check");
+console.log(existsSync(".env.local") ? "source: .env.local + process.env" : "source: process.env (no .env.local)");
 console.log("");
 
 for (const key of requiredKeys) {
@@ -57,4 +56,11 @@ console.log("");
 
 for (const key of optionalKeys) {
   console.log(`${key}: ${describeValue(env[key])}`);
+}
+
+const missing = requiredKeys.filter((key) => !env[key]);
+if (missing.length > 0) {
+  console.error("");
+  console.error(`Missing required env: ${missing.join(", ")}`);
+  process.exit(1);
 }

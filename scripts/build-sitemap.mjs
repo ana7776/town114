@@ -79,6 +79,9 @@ Allow: /
 User-agent: Google-Display-Ads-Bot
 Allow: /
 
+User-agent: AdsBot-Google
+Allow: /
+
 User-agent: *
 Allow: /
 

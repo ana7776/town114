@@ -15,6 +15,24 @@ async function loadLocalEnv() {
 
 await loadLocalEnv();
 
+// 필수 환경변수 사전 검증: 값이 없으면 무엇이 없는지 명시하고 즉시 종료한다.
+// (GitHub Actions에서는 저장소 Secrets가 워크플로 env로 주입되어야 한다.)
+const requiredEnvKeys = [
+  "PUBLIC_DATA_SERVICE_KEY",
+  "PARKING_API_URL",
+  "LIBRARY_API_URL",
+  "CAR_REPAIR_API_URL",
+  "PHARMACY_API_URL",
+];
+const missingEnvKeys = requiredEnvKeys.filter((key) => !process.env[key]);
+if (missingEnvKeys.length > 0) {
+  console.error(`Missing required env: ${missingEnvKeys.join(", ")}`);
+  console.error(
+    "Set them in .env.local for local runs, or as repository secrets (Settings > Secrets and variables > Actions) for GitHub Actions.",
+  );
+  process.exit(1);
+}
+
 const serviceKey = process.env.PUBLIC_DATA_SERVICE_KEY;
 
 const sources = [

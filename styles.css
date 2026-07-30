@@ -3775,6 +3775,50 @@ body {
   color: #26342c;
 }
 
+.place-info-card {
+  margin: 18px 0 24px;
+  padding: 18px 20px;
+  background: #f8fafc;
+  border: 1px solid #d6e0ea;
+  border-radius: 8px;
+}
+
+.place-info-card > strong {
+  display: block;
+  margin-bottom: 12px;
+  color: #14212b;
+  font-size: 15px;
+}
+
+.place-info-card dl {
+  display: grid;
+  grid-template-columns: max-content minmax(0, 1fr);
+  gap: 8px 14px;
+  margin: 0;
+}
+
+.place-info-card dt {
+  color: #4a5c6d;
+  font-weight: 800;
+}
+
+.place-info-card dd {
+  margin: 0;
+  color: #25313c;
+}
+
+.place-info-card a {
+  color: #0d5f8f;
+  font-weight: 700;
+}
+
+.place-map-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
 .editor-profile {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.8fr);
@@ -3958,6 +4002,10 @@ body {
   }
 
   .verification-box dl {
+    grid-template-columns: 1fr;
+  }
+
+  .place-info-card dl {
     grid-template-columns: 1fr;
   }
 

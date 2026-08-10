@@ -3,3 +3,17 @@ https://www.town114.com/* https://town114.com/:splat 301
 /town114.com /sitemap.xml 301
 /town114.com/ /sitemap.xml 301
 /sitemapxml /sitemap.xml 301
+# Removed duplicate auto-posts (2026-07-18 dedupe cleanup) -> latest surviving post on the same topic.
+# Prevents hard 404s in Search Console for URLs Google had already crawled before the cleanup.
+/news/auto-posts/2026-06-09-afternoon-weekday-parking-fee-check/ /news/auto-posts/2026-07-01-afternoon-weekday-parking-fee-check/ 301
+/news/auto-posts/2026-06-09-evening-evening-pharmacy-call-check/ /news/auto-posts/2026-07-01-evening-evening-pharmacy-call-check/ 301
+/news/auto-posts/2026-06-11-afternoon-community-center-document-window/ /news/auto-posts/2026-07-02-afternoon-community-center-document-window/ 301
+/news/auto-posts/2026-06-11-evening-library-evening-room-check/ /news/auto-posts/2026-06-22-evening-library-evening-room-check/ 301
+/news/auto-posts/2026-06-12-afternoon-weekday-parking-fee-check/ /news/auto-posts/2026-07-01-afternoon-weekday-parking-fee-check/ 301
+/news/auto-posts/2026-06-12-evening-evening-pharmacy-call-check/ /news/auto-posts/2026-07-01-evening-evening-pharmacy-call-check/ 301
+/news/auto-posts/2026-06-12-evening-library-evening-room-check/ /news/auto-posts/2026-06-22-evening-library-evening-room-check/ 301
+/news/auto-posts/2026-06-15-afternoon-community-center-document-window/ /news/auto-posts/2026-07-02-afternoon-community-center-document-window/ 301
+/news/auto-posts/2026-06-15-afternoon-library-holiday-notice-check/ /news/auto-posts/2026-07-04-afternoon-library-holiday-notice-check/ 301
+/news/auto-posts/2026-06-15-evening-evening-pharmacy-call-check/ /news/auto-posts/2026-07-01-evening-evening-pharmacy-call-check/ 301
+/news/auto-posts/2026-06-16-afternoon-car-repair-estimate-before-visit/ /news/auto-posts/2026-07-06-afternoon-car-repair-estimate-before-visit/ 301
+/news/auto-posts/2026-06-16-evening-weekend-pharmacy-stock-call-check/ /news/auto-posts/2026-06-23-evening-weekend-pharmacy-stock-call-check/ 301

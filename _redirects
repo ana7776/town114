@@ -3,3 +3,31 @@ https://www.town114.com/* https://town114.com/:splat 301
 /town114.com /sitemap.xml 301
 /town114.com/ /sitemap.xml 301
 /sitemapxml /sitemap.xml 301
+
+# 삭제된 자동 생활정보 글 → 같은 주제의 정식 가이드
+/news/auto-posts/2026-06-09-afternoon-weekday-parking-fee-check/ /articles/public-parking-guide/ 301
+/news/auto-posts/2026-06-09-evening-evening-pharmacy-call-check/ /articles/late-night-public-pharmacy-guide/ 301
+/news/auto-posts/2026-06-11-afternoon-community-center-document-window/ /articles/community-center-guide/ 301
+/news/auto-posts/2026-06-11-evening-library-evening-room-check/ /articles/local-library-guide/ 301
+/news/auto-posts/2026-06-12-afternoon-weekday-parking-fee-check/ /articles/public-parking-guide/ 301
+/news/auto-posts/2026-06-12-evening-evening-pharmacy-call-check/ /articles/late-night-public-pharmacy-guide/ 301
+/news/auto-posts/2026-06-12-evening-library-evening-room-check/ /articles/local-library-guide/ 301
+/news/auto-posts/2026-06-15-afternoon-community-center-document-window/ /articles/community-center-guide/ 301
+/news/auto-posts/2026-06-15-afternoon-library-holiday-notice-check/ /articles/local-library-guide/ 301
+/news/auto-posts/2026-06-15-evening-evening-pharmacy-call-check/ /articles/late-night-public-pharmacy-guide/ 301
+/news/auto-posts/2026-06-16-afternoon-car-repair-estimate-before-visit/ /articles/car-service-guide/ 301
+/news/auto-posts/2026-06-16-evening-weekend-pharmacy-stock-call-check/ /articles/pharmacy-weekend-guide/ 301
+/news/auto-posts/2026-06-17-afternoon-public-parking-discount-proof-check/ /articles/public-parking-free-discount-guide/ 301
+/news/auto-posts/2026-06-17-evening-ev-charging-night-parking-fee-check/ /news/ev-charging-parking-cost/ 301
+/news/auto-posts/2026-06-18-afternoon-family-document-proxy-check/ /articles/family-document-guide/ 301
+/news/auto-posts/2026-06-18-evening-community-center-kiosk-after-hours/ /articles/unmanned-civil-kiosk-guide/ 301
+/news/auto-posts/2026-06-19-evening-library-study-room-seat-check/ /articles/local-library-guide/ 301
+/news/auto-posts/2026-06-20-afternoon-weekday-parking-fee-check/ /articles/public-parking-guide/ 301
+/news/auto-posts/2026-06-20-evening-evening-pharmacy-call-check/ /articles/late-night-public-pharmacy-guide/ 301
+/news/auto-posts/2026-06-22-afternoon-community-center-document-window/ /articles/community-center-guide/ 301
+
+/news/auto-posts/2026-06-10-afternoon-weekday-parking-fee-check/ /articles/public-parking-guide/ 301
+/news/auto-posts/2026-06-10-evening-evening-pharmacy-call-check/ /articles/late-night-public-pharmacy-guide/ 301
+/news/auto-posts/2026-06-23-afternoon-library-holiday-notice-check/ /articles/local-library-guide/ 301
+/news/auto-posts/2026-06-24-afternoon-car-repair-estimate-before-visit/ /articles/car-service-guide/ 301
+/news/auto-posts/2026-06-25-afternoon-public-parking-discount-proof-check/ /articles/public-parking-free-discount-guide/ 301

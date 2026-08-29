@@ -188,39 +188,6 @@ function renderIndex(entries) {
 `;
 }
 
-function formatRssDate(entry) {
-  const hour = entry.slot === "afternoon" ? "13" : "19";
-  return new Date(`${entry.date}T${hour}:00:00+09:00`).toUTCString();
-}
-
-function renderFeed(entries) {
-  const items = entries
-    .slice(0, 20)
-    .map((entry) => `    <item>
-      <title>${escapeHtml(entry.title)}</title>
-      <link>https://town114.com${entry.url}</link>
-      <guid isPermaLink="true">https://town114.com${entry.url}</guid>
-      <pubDate>${formatRssDate(entry)}</pubDate>
-      <category>${escapeHtml(entry.category)}</category>
-      <description>${escapeHtml(`${entry.category} 생활정보를 방문 전 확인 기준으로 정리한 글입니다.`)}</description>
-    </item>`)
-    .join("\n");
-
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>TOWN114 생활정보 업데이트</title>
-    <link>https://town114.com/</link>
-    <description>약국, 주차장, 도서관, 주민센터, 정비소처럼 자주 찾는 지역 생활정보를 방문 전 확인 기준으로 정리합니다.</description>
-    <language>ko-KR</language>
-    <lastBuildDate>${new Date(`${date}T12:00:00+09:00`).toUTCString()}</lastBuildDate>
-    <atom:link href="https://town114.com/feed.xml" rel="self" type="application/rss+xml" />
-${items}
-  </channel>
-</rss>
-`;
-}
-
 async function updateSitemap() {
   const sitemapPath = join(root, "sitemap.xml");
   let sitemap = await readFile(sitemapPath, "utf8");
@@ -246,7 +213,8 @@ await writeFile(outFile, pageHtml, "utf8");
 await writeFile(logPath, `${JSON.stringify(nextLog, null, 2)}\n`, "utf8");
 await mkdir(join(root, "news", "auto-posts"), { recursive: true });
 await writeFile(join(root, "news", "auto-posts", "index.html"), renderIndex(nextLog), "utf8");
-await writeFile(join(root, "feed.xml"), renderFeed(nextLog), "utf8");
+// feed.xml은 색인 대상 페이지에서 scripts/build-feed.mjs가 생성한다.
+// 자동 생활정보 글은 noindex이므로 피드에 싣지 않는다.
 await updateSitemap();
 
 console.log(`Created auto post: ${urlPath}`);

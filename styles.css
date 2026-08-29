@@ -3819,6 +3819,10 @@ body {
   font-size: 14px;
 }
 
+.place-map-link + .place-map-link {
+  margin-left: 16px;
+}
+
 .editor-profile {
   display: grid;
   grid-template-columns: minmax(0, 1.45fr) minmax(260px, 0.8fr);

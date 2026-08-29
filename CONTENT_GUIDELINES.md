@@ -22,6 +22,16 @@
   5. community-center-guide, pharmacy-weekend-guide, ev-charging-station-guide 순으로 확장
 - 한 번에 몰아서 넣지 않고 **주 2~3개 글**씩 추가한다. 급격한 일괄 변경보다 꾸준한 갱신 이력이 낫다.
 
+진행 상황(추가한 순서):
+- 완료: 지역 가이드 5종, `jeonju-parking-local-guide`, `library-interlibrary-loan-guide`
+- 2026-08-29 완료: `public-parking-guide`(요금 누적 구조), `late-night-public-pharmacy-guide`(증상 기준 확인 흐름),
+  `bulky-waste-online-report-guide`(신고 5단계 + 판매소 분기)
+- 다음 차례: `moving-address-checklist`(이사 순서 타임라인) → `community-center-guide` → `pharmacy-weekend-guide`
+  → `ev-charging-station-guide`
+
+다이어그램은 700 안팎 폭의 viewBox로 그린다. 모바일에서는 `.guide-figure`가 가로 스크롤로 처리하므로
+글자 크기를 12px 미만으로 줄이지 않는다.
+
 ## 2. 자동발행 운영 규칙
 
 2026-07-14에 자동발행 글 37개 중 20개가 "같은 내용, 날짜만 다른 재발행"으로 확인되어 삭제했다.

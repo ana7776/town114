@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "town114-data-bot"
           git config user.email "town114-data-bot@users.noreply.github.com"
-          git add data/public-data-summary.json sitemap.xml robots.txt
+          git add data/public-data-summary.json data/page-lastmod.json sitemap.xml robots.txt
           if git diff --cached --quiet; then
             echo "No data changes detected."
           else

@@ -42,6 +42,8 @@ Use these settings:
 
 The build command regenerates `sitemap.xml` and `robots.txt` before deployment. See `DEPLOYMENT_GUIDE.md` for the full GitHub + Cloudflare Pages setup.
 
+`sitemap.xml` dates come from `data/page-lastmod.json`, not from file mtime. The build hashes each indexable page and keeps the stored date when the hash is unchanged, so a fresh checkout (CI or Cloudflare Pages) does not restamp every URL with the deploy date. Commit `data/page-lastmod.json` together with `sitemap.xml`.
+
 ## Cloudflare R2 Image Automation
 
 The image automation script crawls configured pages, extracts image URLs, converts each image to WebP, uploads it to Cloudflare R2 through the S3-compatible API, and writes `data/r2-image-manifest.json`.

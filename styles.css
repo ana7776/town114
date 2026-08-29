@@ -4065,3 +4065,7 @@ body {
 
 .guide-figure{margin:24px 0}
 .guide-figure figcaption{font-size:13px;color:#6b7280;margin-top:6px}
+@media (max-width:640px){
+  .guide-figure{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .guide-figure svg{min-width:600px}
+}

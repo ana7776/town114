@@ -1,0 +1,286 @@
+{
+  "/": {
+    "hash": "2c91c557a3697719d02a8bce25dfe72589723f550f0f9d69a34064b6e70f3774",
+    "lastmod": "2026-07-14"
+  },
+  "/about/": {
+    "hash": "ad75153afe020f465a255c1351c47da9e00888e84be155b694b4d24a8c819233",
+    "lastmod": "2026-07-06"
+  },
+  "/advertising-disclosure/": {
+    "hash": "36afd835d7e71dda85a01b4699b3c9e94f630be1bf510487e32493f2d1e53989",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/apartment-management-fee-guide/": {
+    "hash": "dcd5cd189c72f7a00e471647b9094a486bfb13ec49aebde105a60f00c5b585e3",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/bulky-waste-mobile-report-guide/": {
+    "hash": "935633eae6c68ecd727618253b5055346a3803a62090903f07c4c154cd0c76c9",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/bulky-waste-online-report-guide/": {
+    "hash": "00095933946ff5f79e59af351899033a9d6058b162392c76384751c5e6998a20",
+    "lastmod": "2026-08-29"
+  },
+  "/articles/car-service-guide/": {
+    "hash": "c7959c720d8556ead71619d4e5160e07579f4c5c1475e8df4d27a28203c85a99",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/childcare-center-visit-guide/": {
+    "hash": "947c5d9ea5108dcd5e6a0f26786b90a4382c6a47e488c7b41d5fa1520ab8114f",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/community-center-guide/": {
+    "hash": "b8575e4e2f79027ed9358da11f215783f35fb698b88f7715182366b220a32247",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/culture-accessibility-guide/": {
+    "hash": "b931ffa81bd0e534d0a47ac8878d7e98643f42bd8246cf8e50999faf1077ab12",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/culture-benefit-application-guide/": {
+    "hash": "fea92d36f5c5e0513892f88f9ea9ca259498cf06d1aad40de96d52ba260124fb",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/culture-calendar-check-guide/": {
+    "hash": "09b6ba55e5b3a7a87973bb41bd42d5d81ed6970747e6995960c7c7428ba69830",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/culture-facility-visit-guide/": {
+    "hash": "f5e0d6f6f3dd8848fb5307fdce7f8c5f2071fcc42af624a962306a74e869866f",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/ev-charging-station-check-guide/": {
+    "hash": "867774018bc32b855713e76682c579537ff68a49e504c7fc57f85e1bc3677a65",
+    "lastmod": "2026-07-28"
+  },
+  "/articles/ev-charging-station-guide/": {
+    "hash": "aabd75712fd796e87c81ebf512cc821a0efd227a85ecf00ef10c15270af346cf",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/family-document-guide/": {
+    "hash": "557856b744b4037e8dc00eabc7b2eb1ff47bcd6728c85a77e1bacff7d0c9eb1f",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/how-we-verify-local-info/": {
+    "hash": "5cb00275288f528a016c491ff571841c75cd0fd46bf25051db7fceda47008906",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/jeonju-parking-local-guide/": {
+    "hash": "792ea7bc6120b1da6921446217b7ac2ff01aab39a0b8a685ccc8693833ecc863",
+    "lastmod": "2026-07-28"
+  },
+  "/articles/late-night-public-pharmacy-guide/": {
+    "hash": "a03ee5afe6d64914bd7cb046aa41facfd02bf6df9a2dac83ba3ef6c6ac4cf297",
+    "lastmod": "2026-08-29"
+  },
+  "/articles/library-booksea-interlibrary-guide/": {
+    "hash": "f58f1004fa6aee3e6adfffb60640bc36c58940eef6cb78c5c5da274c95f76ff6",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/library-interlibrary-loan-guide/": {
+    "hash": "2163c2d5065ba4ee305bd202e3348396bd2d41a863b5d2cd8d9c1c31ee76cbe7",
+    "lastmod": "2026-07-28"
+  },
+  "/articles/local-business-check-guide/": {
+    "hash": "5d525ccec90606f5d5970226ea4c173440ecf66041c5decff456e411d67494d2",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/local-info-scorecard/": {
+    "hash": "ece19587c606a6e1521903ead894a5685e998f76f4c9bed83ee4f24af8ebe85c",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/local-library-guide/": {
+    "hash": "d6aa17563450f7bdd7db03bebb4988a3004d1a1c53221c77cff84df57f66c26e",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/local-life-checklist/": {
+    "hash": "28312df368a9dedd493b8f460d63f40f50be2449553a4c1e1d54f6158d2d0746",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/local-phone-search-guide/": {
+    "hash": "fe7d3212aa394a0ebc2bb31569643c6a9459149ea00a6cc604565139f2c9e649",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/local-recycling-disposal-guide/": {
+    "hash": "ce4fb320876602df4f7e155cb33383f1f69ae7dddf652ff6d6af746962479d26",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/moving-address-checklist/": {
+    "hash": "323eedd4104bbb0da4a344d4ee268ec47a92c94b4a98e1979002f3f74ab1ae2f",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/national-dermatology-visit-guide/": {
+    "hash": "205128a3a82a107c78598c39561cb5ce961c0285ca20272f91be7cff43c36587",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/pharmacy-weekend-guide/": {
+    "hash": "8fab8775887746a1bca56d3acd1119fbefc9b5133694efe7f0528d2e069280d3",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/public-notice-guide/": {
+    "hash": "0bb9ed1c47fc37bac5587e80941b10fa15f204c5af4ae957c27d0e9bc777b886",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/public-parking-free-discount-guide/": {
+    "hash": "b9468825dae8db386fd4c737f19628bee2c2abe7e0c425851239d142d2fe7846",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/public-parking-guide/": {
+    "hash": "febce0c3ac15b4a7271d3d8f336a37b6db044c0c186ab2f87ddacae6d8b0df5d",
+    "lastmod": "2026-08-29"
+  },
+  "/articles/region-comparison-guide/": {
+    "hash": "d1d9a8445856c3032aad2fc0774c4205aa425fdaa96a6dcc63a2511ce4435441",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/safe-local-search-guide/": {
+    "hash": "035598ed31eaa7601550fbbcf235e8c2536fbd50ebfb2c330f1637f7ea72d127",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/safety-report-guide/": {
+    "hash": "25d35befb27ef4f07707ea0729a186f57ab9c41091d4896b9fd710b4aa8aef8c",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/saturday-hospital-check-guide/": {
+    "hash": "f6c7fd7ecefa7d10b3045903da2883a889046b284a19fd4f92b2240d97680275",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/senior-welfare-center-guide/": {
+    "hash": "2a4d3668061e6c54815ada6aa40d40a924e2905db46fa3f94e85a805ca8b7ee6",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/unmanned-civil-kiosk-guide/": {
+    "hash": "ad1a68d249a1d35359deaea3b66c1528600048e3f21b0a718cff9cf161be3e20",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/vehicle-road-check-guide/": {
+    "hash": "57a4ac8c1e5119b45e24f0e3e5e54a7da2adee9557d4420122c7825082039e6d",
+    "lastmod": "2026-07-04"
+  },
+  "/articles/welfare-job-check-guide/": {
+    "hash": "b5c9f11c50590f82f658ea2b66e8bfff845ef49c399d64eb35b8486bb6877f4f",
+    "lastmod": "2026-07-04"
+  },
+  "/contact/": {
+    "hash": "5eb0187aae14ae54421cd5eda78ea9e606fd24f03a9e0704d5dc83d2fdb7acac",
+    "lastmod": "2026-07-04"
+  },
+  "/news/community-center-document-visit/": {
+    "hash": "bffa04f83b3e9a527156f6d0c8463f204321da359339e00f78b7b28949753a4b",
+    "lastmod": "2026-07-04"
+  },
+  "/news/ev-charging-parking-cost/": {
+    "hash": "def4008d5f2e5681c40386951d70bfc184571349ee55c97a55e42464ab72ff3d",
+    "lastmod": "2026-07-04"
+  },
+  "/news/jeonbuk-pharmacy-parking-check/": {
+    "hash": "1099118d3bb92984bfa9abac838b6e115621a0450b7b3183054e4db1a67ae2dd",
+    "lastmod": "2026-07-04"
+  },
+  "/news/list/": {
+    "hash": "00e646f48cec37eabcb7d7003960ef0d676c6033f8bd2c1f327c0e482a6351d5",
+    "lastmod": "2026-07-04"
+  },
+  "/news/local-data-update-rule/": {
+    "hash": "5582cf03eb157acd0fc6a1ffaef549db3e4da2256dc666b19e4a8d3d3eef0fc8",
+    "lastmod": "2026-07-04"
+  },
+  "/news/local-official-source-check/": {
+    "hash": "575cfabfe2e6d7dbe304981859cb27ee2fbeadf38603aa071e2d529f5b75bfca",
+    "lastmod": "2026-07-04"
+  },
+  "/news/parking-fee-before-visit/": {
+    "hash": "9308eff0413b0cc53cd6ec4f4fcbf4310cf86447ad80652adcb662b9895e5f33",
+    "lastmod": "2026-07-04"
+  },
+  "/news/weekend-pharmacy-check/": {
+    "hash": "19a7ac993abba2129c75211fe64dcd3720f686402dffbd3e0206ecf347b00c8b",
+    "lastmod": "2026-07-04"
+  },
+  "/privacy/": {
+    "hash": "802c9545193b0509e990862f1738f6628078596f5acf5d36cec075b8948a9426",
+    "lastmod": "2026-07-04"
+  },
+  "/regions/busan-local-guide/": {
+    "hash": "ec2f5066e6d12070900763440b7227babd7a702aa6d025a7d4eb6be8d047cb44",
+    "lastmod": "2026-07-14"
+  },
+  "/regions/gyeonggi-local-guide/": {
+    "hash": "273e76b215c30931d811bce6bf3fd6625cd1a62e123e22f528a885c31d7770e7",
+    "lastmod": "2026-07-14"
+  },
+  "/regions/incheon-local-guide/": {
+    "hash": "40cd5dcbf31d9286f2d2890fb72ee848aa5d4226db61a09a102f090040f7f448",
+    "lastmod": "2026-07-14"
+  },
+  "/regions/jeonbuk-local-guide/": {
+    "hash": "7a953ced37d0ba63c7aed4b45f27c90d1581ac49c0c595335fa528dc8dd3de55",
+    "lastmod": "2026-07-14"
+  },
+  "/regions/seoul-local-guide/": {
+    "hash": "09518d5a73cc55cfc3c01e70c615a6cccbc6340a4152b6363a3cdf30c1f0cf50",
+    "lastmod": "2026-07-14"
+  },
+  "/services/car-repair/": {
+    "hash": "fba308b9e09af0df13c3c3eda51c6f7b11c97e816110b8476994ffc39eb0e133",
+    "lastmod": "2026-07-14"
+  },
+  "/services/community-centers/": {
+    "hash": "b959618f3cfaf197fee47cde683396a3f4f22cf4c7f30b542e9c24868726d29a",
+    "lastmod": "2026-07-02"
+  },
+  "/services/hospitals/": {
+    "hash": "3401ce39bf0e2e89357ceb68efd1ba2a75c069daa63ac0b8e0a9a583218f2058",
+    "lastmod": "2026-07-02"
+  },
+  "/services/libraries/": {
+    "hash": "b993d86d789930157042d855c6bee3c6390a63db74fcf42de28db9c73eb950b8",
+    "lastmod": "2026-07-14"
+  },
+  "/services/parking/": {
+    "hash": "03248c46241455e49f66fddaa9f88d1be951cd400d6c9138db2e22dc95554c87",
+    "lastmod": "2026-07-14"
+  },
+  "/services/pharmacies/": {
+    "hash": "3721c83c9ff56ec2184233d4a4c376f5a103bae082c9b3c03d83dd9bce509572",
+    "lastmod": "2026-07-02"
+  },
+  "/services/rental-cars/": {
+    "hash": "97b3449b12684ad8f755cd40ece1dbed25da8f67535677242e94158c6975586e",
+    "lastmod": "2026-07-14"
+  },
+  "/sitemap/": {
+    "hash": "940b88c084d533e275535efcefc93e11bf806781a6494bebdec2f8b27fb097ac",
+    "lastmod": "2026-07-02"
+  },
+  "/sources/": {
+    "hash": "b9a974be5a09e71df4bc9454acbeb550cd1c2a28bf3ea454b7e51904443f02d1",
+    "lastmod": "2026-07-06"
+  },
+  "/terms/": {
+    "hash": "0f0916b5933880ec4031c89af405eadd0135e8609f30e7e915e82d922d0358fa",
+    "lastmod": "2026-07-04"
+  },
+  "/tools/visit-question-builder/": {
+    "hash": "7ff54f9e67cdf8e66f375f9bd9e0dfc020a6f65d5b3df7c4dc2448cabf895586",
+    "lastmod": "2026-07-02"
+  },
+  "/topics/family-care/": {
+    "hash": "0c0e1f4dc3a5c44f9b69c177281e7ba93ac43d0070f06939da7a514c08a2fc3e",
+    "lastmod": "2026-07-02"
+  },
+  "/topics/local-mobility/": {
+    "hash": "b4a112a24451dce97154a302d2be64310d7857f3872af5c550a9fab7d454f9c9",
+    "lastmod": "2026-07-02"
+  },
+  "/topics/moving-housing/": {
+    "hash": "a000e994125a8364efcb8169d60562e074373cee51a5f0aa609b46718c066d01",
+    "lastmod": "2026-07-02"
+  },
+  "/topics/public-services/": {
+    "hash": "488ef1b5c4d4bb8952e5470e6eb656122b3d7d102bec46494aebc3dd5c09db10",
+    "lastmod": "2026-07-02"
+  }
+}

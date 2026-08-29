@@ -31,3 +31,8 @@ https://www.town114.com/* https://town114.com/:splat 301
 /news/auto-posts/2026-06-23-afternoon-library-holiday-notice-check/ /articles/local-library-guide/ 301
 /news/auto-posts/2026-06-24-afternoon-car-repair-estimate-before-visit/ /articles/car-service-guide/ 301
 /news/auto-posts/2026-06-25-afternoon-public-parking-discount-proof-check/ /articles/public-parking-free-discount-guide/ 301
+
+# 같은 주제의 정식 가이드로 통합한 브리핑
+/news/weekend-pharmacy-check/ /articles/pharmacy-weekend-guide/ 301
+/news/parking-fee-before-visit/ /articles/public-parking-guide/ 301
+/news/community-center-document-visit/ /articles/community-center-guide/ 301

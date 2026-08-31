@@ -12,6 +12,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history so build-sitemap.mjs can date each page by its last commit.
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4

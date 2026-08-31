@@ -15,11 +15,14 @@
 - 사진을 쓸 경우 `assets/`에 저장하고 파일명을 내용 기반으로 짓는다(예: `jeonju-hanok-parking-lot4.jpg`).
   얼굴, 차량 번호판 등 개인정보가 식별되는 부분은 게시 전 가린다.
 - 추가 우선순위(트래픽·검색 의도 기준):
-  1. public-parking-guide (주차 요금 구조 다이어그램)
-  2. late-night-public-pharmacy-guide (야간 약국 확인 흐름)
-  3. bulky-waste-online-report-guide (배출 신고 절차도)
-  4. moving-address-checklist (이사 순서 타임라인)
+  1. ~~public-parking-guide (주차 요금 구조 다이어그램)~~ — 2026-08-31 완료
+  2. ~~late-night-public-pharmacy-guide (야간 약국 확인 흐름)~~ — 2026-08-31 완료
+  3. ~~bulky-waste-online-report-guide (배출 신고 절차도)~~ — 2026-08-31 완료
+  4. moving-address-checklist (이사 순서 타임라인) ← 다음 차례
   5. community-center-guide, pharmacy-weekend-guide, ev-charging-station-guide 순으로 확장
+
+  다이어그램에 금액·시간 같은 수치를 넣을 때는 그 글에서 출처와 기준일을 밝힌 값만 쓴다.
+  지역마다 달라지는 값은 `public-parking-guide`처럼 구조만 그리고 수치는 비워 둔다.
 - 한 번에 몰아서 넣지 않고 **주 2~3개 글**씩 추가한다. 급격한 일괄 변경보다 꾸준한 갱신 이력이 낫다.
 
 ## 2. 자동발행 운영 규칙

@@ -28,6 +28,9 @@ jobs:
       - name: Generate SEO files
         run: npm run build
 
+      - name: Audit structure and duplicates
+        run: npm run seo:audit
+
       - name: Check generated files
         run: |
           test -s sitemap.xml

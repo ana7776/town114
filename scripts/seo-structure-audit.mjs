@@ -51,9 +51,23 @@ function pushIssue(issues, label, message) {
 }
 
 const issues = {};
+function collectDuplicate(store, key, rel) {
+  if (!store.has(key)) store.set(key, []);
+  store.get(key).push(rel);
+}
+
+function reportDuplicates(store, label, describe) {
+  for (const [key, files] of store) {
+    if (files.length > 1) pushIssue(issues, label, `${describe(key)}: ${files.join(", ")}`);
+  }
+}
+
 const htmlFiles = await findHtmlFiles(root);
 const indexableLocs = [];
 const noindexLocs = [];
+const titlesSeen = new Map();
+const bodiesSeen = new Map();
+const topicsSeen = new Map();
 
 for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
@@ -63,6 +77,24 @@ for (const file of htmlFiles) {
 
   if (isIndexable(html)) indexableLocs.push(loc);
   else noindexLocs.push(loc);
+
+  // 같은 글이 날짜만 바꿔 다시 올라오는 것을 막는다. 자동 발행 글은 noindex라도
+  // 사이트에 그대로 남아 크롤러가 읽으므로 색인 여부와 무관하게 검사한다.
+  const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1].trim();
+  if (title) collectDuplicate(titlesSeen, title, rel);
+
+  const main = html.match(/<main[\s\S]*?<\/main>/i)?.[0] || html;
+  const bodyText = main
+    .replace(/<(script|style|svg)[\s\S]*?<\/\1>/gi, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\d{4}[-.]\d{1,2}[-.]\d{1,2}/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (bodyText.length > 200) collectDuplicate(bodiesSeen, bodyText, rel);
+
+  // 자동 발행 글의 주제 슬러그는 날짜와 슬롯을 뗀 나머지다.
+  const autoTopic = pathname.match(/^\/news\/auto-posts\/\d{4}-\d{2}-\d{2}-(?:afternoon|evening)-(.+)\/$/)?.[1];
+  if (autoTopic) collectDuplicate(topicsSeen, autoTopic, rel);
 
   const h1Count = (html.match(/<h1\b/gi) || []).length;
   if (h1Count !== 1) pushIssue(issues, "h1", `${rel}: expected 1 h1, found ${h1Count}`);
@@ -130,6 +162,10 @@ if (!existsSync(sitemapPath)) {
     }
   }
 }
+
+reportDuplicates(titlesSeen, "duplicate-title", (key) => key);
+reportDuplicates(bodiesSeen, "duplicate-body", (key) => `${key.slice(0, 60)}...`);
+reportDuplicates(topicsSeen, "duplicate-auto-post-topic", (key) => key);
 
 const labels = Object.keys(issues);
 if (!labels.length) {

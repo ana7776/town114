@@ -50,7 +50,19 @@
 - 새 지역 페이지를 추가할 때는 기존 5개 지역처럼 **지역마다 다른 각도**(운영 체계, 요금 구조,
   실측 사례 등)로 구성하고, 해당 지역에서만 유효한 구체 정보를 최소 3가지 포함한다.
 
-## 4. 발행 전 최소 점검
+## 4. 표와 모바일 가독성
+
+2026-09-01에 본문 표 95개를 `.table-scroll` 컨테이너로 감쌌다. 이전에는 `.check-table`에 모바일 규칙이 없어
+좁은 화면에서 열이 눌리고, `body { overflow-x: hidden }` 때문에 넘친 내용이 잘려도 스크롤할 수 없었다.
+
+원칙:
+- 본문에 표를 넣을 때는 반드시 다음 구조를 쓴다.
+  `<div class="table-scroll" role="region" aria-label="표 가로 스크롤" tabindex="0"><table class="check-table">…</table></div>`
+- 640px 이하에서는 표 최소 너비 560px가 적용되어 가로 스크롤로 읽는다. 열이 6개를 넘으면 표를 나누거나
+  카드형 목록으로 바꾸는 편이 낫다.
+- `npm run approval:audit`의 `table-scroll` 검사가 누락을 잡는다.
+
+## 5. 발행 전 최소 점검
 
 새 글 커밋 전 확인:
 - [ ] 제목이 기존 글과 검색 의도가 겹치지 않는가
@@ -58,3 +70,8 @@
 - [ ] title/meta description이 본문과 일치하는가
 - [ ] 내부 링크가 실제 존재하는 페이지를 가리키는가
 - [ ] 이미지·다이어그램을 넣었다면 자체 제작인가, aria-label이 있는가
+- [ ] 본문 내부 링크가 3개 이상인가
+- [ ] 표를 `.table-scroll`로 감쌌는가
+- [ ] `npm run seo:audit`와 `npm run approval:audit`가 통과하는가
+
+승인 신청 전 판단 기준과 거절 대응 순서는 `ADSENSE_APPROVAL_GUIDE.md`를 따른다.

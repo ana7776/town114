@@ -58,6 +58,7 @@ marked "auto" and do not need a manual note unless a script reports an issue.
 | Wide tables scroll horizontally instead of being clipped | auto | | |
 | No ad placement asks users to click ads or makes ads look like navigation | auto | | |
 | Pages linking a commercial service carry a visible external-link notice | | | |
+| Every 길찾기 button opens a working car route | Kakao Map links confirmed on a phone by the owner | 2026-09-01 | Pass |
 
 ## Google Search Console
 

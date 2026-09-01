@@ -29,6 +29,15 @@ TOWN114는 별도 어드민 없이 운영 가능한 정적 사이트 구조이�
 | 광고/제휴 고지 | 충족 | `/advertising-disclosure/` |
 | 이미지 WebP/R2 자동화 | 충족 | `scripts/crawl-images-to-r2.mjs` |
 | Cloudflare Pages 가이드 | 충족 | `DEPLOYMENT_GUIDE.md` |
+| sitemap lastmod 정확도 | 충족 | `scripts/build-sitemap.mjs` (git 커밋 날짜 기준) |
+
+## sitemap lastmod 기준
+
+`lastmod`는 파일 mtime이 아니라 **해당 파일을 마지막으로 수정한 git 커밋 날짜**를 씁니다.
+CI는 매 실행마다 저장소를 새로 체크아웃하므로 mtime을 쓰면 전체 URL이 빌드 날짜로 찍히고,
+실제로는 바뀌지 않은 페이지까지 갱신된 것처럼 검색엔진에 알리게 됩니다.
+git이 모르는 파일만 mtime으로 대체합니다. 이 덕분에 `npm run build`를 몇 번 돌려도
+`sitemap.xml` 결과가 달라지지 않습니다.
 
 ## 승인 전 운영 원칙
 

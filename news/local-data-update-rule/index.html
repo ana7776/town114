@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="지역 생활정보에서 기준일, 출처, 공식 안내, 현장 공지를 구분해 오래된 정보를 거르는 방법입니다." />
+    <meta name="description" content="공공데이터포털의 수정일이 자료 기준일이 아닌 이유, 파일데이터와 오픈API 갱신주기 차이, 기관 통폐합과 도로명주소 변경으로 생기는 오류를 정리했습니다." />
     <meta name="robots" content="index,follow" />
     <meta name="google-adsense-account" content="ca-pub-5804969457082424" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5804969457082424" crossorigin="anonymous"></script>
@@ -11,9 +11,9 @@
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-    <title>지역 생활정보 기준일을 읽는 법과 오래된 데이터를 거르는 기준 | TOWN114</title>
+    <title>공공데이터 수정일과 기준일 차이, 오래된 생활정보 거르는 법 | TOWN114</title>
     <link rel="stylesheet" href="../../styles.css" />
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "지역 생활정보 기준일을 읽는 법과 오래된 데이터를 거르는 기준", "description": "지역 생활정보에서 기준일, 출처, 공식 안내, 현장 공지를 구분해 오래된 정보를 거르는 방법입니다.", "url": "https://town114.com/news/local-data-update-rule/", "mainEntityOfPage": "https://town114.com/news/local-data-update-rule/", "dateModified": "2026-07-14", "author": {"@type": "Person", "name": "김안나"}, "publisher": {"@type": "Organization", "name": "TOWN114", "url": "https://town114.com/"}, "inLanguage": "ko"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "공공데이터 수정일과 기준일 차이, 오래된 생활정보 거르는 법", "description": "공공데이터포털의 수정일이 자료 기준일이 아닌 이유, 파일데이터와 오픈API 갱신주기 차이, 기관 통폐합과 도로명주소 변경으로 생기는 오류를 정리했습니다.", "url": "https://town114.com/news/local-data-update-rule/", "mainEntityOfPage": "https://town114.com/news/local-data-update-rule/", "dateModified": "2026-08-31", "author": {"@type": "Person", "name": "김안나"}, "publisher": {"@type": "Organization", "name": "TOWN114", "url": "https://town114.com/"}, "inLanguage": "ko"}</script>
 </head>
   <body>
     <header class="site-header">
@@ -22,18 +22,70 @@
     </header>
     <main class="plain-page"><article class="content-page">
       <p class="eyebrow">운영기준 브리핑</p>
-      <h1>지역 생활정보 기준일을 읽는 법과 오래된 데이터를 거르는 기준</h1>
-      <div class="article-meta"><span>생활정보 브리핑</span><span>업데이트: 2026.06.08</span></div>
-        <div class="verification-box" aria-label="이 글을 읽기 전 확인할 내용">
-          <strong>이 글을 읽기 전 확인하세요</strong>
-          <dl>
-            <dt>확인할 점</dt><dd>운영시간, 비용, 준비물, 예약 여부는 방문 전 다시 확인하는 것이 좋습니다.</dd>
-            <dt>정보 성격</dt><dd>공공데이터, 지자체 공지, 시설 공식 안내를 함께 보는 참고 가이드입니다.</dd>
-            <dt>최종 확인일</dt><dd>2026.07.04</dd>
-            <dt>오류 제보</dt><dd>페이지 내용이 다르면 문의 페이지로 알려주세요.</dd>
-          </dl>
-        </div>
-      <p>글이 최근에 작성됐어도 원자료가 오래됐을 수 있습니다. 운영시간, 요금, 전화번호는 기준일과 출처를 함께 확인해야 합니다.</p><h2>공식 출처와 안내성 글을 구분합니다</h2><p>블로그나 목록형 페이지는 출발점으로만 쓰고, 최종 방문 전에는 기관 공지나 현장 안내를 확인하는 것이 안전합니다.</p><h2>바뀌기 쉬운 항목을 따로 봅니다</h2><p>휴무일, 점심시간, 할인, 예약, 담당 전화번호는 자주 바뀝니다. 방문 전 확인이 필요한 항목으로 따로 표시해 두세요.</p><h2>방문 전 빠른 점검표</h2><div class="table-scroll" role="region" aria-label="표 가로 스크롤" tabindex="0"><table class="check-table"><thead><tr><th>확인 항목</th><th>질문</th><th>메모</th></tr></thead><tbody><tr><td>기준일</td><td>자료가 언제 확인됐나요?</td><td>오래된 정보를 걸러냅니다.</td></tr><tr><td>출처</td><td>공식 안내인가요?</td><td>최종 판단 기준을 세웁니다.</td></tr><tr><td>변동 항목</td><td>요금·시간·예약이 바뀔 수 있나요?</td><td>방문 실패를 줄입니다.</td></tr></tbody></table></div><div class="adsense-depth-marker"></div><h2>기준일은 글 작성일과 다릅니다</h2><p>생활정보 글의 날짜가 최근이어도 실제 자료가 오래됐을 수 있습니다. 반대로 원자료는 오래됐지만 기관 공지로 운영 변경이 따로 올라와 있을 수도 있습니다. 그래서 기준일을 볼 때는 글 작성일, 자료 확인일, 공식 공지일을 나눠 읽어야 합니다. 운영시간, 전화번호, 요금, 예약 방식은 특히 변동이 잦아 마지막 확인 경로가 중요합니다.</p><h2>오래된 정보를 거르는 순서</h2><p>먼저 페이지 하단이나 표 안에 기준일이 있는지 확인합니다. 그다음 기관명, 주소, 전화번호가 현재 사용하는 명칭과 맞는지 봅니다. 마지막으로 공식 사이트, 지자체 공지, 현장 안내 중 어디를 기준으로 쓴 정보인지 확인합니다. 출처가 없고 전화번호만 나열된 글은 방문 결정의 최종 근거로 쓰지 않는 편이 안전합니다.</p><h2>TOWN114의 업데이트 원칙</h2><p>TOWN114는 검색 결과를 그대로 옮기기보다 방문자가 마지막으로 확인해야 할 질문을 정리합니다. 정보가 확정적이지 않은 경우에는 “가능합니다”보다 “확인해야 합니다”라고 안내하고, 자료 출처와 오류 수정 요청 경로를 열어 둡니다. 이 방식은 빠른 클릭보다 실제 방문 실패를 줄이는 데 목적이 있습니다.</p><div class="related-links"><strong>함께 보기</strong><a href="/sources/">자료 출처와 운영 기준</a><a href="/articles/how-we-verify-local-info/">지역 정보 검증 기준</a><a href="/news/list/">생활정보 브리핑 목록</a></div>
+      <h1>공공데이터 수정일과 기준일 차이, 오래된 생활정보 거르는 법</h1>
+      <div class="article-meta"><span>생활정보 브리핑</span><span>업데이트: 2026-08-31</span></div>
+      <div class="verification-box" aria-label="이 글을 읽기 전 확인할 내용">
+        <strong>이 글을 읽기 전 확인하세요</strong>
+        <dl>
+          <dt>확인할 점</dt><dd>이 글은 자료를 읽는 방법을 다룹니다. 개별 시설의 운영 정보는 해당 기관 공지가 최종 기준입니다.</dd>
+          <dt>정보 성격</dt><dd>공공데이터포털 메타데이터 구조와 갱신 주기를 기준으로 정리한 브리핑입니다.</dd>
+          <dt>최종 확인일</dt><dd>2026.07.04</dd>
+          <dt>오류 제보</dt><dd>페이지 내용이 다르면 문의 페이지로 알려주세요.</dd>
+        </dl>
+      </div>
+      <p>공공데이터포털에서 자료를 받아 놓고 "수정일이 최근이니 최신"이라고 판단하면 틀리는 경우가 있습니다. <strong>목록에 표시되는 수정일과 자료 안에 담긴 데이터 기준일은 서로 다른 값입니다.</strong> 이 차이를 모르면 몇 년 전 상태를 최신 정보로 오해하게 됩니다.</p>
+
+      <h2>수정일은 자료 기준일이 아닙니다</h2>
+      <p>공공데이터포털(data.go.kr) 목록의 수정일은 <strong>등록 정보가 손질된 날</strong>입니다. 설명 문구를 고치거나 담당자 연락처를 바꿔도 수정일이 올라갑니다. 실제 데이터가 언제 조사된 것인지는 파일 안의 기준일 항목이나 첨부된 설명 문서에서 따로 확인해야 합니다.</p>
+      <p>그래서 자료를 볼 때는 최소 세 개의 날짜를 나눠 읽어야 합니다.</p>
+      <div class="table-scroll" role="region" aria-label="표 가로 스크롤" tabindex="0"><table class="check-table">
+        <thead><tr><th>날짜</th><th>의미</th><th>믿을 수 있는 범위</th></tr></thead>
+        <tbody>
+          <tr><td>수정일</td><td>등록 정보를 손댄 날</td><td>내용 최신성과 무관할 수 있습니다</td></tr>
+          <tr><td>데이터 기준일</td><td>자료가 실제로 조사된 시점</td><td>이것이 실질 기준입니다</td></tr>
+          <tr><td>갱신 주기</td><td>다음 자료가 언제 나오는지</td><td>연 1회면 최대 1년이 밀려 있습니다</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>파일데이터와 오픈API는 신선도가 다릅니다</h2>
+      <p>같은 주제라도 제공 방식에 따라 최신성이 크게 갈립니다. 파일데이터(CSV·엑셀)는 정해진 주기에 한 번씩 통째로 올라오므로, 갱신 주기가 연 1회면 최대 1년까지 밀린 값을 보게 됩니다. 오픈API는 기관 시스템에서 그때그때 응답을 받아오지만, <strong>API가 최신이라고 해서 원천 데이터가 실시간인 것은 아닙니다.</strong> 기관이 내부 대장을 분기마다 갱신한다면 API도 분기 단위입니다.</p>
+
+      <h2>실시간이 필요한 정보는 공공데이터로 답이 안 나옵니다</h2>
+      <p>"지금 문을 열었는지"처럼 분 단위로 바뀌는 정보는 성격상 정기 갱신 데이터로 맞출 수 없습니다. 이런 항목은 별도의 실시간 서비스를 봐야 합니다.</p>
+      <ul>
+        <li><strong>지금 운영 중인 약국·병원</strong> — 응급의료포털 E-Gen, 응급의료정보제공 앱</li>
+        <li><strong>주차장 실시간 잔여면수</strong> — 지자체 또는 시설관리공단이 별도 제공하는 경우</li>
+        <li><strong>충전기 사용 가능 여부</strong> — 충전사업자 앱</li>
+      </ul>
+      <p>공공데이터가 잘 맞는 항목은 반대로 잘 안 바뀌는 것들입니다. 시설의 위치, 명칭, 대표 연락처, 시설 종류 같은 기본 정보가 그렇습니다. TOWN114도 기본 정보는 공공데이터로 정리하고, 운영 여부는 실시간 도구로 확인하도록 안내하는 방식을 씁니다.</p>
+
+      <h2>기관 통폐합과 명칭 변경이 만드는 오류</h2>
+      <p>오래된 자료에서 가장 자주 틀리는 것이 기관명과 전화번호입니다. 주민센터는 동 통폐합으로 없어지거나 합쳐지고, 공단과 재단은 조직 개편으로 이름이 바뀝니다. 대표번호가 통합 콜센터로 넘어가면서 기존 직통번호가 사라지기도 합니다.</p>
+      <p>확인 순서는 이렇습니다. 먼저 기관명을 그대로 검색해 현재도 같은 이름을 쓰는지 봅니다. 다음으로 해당 지자체 홈페이지의 부서·기관 안내에서 그 이름이 실제로 있는지 확인합니다. 검색 결과에 개인 블로그만 나오고 기관 홈페이지가 안 나오면 이름이 바뀌었을 가능성이 큽니다.</p>
+
+      <h2>도로명주소 변경도 확인 대상입니다</h2>
+      <p>건물 신축이나 도로 구간 조정으로 도로명주소가 바뀌는 경우가 있습니다. 오래된 자료의 주소를 지도에 넣었을 때 엉뚱한 곳이 나오면 주소 자체가 갱신 전일 수 있습니다. 이럴 때는 지번주소로 바꿔 검색하거나 기관 홈페이지의 오시는 길을 기준으로 삼는 편이 확실합니다.</p>
+
+      <h2>바뀌기 쉬운 항목만 따로 봅니다</h2>
+      <p>모든 항목을 매번 확인할 수는 없습니다. 변동이 잦은 것만 골라 확인하면 시간을 아낄 수 있습니다.</p>
+      <div class="table-scroll" role="region" aria-label="표 가로 스크롤" tabindex="0"><table class="check-table">
+        <thead><tr><th>변동 빈도</th><th>항목</th><th>확인 방법</th></tr></thead>
+        <tbody>
+          <tr><td>높음</td><td>휴무일, 점심시간, 예약 필요 여부, 담당 직통번호</td><td>방문 직전 전화 또는 기관 공지</td></tr>
+          <tr><td>중간</td><td>요금, 할인 대상, 운영 시간</td><td>기관 홈페이지 요금 안내의 기준일</td></tr>
+          <tr><td>낮음</td><td>위치, 시설 종류, 대표번호</td><td>공공데이터로 충분한 경우가 많음</td></tr>
+        </tbody>
+      </table></div>
+
+      <h2>출처가 없는 목록형 글을 거르는 기준</h2>
+      <p>검색 결과에는 전화번호와 주소만 나열한 글이 많습니다. 이런 글은 어디서 가져온 자료인지, 언제 확인한 것인지가 없어 방문 결정의 최종 근거로 쓰기 어렵습니다. 다음 중 하나라도 없으면 출발점으로만 쓰고 반드시 원 출처를 찾으세요.</p>
+      <ul>
+        <li>자료를 확인한 날짜</li>
+        <li>어느 기관 자료인지</li>
+        <li>바뀔 수 있다는 안내와 재확인 경로</li>
+      </ul>
+
+      <div class="related-links"><strong>함께 보기</strong><a href="/sources/">자료 출처와 운영 기준</a><a href="/articles/how-we-verify-local-info/">지역 정보 검증 기준</a><a href="/articles/public-notice-guide/">지자체 공지사항을 읽는 기준</a></div>
     </article></main>
     <footer class="site-footer"><div><strong>TOWN114</strong><p>지역 생활정보를 방문 전 확인 기준으로 정리합니다.</p></div><div><span><a href="/about/">소개</a> · <a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/contact/">문의</a></span><p class="footer-data-note">이 사이트는 공공데이터포털의 공개 데이터를 활용해 정리합니다. 자세한 출처와 검증 기준은 <a href="/sources/">자료 출처</a> 페이지에서 확인하세요.</p></div></footer>
   </body>

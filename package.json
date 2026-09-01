@@ -3,8 +3,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-sitemap.mjs",
+    "build": "node scripts/build-sitemap.mjs && node scripts/build-feed.mjs",
     "seo:sitemap": "node scripts/build-sitemap.mjs",
+    "seo:feed": "node scripts/build-feed.mjs",
     "seo:audit": "node scripts/seo-structure-audit.mjs",
     "approval:audit": "node scripts/adsense-approval-audit.mjs",
     "preview": "node scripts/local-static-server.mjs 4173",

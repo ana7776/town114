@@ -188,6 +188,23 @@ if (existsSync(sitemapPath)) {
   }
 }
 
+// 12. RSS도 색인 대상만 내보낸다. noindex 페이지를 피드로 내보내면
+//     색인하지 말라고 한 페이지를 다시 발견 경로로 제공하는 셈이 된다.
+const feedPath = join(root, "feed.xml");
+if (existsSync(feedPath)) {
+  const feed = await readFile(feedPath, "utf8");
+  for (const match of feed.matchAll(/<link>([^<]+)<\/link>/g)) {
+    const loc = match[1];
+    if (loc === `${siteUrl}/`) continue;
+    if (noindexLocs.includes(loc)) {
+      pushIssue(issues, "feed-includes-noindex", loc);
+      continue;
+    }
+    const pathname = loc.replace(siteUrl, "");
+    if (!resolvesToFile(pathname)) pushIssue(issues, "feed-broken-link", loc);
+  }
+}
+
 const labels = Object.keys(issues);
 if (!labels.length) {
   console.log(`AdSense approval audit passed for ${htmlFiles.length} HTML document(s).`);

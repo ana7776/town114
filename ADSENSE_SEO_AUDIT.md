@@ -1,6 +1,9 @@
 # AdSense SEO Audit
 
-점검일: 2026-06-26
+점검일: 2026-06-26 · 보강: 2026-09-01
+
+승인 기준 판단, 대표 글 선정, 거절 대응 순서는 `ADSENSE_APPROVAL_GUIDE.md`에서 관리합니다.
+이 문서는 사이트 구조와 필수 파일의 충족 현황만 다룹니다.
 
 ## 결론
 
@@ -64,6 +67,8 @@ git이 모르는 파일만 mtime으로 대체합니다. 이 덕분에 `npm run b
 
 ```bash
 npm run build
+npm run seo:audit
+npm run approval:audit
 npm run preview
 ```
 

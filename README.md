@@ -40,7 +40,7 @@ Use these settings:
 - Build output directory: `/`
 - Environment variable: `SITE_URL=https://town114.com`
 
-The build command regenerates `sitemap.xml` and `robots.txt` before deployment. See `DEPLOYMENT_GUIDE.md` for the full GitHub + Cloudflare Pages setup.
+The build command regenerates `sitemap.xml`, `robots.txt`, and `feed.xml` before deployment. See `DEPLOYMENT_GUIDE.md` for the full GitHub + Cloudflare Pages setup.
 
 ## Cloudflare R2 Image Automation
 
@@ -122,6 +122,21 @@ After deployment, connect these custom domains:
 - Keep ads visually separate from editorial content and data tables.
 - Do not use wording that asks visitors to click ads.
 - Keep empty or thin categories hidden until each hub has enough original text and related articles. See `ADSENSE_SEO_AUDIT.md`.
+- Approval criteria, the rejection playbook, and the pre-application checklist live in `ADSENSE_APPROVAL_GUIDE.md`; record evidence in `APPROVAL_CHECKLIST.md`.
+
+Run both audits before deploying:
+
+```bash
+npm run seo:audit
+npm run approval:audit
+```
+
+`npm run approval:audit` checks broken internal links, thin indexable pages, duplicate titles and
+descriptions, table scroll wrappers, required-page dates, ad-bait wording, and auto-post indexing.
+
+`feed.xml` is built by `scripts/build-feed.mjs` from indexable editorial pages under `/articles/`
+and `/news/`, ordered by each page's declared `dateModified`. Auto-generated posts are `noindex`
+and must never enter the feed; `scripts/auto-add-post.mjs` no longer writes it.
 
 ## Search Console / Search Advisor
 

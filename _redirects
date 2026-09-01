@@ -36,3 +36,12 @@ https://www.town114.com/* https://town114.com/:splat 301
 /news/weekend-pharmacy-check/ /articles/pharmacy-weekend-guide/ 301
 /news/parking-fee-before-visit/ /articles/public-parking-guide/ 301
 /news/community-center-document-visit/ /articles/community-center-guide/ 301
+
+# 디렉터리 주소를 직접 입력하거나 URL 끝을 잘라 들어오는 방문자를 위한 대응.
+# 각 목적지는 해당 목록을 실제로 담고 있는 페이지로만 연결한다.
+/news/ /news/list/ 301
+/tools/ /tools/visit-question-builder/ 301
+/articles/ /sitemap/ 301
+/services/ /sitemap/ 301
+/topics/ /sitemap/ 301
+/regions/ /sitemap/ 301

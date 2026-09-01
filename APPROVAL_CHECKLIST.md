@@ -22,7 +22,7 @@ marked "auto" and do not need a manual note unless a script reports an issue.
 | Check | Evidence | Date | Status |
 | --- | --- | --- | --- |
 | `https://town114.com/` and `https://www.town114.com/` both open | | | |
-| Site opens in a private window with no login | | | |
+| Site opens in a private window with no login | `/contact/` verified by the owner | 2026-09-01 | Pass |
 | `https://town114.com/sitemap.xml` matches the local `sitemap.xml` URL count | | | |
 | `https://town114.com/robots.txt` includes the sitemap URL | auto | | |
 | No page presents the site as unfinished, pending approval, or under construction | | | |

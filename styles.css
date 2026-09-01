@@ -3186,6 +3186,9 @@ body {
 
 .three-column-main {
   display: grid;
+  /* minmax(0, 1fr)로 고정하지 않으면 auto 트랙이 자식의 max-content로 넓어져
+     좁은 화면에서 본문이 뷰포트 밖으로 잘린다. */
+  grid-template-columns: minmax(0, 1fr);
   gap: 18px;
   min-width: 0;
 }

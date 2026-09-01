@@ -33,7 +33,7 @@ marked "auto" and do not need a manual note unless a script reports an issue.
 | --- | --- | --- | --- |
 | `/about/`, `/contact/`, `/privacy/`, `/terms/`, `/sources/`, `/advertising-disclosure/` reachable from internal links | auto | | |
 | Each required page shows an effective or last-reviewed date | auto | | |
-| `anagim7776@gmail.com` receives a test message sent from an outside account | | | |
+| `anagim7776@gmail.com` receives a test message sent from an outside account | Address in active daily use, confirmed by the owner | 2026-09-01 | Pass |
 | Privacy text discloses Google advertising cookies, identifiers, and third-party processing | | | |
 | Terms contain no leftover sample wording from another site | | | |
 | Contact address is identical in page text and structured data | `/`, `/about/`, `/contact/` | | |
@@ -54,7 +54,7 @@ marked "auto" and do not need a manual note unless a script reports an issue.
 
 | Check | Evidence | Date | Status |
 | --- | --- | --- | --- |
-| Home, a flagship article, and three tables read correctly on two phones | | | |
+| Home, a flagship article, and three tables read correctly on two phones | Chromium sweep: 71 pages x 320/360/390px, no element exceeds the viewport | 2026-09-01 | Chromium (= Android Chrome) clear; iOS Safari still needs a real device |
 | Wide tables scroll horizontally instead of being clipped | auto | | |
 | No ad placement asks users to click ads or makes ads look like navigation | auto | | |
 | Pages linking a commercial service carry a visible external-link notice | | | |

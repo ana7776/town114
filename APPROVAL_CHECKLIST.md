@@ -33,9 +33,10 @@ marked "auto" and do not need a manual note unless a script reports an issue.
 | --- | --- | --- | --- |
 | `/about/`, `/contact/`, `/privacy/`, `/terms/`, `/sources/`, `/advertising-disclosure/` reachable from internal links | auto | | |
 | Each required page shows an effective or last-reviewed date | auto | | |
-| Contact email receives a test message | | | |
+| `anagim7776@gmail.com` receives a test message sent from an outside account | | | |
 | Privacy text discloses Google advertising cookies, identifiers, and third-party processing | | | |
 | Terms contain no leftover sample wording from another site | | | |
+| Contact address is identical in page text and structured data | `/`, `/about/`, `/contact/` | | |
 
 ## Content
 

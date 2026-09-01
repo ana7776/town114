@@ -174,6 +174,7 @@ npm run approval:audit # 아래 표의 승인 기준 항목
 | `image-alt`, `svg-label` | 이미지·다이어그램 대체 텍스트 | 화면 자료 설명 |
 | `table-scroll` | 표가 모바일 가로 스크롤 컨테이너 안에 있음 | 모바일에서 표가 잘리지 않는다 |
 | `ad-bait` | 광고 클릭 유도 표현 없음 | 광고 참여 유도 금지 |
+| `google-maps-directions` | 길찾기 링크가 Google 지도가 아님 | 링크가 실제로 동작하는가 |
 | `duplicate-title`, `duplicate-description` | 색인 대상 제목·요약 중복 없음 | 중복 의도 글 통합 |
 | `hype-claim` | 제목·요약·소제목에 보장 표현 없음 | 제목은 약속이어야 한다 |
 | `thin-content` | 색인 대상 본문 1,350자 이상 | 얇은 콘텐츠 판별 |

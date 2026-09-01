@@ -122,7 +122,21 @@ for (const file of htmlFiles) {
     pushIssue(issues, "table-scroll", `${rel}: ${tableCount} tables, ${wrappedCount} wrapped`);
   }
 
-  // 5. 광고 참여 유도 표현은 어느 페이지에도 없어야 한다.
+  // 5. 길찾기는 국내 지도 서비스로 보낸다.
+  //    Google 지도는 국내 자동차 경로를 제공하지 않아, 데스크톱에서 경로가 열리지 않는다.
+  //    (모바일은 앱이 링크를 가로채 정상처럼 보이므로 발견이 늦다.)
+  for (const match of html.matchAll(/<a\b[^>]*>(?:(?!<\/a>)[\s\S])*?<\/a>/g)) {
+    const anchor = match[0];
+    if (!/google\.com\/maps/.test(anchor)) continue;
+    if (/길찾기|경로/.test(anchor)) {
+      pushIssue(issues, "google-maps-directions", `${rel}: ${anchor.slice(0, 110)}`);
+    }
+  }
+  if (/google\.com\/maps\/dir\//.test(html)) {
+    pushIssue(issues, "google-maps-directions", `${rel}: maps/dir/ link found`);
+  }
+
+  // 6. 광고 참여 유도 표현은 어느 페이지에도 없어야 한다.
   const visibleText = getVisibleText(html);
   if (AD_BAIT.test(visibleText)) {
     pushIssue(issues, "ad-bait", `${rel}: ${visibleText.match(AD_BAIT)[0]}`);
@@ -130,13 +144,13 @@ for (const file of htmlFiles) {
 
   if (!indexable) continue;
 
-  // 6. 제목과 요약이 겹치면 같은 역할의 페이지가 여러 개라는 뜻이다.
+  // 7. 제목과 요약이 겹치면 같은 역할의 페이지가 여러 개라는 뜻이다.
   const title = html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() || "";
   const description = html.match(/<meta[^>]+name=["']description["'][^>]+content=["']([^"']*)["']/i)?.[1]?.trim() || "";
   if (title) titles.set(title, [...(titles.get(title) || []), rel]);
   if (description) descriptions.set(description, [...(descriptions.get(description) || []), rel]);
 
-  // 7. 제목과 요약에서 결과를 보장하지 않는다.
+  // 8. 제목과 요약에서 결과를 보장하지 않는다.
   const promiseZone = [title, description, ...[...html.matchAll(/<h[12]\b[^>]*>([\s\S]*?)<\/h[12]>/gi)].map((match) => match[1])]
     .join(" ")
     .replace(/<[^>]+>/g, " ");
@@ -144,12 +158,12 @@ for (const file of htmlFiles) {
     pushIssue(issues, "hype-claim", `${rel}: ${promiseZone.match(HYPE_CLAIM)[0]}`);
   }
 
-  // 8. 색인 대상 페이지는 읽을 분량이 있어야 한다.
+  // 9. 색인 대상 페이지는 읽을 분량이 있어야 한다.
   if (visibleText.length < MIN_BODY_CHARS) {
     pushIssue(issues, "thin-content", `${rel}: ${visibleText.length} chars (min ${MIN_BODY_CHARS})`);
   }
 
-  // 9. 본문에서 다음 글로 이동할 수 있어야 한다.
+  // 10. 본문에서 다음 글로 이동할 수 있어야 한다.
   const internalLinks = new Set(
     [...getMain(html).matchAll(/href="(\/[^"#?]*)"/g)]
       .map((match) => match[1])
@@ -159,7 +173,7 @@ for (const file of htmlFiles) {
     pushIssue(issues, "internal-links", `${rel}: ${internalLinks.size} links (min ${MIN_INTERNAL_LINKS})`);
   }
 
-  // 10. 기준 페이지는 언제 확인한 내용인지 보여야 한다.
+  // 11. 기준 페이지는 언제 확인한 내용인지 보여야 한다.
   if (DATED_PAGES.includes(rel) && !DATE_LABEL.test(visibleText)) {
     pushIssue(issues, "page-date", `${rel}: missing 시행일/최종 검토/업데이트 label`);
   }
@@ -172,7 +186,7 @@ for (const [description, files] of descriptions) {
   if (files.length > 1) pushIssue(issues, "duplicate-description", `"${description.slice(0, 60)}..." -> ${files.join(", ")}`);
 }
 
-// 11. 자동 생성 글은 색인 대상에서 제외한 상태를 유지한다.
+// 12. 자동 생성 글은 색인 대상에서 제외한 상태를 유지한다.
 for (const file of htmlFiles) {
   const rel = relative(root, file).split(sep).join("/");
   if (!rel.startsWith("news/auto-posts/")) continue;
@@ -188,7 +202,7 @@ if (existsSync(sitemapPath)) {
   }
 }
 
-// 12. RSS도 색인 대상만 내보낸다. noindex 페이지를 피드로 내보내면
+// 13. RSS도 색인 대상만 내보낸다. noindex 페이지를 피드로 내보내면
 //     색인하지 말라고 한 페이지를 다시 발견 경로로 제공하는 셈이 된다.
 const feedPath = join(root, "feed.xml");
 if (existsSync(feedPath)) {

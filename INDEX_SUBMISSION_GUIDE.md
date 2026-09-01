@@ -19,7 +19,7 @@ Use this after the latest files are deployed to `https://town114.com/`.
 4. If an old sitemap row named only `town114.com` shows `Couldn't fetch` or `Not found`, remove that row from the sitemap list.
 5. Submit only `https://town114.com/sitemap.xml`.
 6. Do not submit `town114.com`, `https://town114.com/`, or `/` as a sitemap URL.
-7. Use `URL inspection` for the important new URLs below.
+7. Use `URL inspection` only for the URLs listed in the current priority document (see below).
 8. If Google says the URL is available to Google, click `Request indexing`.
 9. Do not request indexing for URLs that contain `<meta name="robots" content="noindex,follow">`.
 
@@ -28,27 +28,18 @@ Use this after the latest files are deployed to `https://town114.com/`.
 1. Open `https://searchadvisor.naver.com/`.
 2. Select `https://town114.com/`.
 3. Submit `https://town114.com/sitemap.xml`.
-4. Use web page collection/index request for the important new URLs below.
+4. Use web page collection/index request only for the URLs listed in the current priority document (see below).
 
-## Important new URLs
+## Which URLs to request
 
-- `https://town114.com/tools/visit-question-builder/`
-- `https://town114.com/news/list/`
-- `https://town114.com/regions/jeonbuk-local-guide/`
-- `https://town114.com/services/rental-cars/`
-- `https://town114.com/news/jeonbuk-pharmacy-parking-check/`
-- `https://town114.com/news/parking-fee-before-visit/`
-- `https://town114.com/news/community-center-document-visit/`
-- `https://town114.com/news/weekend-pharmacy-check/`
-- `https://town114.com/news/ev-charging-parking-cost/`
-- `https://town114.com/news/local-data-update-rule/`
-- `https://town114.com/articles/public-notice-guide/`
-- `https://town114.com/articles/welfare-job-check-guide/`
-- `https://town114.com/articles/culture-facility-visit-guide/`
-- `https://town114.com/articles/vehicle-road-check-guide/`
-- `https://town114.com/articles/culture-calendar-check-guide/`
-- `https://town114.com/articles/culture-benefit-application-guide/`
-- `https://town114.com/articles/culture-accessibility-guide/`
+Do not work from a fixed list in this file; it goes stale. The current request
+list lives in `INDEX_REQUEST_PRIORITY_2026-09-01.md`, which is rebuilt from the
+latest coverage export.
+
+As of the 2026-08-21 coverage data, 70 of the 71 sitemap URLs are already
+indexed, so the list is short on purpose: request only the pages whose content
+actually changed, plus whatever the coverage report shows as discovered but not
+indexed. Re-requesting pages that are already indexed does nothing.
 
 ## Auto-post policy
 
@@ -56,8 +47,11 @@ The `/news/auto-posts/` section is intentionally kept out of Google/Naver indexi
 
 ## Current production note
 
-Checked on 2026-06-24: Search Console may still show a failed sitemap row named
-`town114.com` from an earlier incorrect submission. That row points to the site
-itself, not to the XML sitemap. Delete it and submit `https://town114.com/sitemap.xml`.
-After deployment, confirm the latest local pages are visible on production
-before requesting indexing for updated URLs.
+Checked on 2026-09-01: the site is served from the apex domain and
+`www.town114.com` 301-redirects to it. Those www URLs will always appear in
+coverage under "페이지에 리디렉션이 있음"; that is the redirect working, not a
+defect. See `ADSENSE_APPROVAL_GUIDE.md` section 9 before acting on that report.
+
+If Search Console still shows an old sitemap row named only `town114.com`
+(pointing at the site rather than the XML file), remove that row and submit
+`https://town114.com/sitemap.xml`.

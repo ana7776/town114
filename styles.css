@@ -4096,3 +4096,6 @@ body {
 
 .guide-figure{margin:24px 0}
 .guide-figure figcaption{font-size:13px;color:#6b7280;margin-top:6px}
+
+/* 출처 표기 문단 (2026-10) */
+.source-note { font-size: 0.9rem; color: var(--muted, #5b6472); border-left: 3px solid currentColor; padding-left: 0.75rem; margin-top: 1rem; }

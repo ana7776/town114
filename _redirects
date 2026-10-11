@@ -12,3 +12,11 @@ https://www.town114.com/* https://town114.com/:splat 301
 /services/ /sitemap/ 301
 /topics/ /sitemap/ 301
 /regions/ /sitemap/ 301
+
+# 2026-10 애드센스 심사 대비: 자동발행 짧은 글을 정리하고 브리핑 목록으로 연결한다.
+/news/auto-posts/* /news/list/ 301
+# 같은 주제를 다룬 짧은 브리핑은 본문 가이드로 통합했다.
+/news/parking-fee-before-visit/ /articles/public-parking-guide/ 301
+/news/community-center-document-visit/ /articles/community-center-guide/ 301
+/news/ev-charging-parking-cost/ /articles/ev-charging-station-guide/ 301
+/news/weekend-pharmacy-check/ /articles/pharmacy-weekend-guide/ 301

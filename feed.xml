@@ -15,6 +15,13 @@
       <description>주민센터 방문 전 준비하면 좋은 서류와 자주 처리하는 민원 업무를 정리했습니다.</description>
     </item>
     <item>
+      <title>공공도서관 회원가입과 자료실 이용 팁</title>
+      <link>https://town114.com/articles/local-library-guide/</link>
+      <guid isPermaLink="true">https://town114.com/articles/local-library-guide/</guid>
+      <pubDate>Sun, 11 Oct 2026 03:00:00 GMT</pubDate>
+      <description>공공도서관 회원가입, 대출증, 열람실, 상호대차, 문화강좌 이용 방법을 정리했습니다.</description>
+    </item>
+    <item>
       <title>대형폐기물과 재활용 배출 전 확인할 기준</title>
       <link>https://town114.com/articles/local-recycling-disposal-guide/</link>
       <guid isPermaLink="true">https://town114.com/articles/local-recycling-disposal-guide/</guid>
@@ -36,11 +43,25 @@
       <description>공영주차장을 이용하기 전 요금, 운영시간, 정기권, 할인 대상을 확인하는 방법입니다.</description>
     </item>
     <item>
+      <title>노인복지관 프로그램 신청 전 확인할 사항</title>
+      <link>https://town114.com/articles/senior-welfare-center-guide/</link>
+      <guid isPermaLink="true">https://town114.com/articles/senior-welfare-center-guide/</guid>
+      <pubDate>Sun, 11 Oct 2026 03:00:00 GMT</pubDate>
+      <description>노인복지관 프로그램 신청 전 회원 등록, 대상, 접수 기간, 이용료, 이동 편의, 상담 연계를 확인하는 방법입니다.</description>
+    </item>
+    <item>
       <title>전기차 충전소 이용 전 충전요금과 주차요금을 따로 보는 이유</title>
       <link>https://town114.com/news/ev-charging-parking-cost/</link>
       <guid isPermaLink="true">https://town114.com/news/ev-charging-parking-cost/</guid>
       <pubDate>Sun, 11 Oct 2026 03:00:00 GMT</pubDate>
       <description>전기차 충전소 방문 전 충전요금, 주차요금, 충전기 상태, 결제 방식을 나눠 확인하는 기준입니다.</description>
+    </item>
+    <item>
+      <title>전주 약국과 공영주차장 방문 전 확인 기준</title>
+      <link>https://town114.com/news/jeonbuk-pharmacy-parking-check/</link>
+      <guid isPermaLink="true">https://town114.com/news/jeonbuk-pharmacy-parking-check/</guid>
+      <pubDate>Sun, 11 Oct 2026 03:00:00 GMT</pubDate>
+      <description>전주와 전북 지역에서 약국, 공영주차장, 도서관, 정비소를 찾기 전 운영시간과 전화 확인 기준을 정리합니다.</description>
     </item>
     <item>
       <title>찾는 책이 우리 동네 도서관에 없을 때, 상호대차 신청 순서</title>
@@ -125,27 +146,6 @@
       <guid isPermaLink="true">https://town114.com/articles/welfare-job-check-guide/</guid>
       <pubDate>Tue, 14 Jul 2026 03:00:00 GMT</pubDate>
       <description>복지정책과 공공 일자리 정보를 확인할 때 자격, 접수 기간, 근무 조건, 담당 기관을 점검하는 방법입니다.</description>
-    </item>
-    <item>
-      <title>생활정보 브리핑 목록</title>
-      <link>https://town114.com/news/list/</link>
-      <guid isPermaLink="true">https://town114.com/news/list/</guid>
-      <pubDate>Tue, 14 Jul 2026 03:00:00 GMT</pubDate>
-      <description>TOWN114 생활정보 브리핑 목록입니다. 약국, 주민센터, 주차장, 도서관, 전기차 충전, 복지, 문화시설 정보를 방문 전 확인 기준으로 찾아볼 수 있습니다.</description>
-    </item>
-    <item>
-      <title>지역 생활정보 기준일을 읽는 법과 오래된 데이터를 거르는 기준</title>
-      <link>https://town114.com/news/local-data-update-rule/</link>
-      <guid isPermaLink="true">https://town114.com/news/local-data-update-rule/</guid>
-      <pubDate>Tue, 14 Jul 2026 03:00:00 GMT</pubDate>
-      <description>지역 생활정보에서 기준일, 출처, 공식 안내, 현장 공지를 구분해 오래된 정보를 거르는 방법입니다.</description>
-    </item>
-    <item>
-      <title>지도 검색 결과와 공식 안내가 다를 때 확인하는 순서</title>
-      <link>https://town114.com/news/local-official-source-check/</link>
-      <guid isPermaLink="true">https://town114.com/news/local-official-source-check/</guid>
-      <pubDate>Tue, 14 Jul 2026 03:00:00 GMT</pubDate>
-      <description>지도 검색 결과와 공식 안내의 운영시간, 요금, 준비물이 다를 때 어떤 순서로 확인해야 하는지 기준일, 공식 출처, 전화 확인 순서로 정리합니다.</description>
     </item>
   </channel>
 </rss>

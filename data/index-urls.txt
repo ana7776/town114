@@ -1,0 +1,128 @@
+TOWN114 색인 주소 목록
+생성일 2026-09-01 · sitemap.xml 기준 71개
+
+2026-08-21 커버리지 기준 71개 중 70개가 이미 색인되어 있습니다.
+따라서 A의 9개만 요청하고, B는 요청하지 않습니다(참고용 전체 목록).
+근거와 판단 기준: INDEX_REQUEST_PRIORITY_2026-09-01.md
+
+
+============================================================
+A. 색인 요청할 주소 9개
+============================================================
+이번 배포에서 방문자가 보는 동작이 바뀐 페이지입니다.
+(길찾기 링크를 카카오맵으로 교체 / 홈은 모바일 레이아웃 수정)
+
+https://town114.com/
+https://town114.com/articles/library-interlibrary-loan-guide/
+https://town114.com/services/car-repair/
+https://town114.com/services/community-centers/
+https://town114.com/services/hospitals/
+https://town114.com/services/libraries/
+https://town114.com/services/parking/
+https://town114.com/services/pharmacies/
+https://town114.com/services/rental-cars/
+
+
+============================================================
+B. 전체 색인 주소 (참고용 · 개별 요청하지 않음)
+============================================================
+이미 색인되어 있습니다. A에 있는 주소가 여기에도 보이지만 중복 요청하지 마세요.
+
+
+[서비스 허브] 7개
+https://town114.com/services/car-repair/
+https://town114.com/services/community-centers/
+https://town114.com/services/hospitals/
+https://town114.com/services/libraries/
+https://town114.com/services/parking/
+https://town114.com/services/pharmacies/
+https://town114.com/services/rental-cars/
+
+[주제 허브] 4개
+https://town114.com/topics/family-care/
+https://town114.com/topics/local-mobility/
+https://town114.com/topics/moving-housing/
+https://town114.com/topics/public-services/
+
+[지역 가이드] 5개
+https://town114.com/regions/busan-local-guide/
+https://town114.com/regions/gyeonggi-local-guide/
+https://town114.com/regions/incheon-local-guide/
+https://town114.com/regions/jeonbuk-local-guide/
+https://town114.com/regions/seoul-local-guide/
+
+[독자 콘텐츠 (articles)] 38개
+https://town114.com/articles/apartment-management-fee-guide/
+https://town114.com/articles/bulky-waste-mobile-report-guide/
+https://town114.com/articles/bulky-waste-online-report-guide/
+https://town114.com/articles/car-service-guide/
+https://town114.com/articles/childcare-center-visit-guide/
+https://town114.com/articles/community-center-guide/
+https://town114.com/articles/culture-accessibility-guide/
+https://town114.com/articles/culture-benefit-application-guide/
+https://town114.com/articles/culture-calendar-check-guide/
+https://town114.com/articles/culture-facility-visit-guide/
+https://town114.com/articles/ev-charging-station-check-guide/
+https://town114.com/articles/ev-charging-station-guide/
+https://town114.com/articles/family-document-guide/
+https://town114.com/articles/how-we-verify-local-info/
+https://town114.com/articles/jeonju-parking-local-guide/
+https://town114.com/articles/late-night-public-pharmacy-guide/
+https://town114.com/articles/library-booksea-interlibrary-guide/
+https://town114.com/articles/library-interlibrary-loan-guide/
+https://town114.com/articles/local-business-check-guide/
+https://town114.com/articles/local-info-scorecard/
+https://town114.com/articles/local-library-guide/
+https://town114.com/articles/local-life-checklist/
+https://town114.com/articles/local-phone-search-guide/
+https://town114.com/articles/local-recycling-disposal-guide/
+https://town114.com/articles/moving-address-checklist/
+https://town114.com/articles/national-dermatology-visit-guide/
+https://town114.com/articles/pharmacy-weekend-guide/
+https://town114.com/articles/public-notice-guide/
+https://town114.com/articles/public-parking-free-discount-guide/
+https://town114.com/articles/public-parking-guide/
+https://town114.com/articles/region-comparison-guide/
+https://town114.com/articles/safe-local-search-guide/
+https://town114.com/articles/safety-report-guide/
+https://town114.com/articles/saturday-hospital-check-guide/
+https://town114.com/articles/senior-welfare-center-guide/
+https://town114.com/articles/unmanned-civil-kiosk-guide/
+https://town114.com/articles/vehicle-road-check-guide/
+https://town114.com/articles/welfare-job-check-guide/
+
+[생활정보 브리핑 (news)] 8개
+https://town114.com/news/community-center-document-visit/
+https://town114.com/news/ev-charging-parking-cost/
+https://town114.com/news/jeonbuk-pharmacy-parking-check/
+https://town114.com/news/list/
+https://town114.com/news/local-data-update-rule/
+https://town114.com/news/local-official-source-check/
+https://town114.com/news/parking-fee-before-visit/
+https://town114.com/news/weekend-pharmacy-check/
+
+[도구] 1개
+https://town114.com/tools/visit-question-builder/
+
+[정책·안내 (개별 요청 불필요)] 7개
+https://town114.com/about/
+https://town114.com/contact/
+https://town114.com/privacy/
+https://town114.com/terms/
+https://town114.com/sources/
+https://town114.com/sitemap/
+https://town114.com/advertising-disclosure/
+
+
+============================================================
+C. 색인 요청 금지
+============================================================
+https://town114.com/news/auto-posts/   (noindex, sitemap·RSS 제외)
+https://town114.com/articles/          (리디렉션 -> /sitemap/)
+https://town114.com/services/          (리디렉션 -> /sitemap/)
+https://town114.com/topics/            (리디렉션 -> /sitemap/)
+https://town114.com/regions/           (리디렉션 -> /sitemap/)
+https://town114.com/news/              (리디렉션 -> /news/list/)
+https://town114.com/tools/             (리디렉션 -> /tools/visit-question-builder/)
+https://town114.com/issuespot/         (삭제됨, 404 유지)
+

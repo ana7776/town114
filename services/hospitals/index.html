@@ -11,6 +11,7 @@
     <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
+
     <title>동네 병원 찾기 전 확인 기준 | TOWN114</title>
     <link rel="stylesheet" href="../../styles.css" />
   </head>
@@ -24,7 +25,8 @@
       <h1>동네 병원 찾기 전 확인 기준</h1>
       <div class="article-meta"><span>서비스 카테고리</span><span>방문 전 확인 기준</span><span>업데이트: 2026-07-02</span></div>
       <p>병원 정보는 위치만으로 판단하기 어렵습니다. 같은 동네에 있어도 진료과, 접수 마감, 예약 필요 여부, 야간·주말 운영, 주차 가능 여부가 다르기 때문입니다. TOWN114는 병원명과 주소를 찾은 뒤 실제 방문 전에 확인해야 할 질문을 먼저 정리합니다.</p>
-      <p>현재 건강보험심사평가원 병원·약국 현황 자료의 요약 데이터를 기준으로 병원 종류, 지역별 분포, 주소, 전화번호, 좌표 확인 기준을 정리했습니다. 공개 페이지에는 원본 파일의 민감하거나 불필요한 내부 필드를 노출하지 않고, 방문자가 확인해야 할 기준과 예시 데이터만 사용합니다.</p>
+      <p>2026년 3월 건강보험심사평가원 병원 기본자료 스냅샷 79,562건과 진료과·시설·교통·장비 상세자료를 기준으로 병원명, 진료과 분류, 주소, 공개 전화번호, 좌표와 방문 전 확인 항목을 정리했습니다. 주소가 없는 병원 레코드는 없지만 전화번호가 비어 있는 레코드 519건도 있어 전화번호가 없을 수 있습니다. 이 자료만으로 당일 진료·의사 근무·접수 마감·검사 가능 여부를 확정하지 않으며, 방문 전 병원 공식 안내나 전화 확인이 필요합니다.</p>
+
 
       <section class="pharmacy-map-widget" aria-labelledby="hospital-map-title">
         <div class="pharmacy-map-copy">
@@ -61,6 +63,7 @@
         </div>
       </section>
 
+
       <section class="pharmacy-finder" aria-labelledby="hospital-sample-title">
         <div class="inline-heading">
           <div>
@@ -79,149 +82,3 @@
         </div>
       </section>
 
-      <div class="decision-box">
-        <strong>TOWN114 병원 방문 판단법</strong>
-        <ol>
-          <li>증상에 맞는 진료과가 맞는지 먼저 확인합니다.</li>
-          <li>오늘 접수가 가능한지, 접수 마감 시간이 운영 종료보다 빠른지 전화로 묻습니다.</li>
-          <li>검사나 처방이 예상되면 주변 약국, 주차장, 대중교통 동선을 함께 확인합니다.</li>
-        </ol>
-      </div>
-
-      <h2>방문 전 확인할 점</h2>
-      <div class="table-scroll" role="region" aria-label="표 가로 스크롤" tabindex="0"><table class="check-table">
-        <thead><tr><th>항목</th><th>확인 질문</th><th>이유</th></tr></thead>
-        <tbody>
-          <tr><td>진료과</td><td>내 증상에 맞는 진료과가 오늘 운영하나요?</td><td>병원 전체는 열려 있어도 해당 진료과가 휴진일 수 있습니다.</td></tr>
-          <tr><td>접수 마감</td><td>지금 도착하면 접수가 가능한가요?</td><td>운영시간보다 접수 마감이 빠른 경우가 많습니다.</td></tr>
-          <tr><td>예약</td><td>초진도 예약이 필요한가요?</td><td>전문의 진료, 검사, 예방접종은 예약 기준이 다를 수 있습니다.</td></tr>
-          <tr><td>동선</td><td>주차와 주변 약국 이동이 가능한가요?</td><td>진료 후 처방전 조제나 검사 이동 시간이 필요할 수 있습니다.</td></tr>
-        </tbody>
-      </table></div>
-
-      <h2>상황별 확인 기준</h2>
-      <p>아이 동반, 고령자 진료, 직장인 점심시간 방문처럼 상황이 다르면 확인할 질문도 달라집니다. 급한 상황에서는 가까운 거리보다 접수 가능성과 진료 범위가 더 중요합니다.</p>
-      <div class="table-scroll" role="region" aria-label="표 가로 스크롤" tabindex="0"><table class="check-table">
-        <thead><tr><th>상황</th><th>우선 확인</th><th>다음 행동</th></tr></thead>
-        <tbody>
-          <tr><td>야간·주말</td><td>오늘 실제 진료과와 접수 마감</td><td>지도 이동 전 전화로 운영 여부를 확인합니다.</td></tr>
-          <tr><td>아이 진료</td><td>소아 진료 가능 여부와 대기 시간</td><td>아이 나이, 증상, 열 여부를 짧게 말합니다.</td></tr>
-          <tr><td>검사 필요</td><td>검사 가능 시간과 결과 안내 방식</td><td>금식, 준비물, 비용 항목을 함께 확인합니다.</td></tr>
-        </tbody>
-      </table></div>
-
-      <h2>자료 출처와 한계</h2>
-      <p>병원 기본 정보는 공공 보건의료 자료와 공식 안내를 기준으로 정리합니다. 다만 진료시간, 전문의 근무, 예약 가능 여부, 접수 마감, 검사 가능 여부는 당일 병원 운영 상황에 따라 달라질 수 있습니다. TOWN114는 특정 병원을 추천하거나 진료 결과를 보장하지 않으며, 방문 전에 확인할 기준을 제공하는 데 초점을 둡니다.</p>
-      <div class="field-memo" aria-label="병원 방문 전 메모 양식">
-        <span>방문 목적: 진료 / 검사 / 예방접종 / 처방 / 상담</span>
-        <span>시간 조건: 평일 / 야간 / 토요일 / 일요일 / 공휴일</span>
-        <span>전화 질문: 진료과 운영 / 접수 마감 / 예약 필요 / 주차 / 주변 약국</span>
-        <span>주의 대상: 아이 / 임산부 / 고령자 / 기존 복용약 / 알레르기</span>
-      </div>
-      <div class="related-links"><strong>관련 콘텐츠</strong><a href="/services/pharmacies/">동네 약국 찾기 전 확인 기준</a><a href="/articles/national-dermatology-visit-guide/">전국 피부과 찾기 전 확인 기준</a><a href="/articles/local-life-checklist/">동네 생활시설 방문 전 공통 체크리스트</a></div>
-    </article></main>
-    <footer class="site-footer"><div><strong>TOWN114</strong><p>병원 방문 전 확인 기준을 정리합니다.</p></div><div><span><a href="/privacy/">개인정보처리방침</a> · <a href="/terms/">이용약관</a> · <a href="/sitemap/">사이트맵</a> · <a href="/contact/">문의</a></span><p class="footer-data-note">이 사이트는 공공데이터포털의 공개 데이터를 활용해 정리합니다. 자세한 출처와 검증 기준은 <a href="/sources/">자료 출처</a> 페이지에서 확인하세요.</p></div></footer>
-    <script>
-      (() => {
-        const form = document.querySelector("#hospital-map-search");
-        const input = document.querySelector("#hospital-map-query");
-        const iframe = document.querySelector("#hospital-google-map");
-        const openLink = document.querySelector("#hospital-map-open");
-        const directionsLink = document.querySelector("#hospital-map-directions");
-        const shortcutButtons = document.querySelectorAll("[data-hospital-query]");
-        const list = document.querySelector("#hospital-result-list");
-        const status = document.querySelector("#hospital-finder-status");
-
-        if (!form || !input || !iframe || !openLink || !directionsLink) return;
-
-        // 서버 렌더링된 정적 카드용 지도 보기 버튼 (JS 미실행/데이터 fetch 실패 시에도 동작)
-        list?.addEventListener("click", (event) => {
-          const staticButton = event.target.closest("[data-static-map-query]");
-          if (!staticButton) return;
-          const query = staticButton.getAttribute("data-static-map-query") || "";
-          const label = staticButton.getAttribute("data-static-map-label") || query;
-          input.value = label;
-          updateMap(query);
-        });
-
-        const updateMap = (query) => {
-          const normalizedQuery = query.trim() || "서울 강남구 내과";
-          const encodedQuery = encodeURIComponent(normalizedQuery);
-          iframe.src = `https://maps.google.com/maps?q=${encodedQuery}&output=embed`;
-          openLink.href = `https://www.google.com/maps/search/?api=1&query=${encodedQuery}`;
-          directionsLink.href = `https://map.kakao.com/link/search/${encodedQuery}`;
-          openLink.textContent = `${normalizedQuery} Google 지도에서 크게 보기`;
-          directionsLink.textContent = `${normalizedQuery} 길찾기 열기`;
-        };
-
-        const mapQueryFor = (item) => item.latitude && item.longitude ? `${item.latitude},${item.longitude}` : `${item.name} ${item.address}`;
-
-        const renderSamples = (items) => {
-          if (!list || !status) return;
-          const samples = items.slice(0, 6);
-          status.textContent = `${samples.length}개 예시를 표시합니다. 실제 접수 가능 여부는 병원에 직접 확인하세요.`;
-          list.replaceChildren();
-          samples.forEach((item) => {
-            const card = document.createElement("article");
-            const info = document.createElement("div");
-            const name = document.createElement("strong");
-            const address = document.createElement("p");
-            const meta = document.createElement("small");
-            const actions = document.createElement("div");
-            const mapButton = document.createElement("button");
-            const directions = document.createElement("a");
-            const phone = document.createElement(item.phone ? "a" : "span");
-            card.className = "pharmacy-result-card";
-            actions.className = "pharmacy-result-actions";
-            name.textContent = item.name || "병원명 확인 필요";
-            address.textContent = item.address || "주소 확인 필요";
-            meta.textContent = `${item.type || "종류 확인 필요"} · ${item.sido || ""} ${item.sigungu || ""} · 의사 ${item.doctors ?? "확인 필요"}명`;
-            mapButton.type = "button";
-            mapButton.textContent = "지도 보기";
-            mapButton.addEventListener("click", () => {
-              const label = `${item.name} ${item.address}`.trim();
-              input.value = label;
-              updateMap(mapQueryFor(item));
-            });
-            directions.href = `https://map.kakao.com/link/search/${encodeURIComponent(mapQueryFor(item))}`;
-            directions.target = "_blank";
-            directions.rel = "noopener";
-            directions.textContent = "길찾기";
-            if (item.phone) {
-              phone.href = `tel:${String(item.phone).replace(/[^0-9+]/g, "")}`;
-              phone.textContent = "전화";
-            } else {
-              phone.textContent = "전화 없음";
-            }
-            info.append(name, address, meta);
-            actions.append(mapButton, directions, phone);
-            card.append(info, actions);
-            list.append(card);
-          });
-        };
-
-        form.addEventListener("submit", (event) => {
-          event.preventDefault();
-          updateMap(input.value);
-        });
-        input.addEventListener("input", () => updateMap(input.value));
-        shortcutButtons.forEach((button) => {
-          button.addEventListener("click", () => {
-            input.value = button.dataset.hospitalQuery || "";
-            updateMap(input.value);
-          });
-        });
-
-        fetch("/data/medical-facilities-summary.json")
-          .then((response) => {
-            if (!response.ok) throw new Error("병원 데이터를 불러오지 못했습니다.");
-            return response.json();
-          })
-          .then((data) => renderSamples(data.hospital?.prioritySamples || []))
-          .catch(() => {
-            if (status) status.textContent = "병원 예시 데이터를 불러오지 못했습니다. 위 검색창에서 동네와 진료과를 직접 입력해 지도 검색을 이용하세요.";
-          });
-      })();
-    </script>
-  </body>
-</html>

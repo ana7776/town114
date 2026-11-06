@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+<title id="title">병원 방문 전 확인 순서</title>
+<desc id="desc">진료과와 위치 확인, 접수 마감 확인, 전화 문의, 방문 순서 네 단계를 보여주는 안내 도식</desc>
+<rect width="1200" height="700" rx="32" fill="#eef5ff"/>
+<text x="70" y="90" font-family="Arial,sans-serif" font-size="42" font-weight="700" fill="#173b68">병원 방문 전 확인 순서</text>
+<text x="70" y="140" font-family="Arial,sans-serif" font-size="22" fill="#4b6380">공공데이터는 위치와 기본정보를 찾는 출발점입니다.</text>
+<g font-family="Arial,sans-serif">
+<g transform="translate(70 220)"><rect width="240" height="280" rx="24" fill="#fff" stroke="#76a9e8" stroke-width="4"/><circle cx="120" cy="70" r="38" fill="#2e76c8"/><text x="120" y="84" text-anchor="middle" font-size="38" font-weight="700" fill="#fff">1</text><text x="120" y="145" text-anchor="middle" font-size="25" font-weight="700" fill="#173b68">진료과 확인</text><text x="120" y="190" text-anchor="middle" font-size="19" fill="#4b6380">내가 필요한 진료과와</text><text x="120" y="220" text-anchor="middle" font-size="19" fill="#4b6380">병원 위치를 확인</text></g>
+<g transform="translate(350 220)"><rect width="240" height="280" rx="24" fill="#fff" stroke="#76a9e8" stroke-width="4"/><circle cx="120" cy="70" r="38" fill="#2e76c8"/><text x="120" y="84" text-anchor="middle" font-size="38" font-weight="700" fill="#fff">2</text><text x="120" y="145" text-anchor="middle" font-size="25" font-weight="700" fill="#173b68">접수 확인</text><text x="120" y="190" text-anchor="middle" font-size="19" fill="#4b6380">운영시간보다 빠른</text><text x="120" y="220" text-anchor="middle" font-size="19" fill="#4b6380">접수 마감 여부 확인</text></g>
+<g transform="translate(630 220)"><rect width="240" height="280" rx="24" fill="#fff" stroke="#76a9e8" stroke-width="4"/><circle cx="120" cy="70" r="38" fill="#2e76c8"/><text x="120" y="84" text-anchor="middle" font-size="38" font-weight="700" fill="#fff">3</text><text x="120" y="145" text-anchor="middle" font-size="25" font-weight="700" fill="#173b68">전화 문의</text><text x="120" y="190" text-anchor="middle" font-size="19" fill="#4b6380">당일 진료와 의사</text><text x="120" y="220" text-anchor="middle" font-size="19" fill="#4b6380">근무 여부를 재확인</text></g>
+<g transform="translate(910 220)"><rect width="220" height="280" rx="24" fill="#173b68"/><circle cx="110" cy="70" r="38" fill="#7dd3c7"/><text x="110" y="84" text-anchor="middle" font-size="38" font-weight="700" fill="#173b68">4</text><text x="110" y="145" text-anchor="middle" font-size="25" font-weight="700" fill="#fff">방문</text><text x="110" y="190" text-anchor="middle" font-size="19" fill="#dcecff">주소와 접수 가능</text><text x="110" y="220" text-anchor="middle" font-size="19" fill="#dcecff">시간을 확인하고 이동</text></g>
+</g>
+<text x="70" y="610" font-family="Arial,sans-serif" font-size="21" fill="#315273">※ 실제 진료 가능 여부와 접수 마감은 병원 공식 안내 또는 전화로 확인하세요.</text>
+</svg>
